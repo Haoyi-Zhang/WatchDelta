@@ -1,0 +1,82 @@
+{
+  "id": "known-c01-r02--s01-consumer",
+  "numeric_id": 1000621,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "publish_stale",
+  "diagnostic": false,
+  "diagnosis_unit": "known-c01-r02",
+  "diagnosis_repairs": [
+    "consumer"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 2104588572068,
+    "end_ns": 2104588993612,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 2104586841448,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "6c2c9f6ebc48d20170b0603da382cf39a9511e51aa6803502e4b2d90c3415aa0",
+    "projection": {
+      "index.html": "c6104ac20c160ecb999fec7ea75884352a0c8240c7b3d77f7d897c19a8fe1e8c"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.006091000000000069,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 40
+  },
+  "observation_ms": 1500.39535,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    2104587822132,
+    2106093627255
+  ],
+  "completion_observed": true,
+  "unpublished_projection": {
+    "index.html": "c6104ac20c160ecb999fec7ea75884352a0c8240c7b3d77f7d897c19a8fe1e8c"
+  },
+  "worker_stderr": "",
+  "unpublished_matches_clean": true
+}

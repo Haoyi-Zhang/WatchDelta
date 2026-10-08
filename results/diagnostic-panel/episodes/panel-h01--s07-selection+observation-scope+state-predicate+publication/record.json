@@ -1,0 +1,83 @@
+{
+  "id": "panel-h01--s07-selection+observation-scope+state-predicate+publication",
+  "numeric_id": 2000107,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "fail",
+  "diagnostic": false,
+  "diagnosis_unit": "panel-h01",
+  "diagnosis_repairs": [
+    "selection",
+    "observation_scope",
+    "state_predicate",
+    "publication"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 695050313484,
+    "end_ns": 695050479243,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 695049236566,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "ff3945736c84661a62994b796560d4d6f55216d052fe93699972d519941800ef",
+    "projection": {
+      "index.html": "6968097a40ecebdd9cd4c6edb9a9d5b61640efe9aa5fc712c032342113888bce"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.0027160000000000517,
+    "failed_builds": 1,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 0
+  },
+  "observation_ms": 1000.57003,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 0,
+  "completion_window_ns": [
+    695049897138,
+    696054678341
+  ],
+  "completion_observed": false,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

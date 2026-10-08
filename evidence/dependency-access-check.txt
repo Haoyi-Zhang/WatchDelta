@@ -1,0 +1,10 @@
+Wed Sep 30 03:22:47 UTC 2026
+mkdocs False
+watchfiles True
+markdown_it True
+uvicorn True
+bun None
+vite None
+tsc /opt/nvm/versions/node/v22.16.0/bin/tsc
+node /opt/nvm/versions/node/v22.16.0/bin/node
+curl: (6) Could not resolve host: pypi.org

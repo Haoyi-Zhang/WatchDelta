@@ -1,0 +1,6 @@
+{
+  "output": "evidence/paper-citation-snapshot.json",
+  "entries": 67,
+  "cited": 67,
+  "all_entries_cited": true
+}

@@ -1,0 +1,83 @@
+{
+  "id": "panel-h30--s07-selection+observation-scope+state-predicate+publication",
+  "numeric_id": 2003007,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "drop,fail",
+  "diagnostic": false,
+  "diagnosis_unit": "panel-h30",
+  "diagnosis_repairs": [
+    "selection",
+    "observation_scope",
+    "state_predicate",
+    "publication"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1537075409288,
+    "end_ns": 1537075585232,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 1537074242430,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "938927a7f5db026b31d89516019c08606aecb90f15b3f483b6518f247d2d49a6",
+    "projection": {
+      "index.html": "4fc96f239549285501ee6f5c6ab4a53d25ed88c1d35da687e9371cf5c78bb371"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 0,
+    "cpu_s": 0.004706000000000099,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 0
+  },
+  "observation_ms": 1000.626942,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 0,
+  "completion_window_ns": [
+    1537074876026,
+    1538079644051
+  ],
+  "completion_observed": false,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

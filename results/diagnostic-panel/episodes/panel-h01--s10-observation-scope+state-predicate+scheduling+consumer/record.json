@@ -1,0 +1,83 @@
+{
+  "id": "panel-h01--s10-observation-scope+state-predicate+scheduling+consumer",
+  "numeric_id": 2000110,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "none",
+  "diagnostic": false,
+  "diagnosis_unit": "panel-h01",
+  "diagnosis_repairs": [
+    "observation_scope",
+    "state_predicate",
+    "scheduling",
+    "consumer"
+  ],
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 702247230436,
+    "end_ns": 702247448194,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 702245868700,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "8458ad2587bae569f343f158a35aa03ecdfe85e1309dcfbd206ee2c8059740d3"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "fdb6fb0f2cf756e7516c1429e104b6c5ac7753ce6b786881fd00d71800d48ac5",
+    "projection": {
+      "index.html": "8458ad2587bae569f343f158a35aa03ecdfe85e1309dcfbd206ee2c8059740d3"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "8458ad2587bae569f343f158a35aa03ecdfe85e1309dcfbd206ee2c8059740d3"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": 101.963139,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.004905000000000048,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 8
+  },
+  "observation_ms": 1000.530847,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    702246503920,
+    703251524809
+  ],
+  "completion_observed": true,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

@@ -1,0 +1,60 @@
+{
+  "id": "hypercorn2-r02-inplace",
+  "numeric_id": 91014,
+  "pipeline": "hypercorn-0.18.0-reload",
+  "scenario": "inplace",
+  "replicate": 2,
+  "stratum": "integration-holdout",
+  "tool": "python-asgi",
+  "status": "matched",
+  "initial": "WD0000000000",
+  "expected": "WD0000091014",
+  "observed": "WD0000091014",
+  "oracle": {
+    "returncode": 0,
+    "content": "WD0000091014",
+    "stdout": "WATCHDELTA_HYPERCORN_IMPORT WD0000091014\nWATCHDELTA_ORACLE=\"WD0000091014\"\n",
+    "stderr": "",
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-c",
+      "<fresh-import>",
+      "<project>"
+    ]
+  },
+  "ready_ns": 1112085547569,
+  "endpoint_ns": 1114477226340,
+  "edit": {
+    "start_ns": 1112085700279,
+    "end_ns": 1112085802173,
+    "writes": 1,
+    "obligation": true,
+    "same_size": false,
+    "mtime_before_ns": 1790859550522404155,
+    "mtime_after_ns": 1790859551566092023,
+    "mtime_restored": false,
+    "source_sha256": "554a40cf1b028c187b8f4a6fe3db908f7781c12cc16408852e3bcf7e1826426a"
+  },
+  "reload_imports": 1,
+  "observation_ms": 2391.424167,
+  "response_latency_ms": 1086.886952,
+  "transient_errors": 1,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "hypercorn",
+    "app:app",
+    "--bind",
+    "127.0.0.1:36343",
+    "--reload",
+    "--workers",
+    "1",
+    "--worker-class",
+    "asyncio",
+    "--log-level",
+    "warning"
+  ],
+  "source_sha256": "554a40cf1b028c187b8f4a6fe3db908f7781c12cc16408852e3bcf7e1826426a",
+  "startup_ms": 1043.485302,
+  "episode_wall_ms": 5108.155169
+}

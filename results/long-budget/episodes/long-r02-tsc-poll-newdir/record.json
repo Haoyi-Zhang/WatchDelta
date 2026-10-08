@@ -1,0 +1,80 @@
+{
+  "id": "long-r02-tsc-poll-newdir",
+  "numeric_id": 6004,
+  "tool": "tsc",
+  "mode": "poll",
+  "scenario": "newdir",
+  "replicate": 2,
+  "inject": "none",
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 2249177718823,
+    "end_ns": 2249180137434,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 2249176533203,
+  "initial_projection": {
+    "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+    "message.js": "73cfa8453e8340fb006c056dd37ef322d1c5bcd08e17c1d3c0cac09940d5d746"
+  },
+  "observed_projection": {
+    "feature/card.js": "ec0c02d8c9f0a3128e6023353339e41048d08391105906a915eb6536ebfe0257",
+    "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+    "message.js": "73cfa8453e8340fb006c056dd37ef322d1c5bcd08e17c1d3c0cac09940d5d746"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "source_sha256": "cd735e8f07e84a0b2e35ec57a271c7eaa3476cdf65ecff40c873702f0c29c6ac",
+    "projection": {
+      "feature/card.js": "ec0c02d8c9f0a3128e6023353339e41048d08391105906a915eb6536ebfe0257",
+      "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+      "message.js": "73cfa8453e8340fb006c056dd37ef322d1c5bcd08e17c1d3c0cac09940d5d746"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "tsc"
+    ]
+  },
+  "served_projection": {},
+  "served_matches_disk": null,
+  "runtime": {
+    "returncode": 0,
+    "stdout": "{\"message\":\"WD0000000000\"}",
+    "stderr": ""
+  },
+  "clean_runtime": {
+    "returncode": 0,
+    "stdout": "{\"message\":\"WD0000000000\"}",
+    "stderr": ""
+  },
+  "runtime_matches": true,
+  "stable_latency_ms": 1286.74434,
+  "metrics": {
+    "accepted_events": 0,
+    "batches": 0,
+    "builds": 1,
+    "cpu_s": 0.06051200000000012,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 24
+  },
+  "observation_ms": 5000.514538,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completion_observed": true,
+  "worker_stderr": ""
+}

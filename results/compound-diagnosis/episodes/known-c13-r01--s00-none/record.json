@@ -1,0 +1,78 @@
+{
+  "id": "known-c13-r01--s00-none",
+  "numeric_id": 1000240,
+  "tool": "docs",
+  "mode": "blind",
+  "scenario": "same_size",
+  "inject": "fail,publish_stale",
+  "diagnostic": false,
+  "diagnosis_unit": "known-c13-r01",
+  "diagnosis_repairs": [],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1908289134880,
+    "end_ns": 1908289352834,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 1908288049209,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "c0e39ad3445626e35da9f8371e06943b83240851bf35ca599f8b79e22709edd7",
+    "projection": {
+      "index.html": "e67835b162afc108bb1fcf57de189b173d370d0421a0f51c487a560c7d4206d2"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 0,
+    "batches": 0,
+    "builds": 0,
+    "cpu_s": 0.0034250000000000114,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 0
+  },
+  "observation_ms": 1500.428973,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 0,
+  "completion_window_ns": [
+    1908288642345,
+    1909793792146
+  ],
+  "completion_observed": false,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

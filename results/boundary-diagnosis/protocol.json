@@ -1,0 +1,1230 @@
+{
+  "classes": [
+    "healthy",
+    "unnecessary_work",
+    "selection_failure",
+    "observation_scope_failure",
+    "state_predicate_failure",
+    "scheduling_failure",
+    "consumer_failure",
+    "publication_failure"
+  ],
+  "id": "boundary-diagnosis",
+  "repetitions": 6,
+  "settle_seconds": 1.5,
+  "unit_is_sample": true,
+  "units": [
+    {
+      "id": "healthy-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "healthy",
+          "id": "healthy-r01--base",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800000,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "healthy"
+    },
+    {
+      "id": "unnecessary_work-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r01--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800010,
+          "scenario": "temporary",
+          "tool": "docs"
+        },
+        "relevance_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "relevance_filter",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r01--relevance_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800011,
+          "scenario": "temporary",
+          "tool": "docs"
+        }
+      },
+      "truth": "unnecessary_work"
+    },
+    {
+      "id": "selection_failure-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r01--base",
+          "inject": "none",
+          "mode": "wrong_filter",
+          "numeric_id": 800020,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r01--broad_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800021,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "selection_failure"
+    },
+    {
+      "id": "observation_scope_failure-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r01--base",
+          "inject": "none",
+          "mode": "blind",
+          "numeric_id": 800030,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter_same_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter_same_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r01--broad_filter_same_scope",
+          "inject": "none",
+          "mode": "blind_default",
+          "numeric_id": 800031,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "correct_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "correct_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r01--correct_scope",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800032,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "observation_scope_failure"
+    },
+    {
+      "id": "state_predicate_failure-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r01--base",
+          "inject": "none",
+          "mode": "poll",
+          "numeric_id": 800040,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        },
+        "content_scan": {
+          "diagnostic": true,
+          "diagnostic_role": "content_scan",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r01--content_scan",
+          "inject": "none",
+          "mode": "hash",
+          "numeric_id": 800042,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        },
+        "native_notification": {
+          "diagnostic": true,
+          "diagnostic_role": "native_notification",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r01--native_notification",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800041,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        }
+      },
+      "truth": "state_predicate_failure"
+    },
+    {
+      "id": "scheduling_failure-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "scheduling_failure",
+          "id": "scheduling_failure-r01--base",
+          "inject": "drop",
+          "mode": "relevant",
+          "numeric_id": 800050,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "scheduling_failure"
+    },
+    {
+      "id": "consumer_failure-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "consumer_failure",
+          "id": "consumer_failure-r01--base",
+          "inject": "fail",
+          "mode": "relevant",
+          "numeric_id": 800060,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "consumer_failure"
+    },
+    {
+      "id": "publication_failure-r01",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "publication_failure",
+          "id": "publication_failure-r01--base",
+          "inject": "publish_stale",
+          "mode": "relevant",
+          "numeric_id": 800070,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "publication_failure"
+    },
+    {
+      "id": "healthy-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "healthy",
+          "id": "healthy-r02--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800100,
+          "scenario": "same_size",
+          "tool": "tsc"
+        }
+      },
+      "truth": "healthy"
+    },
+    {
+      "id": "unnecessary_work-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r02--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800110,
+          "scenario": "temporary",
+          "tool": "docs"
+        },
+        "relevance_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "relevance_filter",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r02--relevance_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800111,
+          "scenario": "temporary",
+          "tool": "docs"
+        }
+      },
+      "truth": "unnecessary_work"
+    },
+    {
+      "id": "selection_failure-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r02--base",
+          "inject": "none",
+          "mode": "wrong_filter",
+          "numeric_id": 800120,
+          "scenario": "same_size",
+          "tool": "tsc"
+        },
+        "broad_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r02--broad_filter",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800121,
+          "scenario": "same_size",
+          "tool": "tsc"
+        }
+      },
+      "truth": "selection_failure"
+    },
+    {
+      "id": "observation_scope_failure-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r02--base",
+          "inject": "none",
+          "mode": "blind",
+          "numeric_id": 800130,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter_same_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter_same_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r02--broad_filter_same_scope",
+          "inject": "none",
+          "mode": "blind_default",
+          "numeric_id": 800131,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "correct_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "correct_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r02--correct_scope",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800132,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "observation_scope_failure"
+    },
+    {
+      "id": "state_predicate_failure-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r02--base",
+          "inject": "none",
+          "mode": "poll",
+          "numeric_id": 800140,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        },
+        "content_scan": {
+          "diagnostic": true,
+          "diagnostic_role": "content_scan",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r02--content_scan",
+          "inject": "none",
+          "mode": "hash",
+          "numeric_id": 800142,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        },
+        "native_notification": {
+          "diagnostic": true,
+          "diagnostic_role": "native_notification",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r02--native_notification",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800141,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        }
+      },
+      "truth": "state_predicate_failure"
+    },
+    {
+      "id": "scheduling_failure-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "scheduling_failure",
+          "id": "scheduling_failure-r02--base",
+          "inject": "drop",
+          "mode": "relevant",
+          "numeric_id": 800150,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "scheduling_failure"
+    },
+    {
+      "id": "consumer_failure-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "consumer_failure",
+          "id": "consumer_failure-r02--base",
+          "inject": "fail",
+          "mode": "relevant",
+          "numeric_id": 800160,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "consumer_failure"
+    },
+    {
+      "id": "publication_failure-r02",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "publication_failure",
+          "id": "publication_failure-r02--base",
+          "inject": "publish_stale",
+          "mode": "relevant",
+          "numeric_id": 800170,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "publication_failure"
+    },
+    {
+      "id": "healthy-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "healthy",
+          "id": "healthy-r03--base",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800200,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "healthy"
+    },
+    {
+      "id": "unnecessary_work-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r03--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800210,
+          "scenario": "temporary",
+          "tool": "docs"
+        },
+        "relevance_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "relevance_filter",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r03--relevance_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800211,
+          "scenario": "temporary",
+          "tool": "docs"
+        }
+      },
+      "truth": "unnecessary_work"
+    },
+    {
+      "id": "selection_failure-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r03--base",
+          "inject": "none",
+          "mode": "wrong_filter",
+          "numeric_id": 800220,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r03--broad_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800221,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "selection_failure"
+    },
+    {
+      "id": "observation_scope_failure-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r03--base",
+          "inject": "none",
+          "mode": "blind",
+          "numeric_id": 800230,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter_same_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter_same_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r03--broad_filter_same_scope",
+          "inject": "none",
+          "mode": "blind_default",
+          "numeric_id": 800231,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "correct_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "correct_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r03--correct_scope",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800232,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "observation_scope_failure"
+    },
+    {
+      "id": "state_predicate_failure-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r03--base",
+          "inject": "none",
+          "mode": "poll",
+          "numeric_id": 800240,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        },
+        "content_scan": {
+          "diagnostic": true,
+          "diagnostic_role": "content_scan",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r03--content_scan",
+          "inject": "none",
+          "mode": "hash",
+          "numeric_id": 800242,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        },
+        "native_notification": {
+          "diagnostic": true,
+          "diagnostic_role": "native_notification",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r03--native_notification",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800241,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        }
+      },
+      "truth": "state_predicate_failure"
+    },
+    {
+      "id": "scheduling_failure-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "scheduling_failure",
+          "id": "scheduling_failure-r03--base",
+          "inject": "drop",
+          "mode": "relevant",
+          "numeric_id": 800250,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "scheduling_failure"
+    },
+    {
+      "id": "consumer_failure-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "consumer_failure",
+          "id": "consumer_failure-r03--base",
+          "inject": "fail",
+          "mode": "relevant",
+          "numeric_id": 800260,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "consumer_failure"
+    },
+    {
+      "id": "publication_failure-r03",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "publication_failure",
+          "id": "publication_failure-r03--base",
+          "inject": "publish_stale",
+          "mode": "relevant",
+          "numeric_id": 800270,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "publication_failure"
+    },
+    {
+      "id": "healthy-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "healthy",
+          "id": "healthy-r04--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800300,
+          "scenario": "same_size",
+          "tool": "tsc"
+        }
+      },
+      "truth": "healthy"
+    },
+    {
+      "id": "unnecessary_work-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r04--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800310,
+          "scenario": "temporary",
+          "tool": "docs"
+        },
+        "relevance_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "relevance_filter",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r04--relevance_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800311,
+          "scenario": "temporary",
+          "tool": "docs"
+        }
+      },
+      "truth": "unnecessary_work"
+    },
+    {
+      "id": "selection_failure-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r04--base",
+          "inject": "none",
+          "mode": "wrong_filter",
+          "numeric_id": 800320,
+          "scenario": "same_size",
+          "tool": "tsc"
+        },
+        "broad_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r04--broad_filter",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800321,
+          "scenario": "same_size",
+          "tool": "tsc"
+        }
+      },
+      "truth": "selection_failure"
+    },
+    {
+      "id": "observation_scope_failure-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r04--base",
+          "inject": "none",
+          "mode": "blind",
+          "numeric_id": 800330,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter_same_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter_same_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r04--broad_filter_same_scope",
+          "inject": "none",
+          "mode": "blind_default",
+          "numeric_id": 800331,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "correct_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "correct_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r04--correct_scope",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800332,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "observation_scope_failure"
+    },
+    {
+      "id": "state_predicate_failure-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r04--base",
+          "inject": "none",
+          "mode": "poll",
+          "numeric_id": 800340,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        },
+        "content_scan": {
+          "diagnostic": true,
+          "diagnostic_role": "content_scan",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r04--content_scan",
+          "inject": "none",
+          "mode": "hash",
+          "numeric_id": 800342,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        },
+        "native_notification": {
+          "diagnostic": true,
+          "diagnostic_role": "native_notification",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r04--native_notification",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800341,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        }
+      },
+      "truth": "state_predicate_failure"
+    },
+    {
+      "id": "scheduling_failure-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "scheduling_failure",
+          "id": "scheduling_failure-r04--base",
+          "inject": "drop",
+          "mode": "relevant",
+          "numeric_id": 800350,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "scheduling_failure"
+    },
+    {
+      "id": "consumer_failure-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "consumer_failure",
+          "id": "consumer_failure-r04--base",
+          "inject": "fail",
+          "mode": "relevant",
+          "numeric_id": 800360,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "consumer_failure"
+    },
+    {
+      "id": "publication_failure-r04",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "publication_failure",
+          "id": "publication_failure-r04--base",
+          "inject": "publish_stale",
+          "mode": "relevant",
+          "numeric_id": 800370,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "publication_failure"
+    },
+    {
+      "id": "healthy-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "healthy",
+          "id": "healthy-r05--base",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800400,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "healthy"
+    },
+    {
+      "id": "unnecessary_work-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r05--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800410,
+          "scenario": "temporary",
+          "tool": "docs"
+        },
+        "relevance_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "relevance_filter",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r05--relevance_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800411,
+          "scenario": "temporary",
+          "tool": "docs"
+        }
+      },
+      "truth": "unnecessary_work"
+    },
+    {
+      "id": "selection_failure-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r05--base",
+          "inject": "none",
+          "mode": "wrong_filter",
+          "numeric_id": 800420,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r05--broad_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800421,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "selection_failure"
+    },
+    {
+      "id": "observation_scope_failure-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r05--base",
+          "inject": "none",
+          "mode": "blind",
+          "numeric_id": 800430,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter_same_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter_same_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r05--broad_filter_same_scope",
+          "inject": "none",
+          "mode": "blind_default",
+          "numeric_id": 800431,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "correct_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "correct_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r05--correct_scope",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800432,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "observation_scope_failure"
+    },
+    {
+      "id": "state_predicate_failure-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r05--base",
+          "inject": "none",
+          "mode": "poll",
+          "numeric_id": 800440,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        },
+        "content_scan": {
+          "diagnostic": true,
+          "diagnostic_role": "content_scan",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r05--content_scan",
+          "inject": "none",
+          "mode": "hash",
+          "numeric_id": 800442,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        },
+        "native_notification": {
+          "diagnostic": true,
+          "diagnostic_role": "native_notification",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r05--native_notification",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800441,
+          "scenario": "preserved_stat",
+          "tool": "docs"
+        }
+      },
+      "truth": "state_predicate_failure"
+    },
+    {
+      "id": "scheduling_failure-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "scheduling_failure",
+          "id": "scheduling_failure-r05--base",
+          "inject": "drop",
+          "mode": "relevant",
+          "numeric_id": 800450,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "scheduling_failure"
+    },
+    {
+      "id": "consumer_failure-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "consumer_failure",
+          "id": "consumer_failure-r05--base",
+          "inject": "fail",
+          "mode": "relevant",
+          "numeric_id": 800460,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "consumer_failure"
+    },
+    {
+      "id": "publication_failure-r05",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "publication_failure",
+          "id": "publication_failure-r05--base",
+          "inject": "publish_stale",
+          "mode": "relevant",
+          "numeric_id": 800470,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "publication_failure"
+    },
+    {
+      "id": "healthy-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "healthy",
+          "id": "healthy-r06--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800500,
+          "scenario": "same_size",
+          "tool": "tsc"
+        }
+      },
+      "truth": "healthy"
+    },
+    {
+      "id": "unnecessary_work-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r06--base",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800510,
+          "scenario": "temporary",
+          "tool": "docs"
+        },
+        "relevance_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "relevance_filter",
+          "diagnostic_truth": "unnecessary_work",
+          "id": "unnecessary_work-r06--relevance_filter",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800511,
+          "scenario": "temporary",
+          "tool": "docs"
+        }
+      },
+      "truth": "unnecessary_work"
+    },
+    {
+      "id": "selection_failure-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r06--base",
+          "inject": "none",
+          "mode": "wrong_filter",
+          "numeric_id": 800520,
+          "scenario": "same_size",
+          "tool": "tsc"
+        },
+        "broad_filter": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter",
+          "diagnostic_truth": "selection_failure",
+          "id": "selection_failure-r06--broad_filter",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800521,
+          "scenario": "same_size",
+          "tool": "tsc"
+        }
+      },
+      "truth": "selection_failure"
+    },
+    {
+      "id": "observation_scope_failure-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r06--base",
+          "inject": "none",
+          "mode": "blind",
+          "numeric_id": 800530,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "broad_filter_same_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "broad_filter_same_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r06--broad_filter_same_scope",
+          "inject": "none",
+          "mode": "blind_default",
+          "numeric_id": 800531,
+          "scenario": "same_size",
+          "tool": "docs"
+        },
+        "correct_scope": {
+          "diagnostic": true,
+          "diagnostic_role": "correct_scope",
+          "diagnostic_truth": "observation_scope_failure",
+          "id": "observation_scope_failure-r06--correct_scope",
+          "inject": "none",
+          "mode": "relevant",
+          "numeric_id": 800532,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "observation_scope_failure"
+    },
+    {
+      "id": "state_predicate_failure-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r06--base",
+          "inject": "none",
+          "mode": "poll",
+          "numeric_id": 800540,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        },
+        "content_scan": {
+          "diagnostic": true,
+          "diagnostic_role": "content_scan",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r06--content_scan",
+          "inject": "none",
+          "mode": "hash",
+          "numeric_id": 800542,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        },
+        "native_notification": {
+          "diagnostic": true,
+          "diagnostic_role": "native_notification",
+          "diagnostic_truth": "state_predicate_failure",
+          "id": "state_predicate_failure-r06--native_notification",
+          "inject": "none",
+          "mode": "default",
+          "numeric_id": 800541,
+          "scenario": "preserved_stat",
+          "tool": "tsc"
+        }
+      },
+      "truth": "state_predicate_failure"
+    },
+    {
+      "id": "scheduling_failure-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "scheduling_failure",
+          "id": "scheduling_failure-r06--base",
+          "inject": "drop",
+          "mode": "relevant",
+          "numeric_id": 800550,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "scheduling_failure"
+    },
+    {
+      "id": "consumer_failure-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "consumer_failure",
+          "id": "consumer_failure-r06--base",
+          "inject": "fail",
+          "mode": "relevant",
+          "numeric_id": 800560,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "consumer_failure"
+    },
+    {
+      "id": "publication_failure-r06",
+      "roles": {
+        "base": {
+          "diagnostic": true,
+          "diagnostic_role": "base",
+          "diagnostic_truth": "publication_failure",
+          "id": "publication_failure-r06--base",
+          "inject": "publish_stale",
+          "mode": "relevant",
+          "numeric_id": 800570,
+          "scenario": "same_size",
+          "tool": "docs"
+        }
+      },
+      "truth": "publication_failure"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "WatchDelta: End-to-End Qualification and Robust Diagnosis of Watch-Mode Development Workflows",
+  "artifact": "watchdelta",
+  "date": "2026-10-08",
+  "authors": [
+    {
+      "name": "Haoyi Zhang",
+      "orcid": "0009-0009-3693-786X",
+      "affiliation": "Xi'an Jiaotong-Liverpool University, Suzhou, China",
+      "email": "hyeliozhang@gmail.com"
+    },
+    {
+      "name": "Huaijin Ran",
+      "orcid": "0009-0009-2482-2344",
+      "affiliation": "Nanyang Technological University, Singapore, Singapore",
+      "email": "huaijin003@e.ntu.edu.sg"
+    },
+    {
+      "name": "Xunzhu Tang",
+      "orcid": "0000-0002-6377-0884",
+      "affiliation": "University of Luxembourg, Luxembourg, Luxembourg",
+      "email": "xunzhu.tang@uni.lu",
+      "corresponding": true,
+      "secondary_email": "realdanieltang@gmail.com"
+    }
+  ],
+  "public_repository": null,
+  "archival_doi": null,
+  "note": "The review bundle is local and has not been published or assigned a DOI."
+}

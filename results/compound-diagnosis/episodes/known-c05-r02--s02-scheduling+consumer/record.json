@@ -1,0 +1,81 @@
+{
+  "id": "known-c05-r02--s02-scheduling+consumer",
+  "numeric_id": 1000702,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "none",
+  "diagnostic": false,
+  "diagnosis_unit": "known-c05-r02",
+  "diagnosis_repairs": [
+    "scheduling",
+    "consumer"
+  ],
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 2141661825771,
+    "end_ns": 2141662242994,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 2141659773635,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "83cf0f35b9cf28c41576cbb709cd07e39124ed03edab41e76d46627159903f51"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "f4d389010865bc9dfd6d6f0c405a3d3313b238e1d157fad08d49c8877e4ed69f",
+    "projection": {
+      "index.html": "83cf0f35b9cf28c41576cbb709cd07e39124ed03edab41e76d46627159903f51"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "83cf0f35b9cf28c41576cbb709cd07e39124ed03edab41e76d46627159903f51"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": 101.310899,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.007200999999999791,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 8
+  },
+  "observation_ms": 1500.657165,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    2141660731887,
+    2143167664338
+  ],
+  "completion_observed": true,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

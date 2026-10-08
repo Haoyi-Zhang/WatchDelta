@@ -1,0 +1,69 @@
+{
+  "id": "main-r02-docs-poll-preserved_stat",
+  "numeric_id": 10207,
+  "tool": "docs",
+  "mode": "poll",
+  "scenario": "preserved_stat",
+  "replicate": 2,
+  "stratum": "metadata_boundary",
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1557079741343,
+    "end_ns": 1557079904428,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": true
+  },
+  "ready_ns": 1557078811859,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1}\n",
+    "stderr": "",
+    "source_sha256": "c9103f604697e3800b09fb1f2934cbf80a76856cf5c3871ee3dc427c0e415b6c",
+    "projection": {
+      "index.html": "41e50ce70c153697dbef6c468c5f8c8137a2b56268894f076fb829a00c8bf4ec"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 0,
+    "batches": 0,
+    "builds": 0,
+    "cpu_s": 0.004730000000000012,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 0
+  },
+  "observation_ms": 1500.450376,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completion_observed": false,
+  "worker_stderr": ""
+}

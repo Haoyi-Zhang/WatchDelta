@@ -1,0 +1,84 @@
+{
+  "id": "panel-h28--s03-selection+state-predicate+scheduling",
+  "numeric_id": 2002803,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "preserved_stat",
+  "inject": "publish_stale",
+  "diagnostic": false,
+  "diagnosis_unit": "panel-h28",
+  "diagnosis_repairs": [
+    "selection",
+    "state_predicate",
+    "scheduling"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1467827042798,
+    "end_ns": 1467828265786,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": true
+  },
+  "ready_ns": 1467825949699,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "d27f4a717a4c5474ce3d3fdad27e67feecc90bdc024aecebbbb61f24d5e5f614",
+    "projection": {
+      "index.html": "d3c407f3b5ced62c89b10afa23d34dc4ad1707f8b2fe0d9deab41a0b9c45f4d9"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.005137999999999865,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 48
+  },
+  "observation_ms": 1000.522231,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    1467826569626,
+    1468832071476
+  ],
+  "completion_observed": true,
+  "unpublished_projection": {
+    "index.html": "d3c407f3b5ced62c89b10afa23d34dc4ad1707f8b2fe0d9deab41a0b9c45f4d9"
+  },
+  "worker_stderr": "",
+  "unpublished_matches_clean": true
+}

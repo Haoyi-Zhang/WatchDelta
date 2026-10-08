@@ -1,0 +1,78 @@
+{
+  "id": "main-r05-tsc-poll-chunked",
+  "numeric_id": 10382,
+  "tool": "tsc",
+  "mode": "poll",
+  "scenario": "chunked",
+  "replicate": 5,
+  "stratum": "ordinary",
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1840598352014,
+    "end_ns": 1840718558791,
+    "writes": 2,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 1840596356741,
+  "initial_projection": {
+    "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+    "message.js": "73cfa8453e8340fb006c056dd37ef322d1c5bcd08e17c1d3c0cac09940d5d746"
+  },
+  "observed_projection": {
+    "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+    "message.js": "9fa283fb907fab9303826d83d4508386490ced03a68812ff641307df1131427d"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "source_sha256": "c399cb5c168af08f9aa05a5329a88caf15cabf95d0bd2c14d5d9071e478d8d51",
+    "projection": {
+      "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+      "message.js": "9fa283fb907fab9303826d83d4508386490ced03a68812ff641307df1131427d"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "tsc"
+    ]
+  },
+  "served_projection": {},
+  "served_matches_disk": null,
+  "runtime": {
+    "returncode": 0,
+    "stdout": "{\"message\":\"WD0000010382\"}",
+    "stderr": ""
+  },
+  "clean_runtime": {
+    "returncode": 0,
+    "stdout": "{\"message\":\"WD0000010382\"}",
+    "stderr": ""
+  },
+  "runtime_matches": true,
+  "stable_latency_ms": 453.968685,
+  "metrics": {
+    "accepted_events": 0,
+    "batches": 0,
+    "builds": 1,
+    "cpu_s": 0.04045700000000019,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 16
+  },
+  "observation_ms": 1500.392299,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completion_observed": true,
+  "worker_stderr": ""
+}

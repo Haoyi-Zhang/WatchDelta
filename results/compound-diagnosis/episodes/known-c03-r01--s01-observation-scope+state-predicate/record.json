@@ -1,0 +1,83 @@
+{
+  "id": "known-c03-r01--s01-observation-scope+state-predicate",
+  "numeric_id": 1000041,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "publish_stale",
+  "diagnostic": false,
+  "diagnosis_unit": "known-c03-r01",
+  "diagnosis_repairs": [
+    "observation_scope",
+    "state_predicate"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1812347984907,
+    "end_ns": 1812348495402,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 1812345718155,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "d3dbd20a2ada46bb90b2f20872b4bb54ea1dbae2deedff35d554a30162c91824",
+    "projection": {
+      "index.html": "79563ba7211db9275064ae3a887bd087c1bed95d315b76b2a4e668e14db22ce2"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.008828999999999976,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 80
+  },
+  "observation_ms": 1500.371355,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    1812346508153,
+    1813853786912
+  ],
+  "completion_observed": true,
+  "unpublished_projection": {
+    "index.html": "79563ba7211db9275064ae3a887bd087c1bed95d315b76b2a4e668e14db22ce2"
+  },
+  "worker_stderr": "",
+  "unpublished_matches_clean": true
+}

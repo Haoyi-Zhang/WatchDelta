@@ -1,0 +1,231 @@
+{
+  "id": "hypercorn-integration",
+  "created_utc": "2026-10-01T00:00:00Z",
+  "hypercorn": "0.18.0",
+  "settle_seconds": 2.35,
+  "question": "How does Hypercorn 0.18.0 real reload behave across content, atomic-replace, burst, preserved-mtime, and temporary-file edits?",
+  "mechanism_hypothesis": "The installed supervisor snapshots imported-module mtimes and checks mtime > previous at one-second intervals; preserved-mtime edits should remain stale.",
+  "classification": "A preserved-mtime stale endpoint is a mechanism boundary of this local version, not evidence of universal filesystem notification loss.",
+  "oracle": "A fresh interpreter reads and compiles the identical final app.py bytes directly with PYTHONDONTWRITEBYTECODE=1; it does not import from the measured directory or reuse __pycache__.",
+  "pilot_correction": "The excluded oracle-contamination pilot imported from the measured directory and exposed .pyc oracle contamination for restored-mtime same-size edits.",
+  "stop_rule": "24 fixed fresh-process episodes (6 scenarios x 4 repetitions), all outcomes retained.",
+  "script_sha256": "d72ec69bd6c62894e088a6ed567e3991f27dc8f6b428ece584375ee0391a2019",
+  "jobs": [
+    {
+      "id": "hypercorn2-r00-same_size",
+      "numeric_id": 91001,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "same_size",
+      "replicate": 0,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r00-inplace",
+      "numeric_id": 91002,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "inplace",
+      "replicate": 0,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r00-atomic",
+      "numeric_id": 91003,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "atomic",
+      "replicate": 0,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r00-burst",
+      "numeric_id": 91004,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "burst",
+      "replicate": 0,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r00-preserved_stat",
+      "numeric_id": 91005,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "preserved_stat",
+      "replicate": 0,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r00-temporary",
+      "numeric_id": 91006,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "temporary",
+      "replicate": 0,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r01-same_size",
+      "numeric_id": 91007,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "same_size",
+      "replicate": 1,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r01-inplace",
+      "numeric_id": 91008,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "inplace",
+      "replicate": 1,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r01-atomic",
+      "numeric_id": 91009,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "atomic",
+      "replicate": 1,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r01-burst",
+      "numeric_id": 91010,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "burst",
+      "replicate": 1,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r01-preserved_stat",
+      "numeric_id": 91011,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "preserved_stat",
+      "replicate": 1,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r01-temporary",
+      "numeric_id": 91012,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "temporary",
+      "replicate": 1,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r02-same_size",
+      "numeric_id": 91013,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "same_size",
+      "replicate": 2,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r02-inplace",
+      "numeric_id": 91014,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "inplace",
+      "replicate": 2,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r02-atomic",
+      "numeric_id": 91015,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "atomic",
+      "replicate": 2,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r02-burst",
+      "numeric_id": 91016,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "burst",
+      "replicate": 2,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r02-preserved_stat",
+      "numeric_id": 91017,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "preserved_stat",
+      "replicate": 2,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r02-temporary",
+      "numeric_id": 91018,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "temporary",
+      "replicate": 2,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r03-same_size",
+      "numeric_id": 91019,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "same_size",
+      "replicate": 3,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r03-inplace",
+      "numeric_id": 91020,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "inplace",
+      "replicate": 3,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r03-atomic",
+      "numeric_id": 91021,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "atomic",
+      "replicate": 3,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r03-burst",
+      "numeric_id": 91022,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "burst",
+      "replicate": 3,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r03-preserved_stat",
+      "numeric_id": 91023,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "preserved_stat",
+      "replicate": 3,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    },
+    {
+      "id": "hypercorn2-r03-temporary",
+      "numeric_id": 91024,
+      "pipeline": "hypercorn-0.18.0-reload",
+      "scenario": "temporary",
+      "replicate": 3,
+      "stratum": "integration-holdout",
+      "tool": "python-asgi"
+    }
+  ]
+}

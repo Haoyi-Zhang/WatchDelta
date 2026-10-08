@@ -1,0 +1,67 @@
+{
+  "scope": "Reproduction, integrity, structural paper, and retained-evidence checks.",
+  "test_suites": {
+    "pytest": {
+      "passed": 47,
+      "output": "...............................................                          [100%]\n47 passed in 15.14s"
+    },
+    "unittest": {
+      "passed": 47,
+      "status": "OK"
+    }
+  },
+  "analyzers": {
+    "analyze-primary.json": true,
+    "analyze-integrations.json": true,
+    "analyze-diagnostics.json": true,
+    "analyze-compound-scaling.json": true,
+    "analyze-panel.json": true
+  },
+  "diagnostic_panel": {
+    "actual_process_executions": 384,
+    "model_conformant_executions": 384,
+    "robust_single_substitutions": 1920,
+    "robust_substitutions_recovered": 1920,
+    "false_exact": 0,
+    "exact_panel_runs": 5,
+    "robust_panel_runs": 12,
+    "robust_panel_minimum_distance": 3,
+    "milp_optimal": true,
+    "mip_gap": 0.0
+  },
+  "completion_audit": {
+    "episodes_checked": 510,
+    "legacy_flags_present": 480,
+    "flag_disagreements": 0,
+    "other_schema_without_legacy_flag": 30,
+    "raw_records_modified": false,
+    "scope": "Uvicorn and Hypercorn use separate reload-record schemas; pilots and mechanism replays are not part of this main/diagnostic completion-field audit. Agreement does not make the legacy formula generally valid."
+  },
+  "references": {
+    "bibliography_entries": 67,
+    "unique_cited_keys": 67,
+    "errors": [],
+    "duplicates": {
+      "doi": {},
+      "title": {}
+    }
+  },
+  "paper": {
+    "pages": 12,
+    "main_content_pages": 10,
+    "reference_only_pages": 2,
+    "figures": 3,
+    "tables": 3,
+    "overfull_boxes": 0,
+    "fonts_embedded_and_subset": true,
+    "visually_inspected_pages": 12,
+    "pdf_sha256": "0070a9e856fe07623203e7f7b088b7cc355d42a0b72140784d4ec59994ff517e",
+    "clean_build_byte_identical": true,
+    "errors": []
+  },
+  "runtime_evidence": {
+    "actual_process_executions": 1300,
+    "versioned_mechanism_replays": 72,
+    "audited_execution_cases": 1372
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "recorded_utc": "2026-09-30T03:27:55.086791+00:00",
+  "note": "Controller parent environment; no corresponding override was set by the run launchers. Captured during the diagnostic phase, not retroactively claimed as a pre-main timestamp.",
+  "values": {
+    "TSC_WATCHFILE": null,
+    "TSC_WATCHDIRECTORY": null,
+    "TSC_NONPOLLING_WATCHER": null,
+    "TSC_WATCH_POLLINGINTERVAL_LOW": null,
+    "TSC_WATCH_POLLINGINTERVAL_MEDIUM": null,
+    "TSC_WATCH_POLLINGINTERVAL_HIGH": null,
+    "WATCHFILES_FORCE_POLLING": null,
+    "WATCHFILES_POLL_DELAY_MS": null,
+    "WATCHFILES_IGNORE_PERMISSION_DENIED": null
+  }
+}

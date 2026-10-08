@@ -1,0 +1,8 @@
+{
+  "name": "watchdelta-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pinned TypeScript runtime for local WatchDelta qualification; not a published npm package",
+  "engines": {"node": "22.16.0"},
+  "devDependencies": {"typescript": "5.8.3"}
+}

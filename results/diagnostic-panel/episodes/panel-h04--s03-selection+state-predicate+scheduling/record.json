@@ -1,0 +1,82 @@
+{
+  "id": "panel-h04--s03-selection+state-predicate+scheduling",
+  "numeric_id": 2000403,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "none",
+  "diagnostic": false,
+  "diagnosis_unit": "panel-h04",
+  "diagnosis_repairs": [
+    "selection",
+    "state_predicate",
+    "scheduling"
+  ],
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 772448193366,
+    "end_ns": 772448338324,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 772447080794,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "688ae1767d036fbe53de3c1a0a84d7bd4c6cbfe7cbd6a1df5defcaf53a0d60b6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "690a7d2e15733bba92b86182656b27605e30193c0ee7575d9a09d3b7ae2bbc99",
+    "projection": {
+      "index.html": "688ae1767d036fbe53de3c1a0a84d7bd4c6cbfe7cbd6a1df5defcaf53a0d60b6"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "688ae1767d036fbe53de3c1a0a84d7bd4c6cbfe7cbd6a1df5defcaf53a0d60b6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": 101.557497,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.004785999999999957,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 16
+  },
+  "observation_ms": 1000.308047,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    772447698963,
+    773451928361
+  ],
+  "completion_observed": true,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

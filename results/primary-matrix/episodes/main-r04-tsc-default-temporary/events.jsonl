@@ -1,0 +1,10 @@
+{"kind": "tool_log", "t_ns": 965767734091, "text": ""}
+{"kind": "tool_log", "t_ns": 965767815233, "text": "3:09:07 AM - Starting compilation in watch mode..."}
+{"kind": "build_start", "t_ns": 965767830065}
+{"kind": "tool_log", "t_ns": 965767837206, "text": ""}
+{"kind": "tool_log", "t_ns": 966158191095, "text": ""}
+{"kind": "tool_log", "t_ns": 966158273298, "text": "3:09:07 AM - Found 0 errors. Watching for file changes."}
+{"kind": "build_end", "returncode": 0, "t_ns": 966158283834}
+{"kind": "ready", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 1.7536649999999998, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 16}, "t_ns": 966158472598}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 1.753889, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 16}, "t_ns": 966158964418}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 1.754042, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 16}, "t_ns": 967724334358}

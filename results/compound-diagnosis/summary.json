@@ -1,0 +1,20 @@
+{
+  "units": 62,
+  "planned_units": 62,
+  "known_units": 50,
+  "unknown_units": 12,
+  "actual_process_executions": 206,
+  "known_exact": 50,
+  "known_truth_retained": 50,
+  "unknown_unmodeled": 12,
+  "false_exact": 0,
+  "unsupported_aliased": 0,
+  "noncomparable": 0,
+  "episodes_known_median": 4.0,
+  "episodes_known_min": 2,
+  "episodes_known_max": 5,
+  "repair_breadth_known_median": 5.0,
+  "fixed_panel_size": 6,
+  "modeled_observations": 194,
+  "completed_utc": "2026-10-05T02:10:37Z"
+}

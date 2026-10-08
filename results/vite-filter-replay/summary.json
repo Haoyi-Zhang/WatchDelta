@@ -1,0 +1,46 @@
+{
+  "classification": "versioned source-decision replay, not full Vite runtime reproduction",
+  "cases": 48,
+  "unchanged": 34,
+  "changed": 14,
+  "old_ignored_fixed_not": 12,
+  "old_not_fixed_ignored": 2,
+  "issue_case": {
+    "case": "issue-empty-false/configured-outdir",
+    "config": {
+      "id": "issue-empty-false",
+      "outDir": "dist",
+      "emptyOutDir": false
+    },
+    "target": "/tmp/watchdelta-vite/project/dist/styles.scss",
+    "oldIgnored": true,
+    "fixedIgnored": false,
+    "changed": true,
+    "oldPatterns": [
+      "/tmp/watchdelta-vite/project/node_modules/.vite/**",
+      "/tmp/watchdelta-vite/project/dist/**"
+    ],
+    "fixedPatterns": [
+      "/tmp/watchdelta-vite/project/node_modules/.vite/**"
+    ],
+    "resolvedOutDirs": [
+      "/tmp/watchdelta-vite/project/dist"
+    ],
+    "resolvedEmptyOutDir": false
+  },
+  "source": {
+    "old": {
+      "tag": "v5.2.4",
+      "path": "packages/vite/src/node/watch.ts",
+      "github_blob_sha": "9c9972bdd3a4710650b0a7ed421899e0ddb76b1e",
+      "sha256": "ccce548ac88c3112a9566daa275b751aa7b6df6054d340f6a0a75aa613a65c65"
+    },
+    "fixed": {
+      "tag": "v5.2.10",
+      "path": "packages/vite/src/node/watch.ts",
+      "github_blob_sha": "d8eb128f1613a52965526526497ea8ae3656c38c",
+      "sha256": "eb092125538288d53473ad7d88beaaf25002883be19e4b44231706bf9c069e86"
+    }
+  },
+  "node": "v22.16.0"
+}

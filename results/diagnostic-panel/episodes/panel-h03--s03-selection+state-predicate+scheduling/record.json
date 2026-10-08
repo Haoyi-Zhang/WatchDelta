@@ -1,0 +1,84 @@
+{
+  "id": "panel-h03--s03-selection+state-predicate+scheduling",
+  "numeric_id": 2000303,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "publish_stale",
+  "diagnostic": false,
+  "diagnosis_unit": "panel-h03",
+  "diagnosis_repairs": [
+    "selection",
+    "state_predicate",
+    "scheduling"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 743080237587,
+    "end_ns": 743080421102,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 743079022626,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "1411436f3a46a4fdab3275a1c3ff2ba57ec1138b747ff3190df58f5a3e1320e0",
+    "projection": {
+      "index.html": "ab05e9b055d97db3ab1d541000cf23983afdd40698f86164039eb15f5e30d8f7"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.006347999999999909,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 40
+  },
+  "observation_ms": 1000.707126,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    743079683765,
+    744084827081
+  ],
+  "completion_observed": true,
+  "unpublished_projection": {
+    "index.html": "ab05e9b055d97db3ab1d541000cf23983afdd40698f86164039eb15f5e30d8f7"
+  },
+  "worker_stderr": "",
+  "unpublished_matches_clean": true
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "exact merged MkDocs _build_loop replay at accepted-callback boundary; not full MkDocs runtime",
+  "episodes": 24,
+  "all_expected": true,
+  "source_sha256": "7dac868618cfb96d0aaad8bf79468892b6e2ea24674d4479bfdc5797c06c49d7",
+  "burst_events": 360,
+  "burst_builds": 9
+}

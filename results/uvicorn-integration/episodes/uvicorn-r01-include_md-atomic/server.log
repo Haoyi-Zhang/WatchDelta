@@ -1,0 +1,22 @@
+INFO:     Will watch for changes in these directories: ['/mnt/data/watchdelta_work/watchdelta/artifact/results/uvicorn-integration/episodes/uvicorn-r01-include_md-atomic/work/src']
+WATCHDELTA_RENDER_COMPLETE
+INFO:     Uvicorn running on http://127.0.0.1:50849 (Press CTRL+C to quit)
+INFO:     Started reloader process [23274] using WatchFiles
+WATCHDELTA_RENDER_COMPLETE
+INFO:     Started server process [23286]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'src/index.md'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [23286]
+WATCHDELTA_RENDER_COMPLETE
+INFO:     Started server process [23306]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [23306]
+INFO:     Stopping reloader process [23274]

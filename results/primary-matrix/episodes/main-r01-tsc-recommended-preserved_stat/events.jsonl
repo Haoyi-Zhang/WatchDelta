@@ -1,0 +1,17 @@
+{"kind": "tool_log", "t_ns": 716288987855, "text": ""}
+{"kind": "tool_log", "t_ns": 716289065512, "text": "3:04:57 AM - Starting compilation in watch mode..."}
+{"kind": "build_start", "t_ns": 716289078772}
+{"kind": "tool_log", "t_ns": 716289086183, "text": ""}
+{"kind": "tool_log", "t_ns": 716638649445, "text": ""}
+{"kind": "tool_log", "t_ns": 716638721934, "text": "3:04:58 AM - Found 0 errors. Watching for file changes."}
+{"kind": "build_end", "returncode": 0, "t_ns": 716638739340}
+{"kind": "ready", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 1.5497459999999998, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 16}, "t_ns": 716638998681}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 1.5499839999999998, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 16}, "t_ns": 716639574905}
+{"kind": "tool_log", "t_ns": 716890995376, "text": ""}
+{"kind": "tool_log", "t_ns": 716891061536, "text": "3:04:58 AM - File change detected. Starting incremental compilation..."}
+{"kind": "build_start", "t_ns": 716891073223}
+{"kind": "tool_log", "t_ns": 716891080064, "text": ""}
+{"kind": "tool_log", "t_ns": 716905974013, "text": ""}
+{"kind": "tool_log", "t_ns": 716906025490, "text": "3:04:58 AM - Found 0 errors. Watching for file changes."}
+{"kind": "build_end", "returncode": 0, "t_ns": 716906037188}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 0, "builds": 2, "cpu_s": 1.5803949999999998, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 32}, "t_ns": 718140866001}

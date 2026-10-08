@@ -1,0 +1,232 @@
+{
+  "id": "sensitivity",
+  "created_utc": "2026-09-30T03:02:33.713388+00:00",
+  "scope": "Local Linux overlay; real tsc watch and watchfiles + markdown-it-py; no MkDocs/Vite runtime claim",
+  "settle_seconds": 1.5,
+  "sampler_seconds": 0.02,
+  "scan_interval_seconds": 0.1,
+  "repetitions": 3,
+  "random_seed": 290926,
+  "oracle": "Exact relative output path set and SHA-256 bytes; identity normalization; fresh one-shot build of final copied sources",
+  "latency": "first sample in final matching suffix, lower bounded by edit completion; not defined for no-op controls or stale outcomes",
+  "noise": "build attempts in output-neutral temporary-file episodes; extra builds during relevant bursts are not called unnecessary",
+  "stop_rule": "fixed job list; infrastructure failures retained; no outcome-adaptive repetition",
+  "pilot_disclosure": "The nine pilot observations were inspected before this main protocol was frozen. Main results are new executions. The size-changing inplace replay was made distinct from same_size before main freeze.",
+  "strata": {
+    "ordinary": [
+      "inplace",
+      "atomic",
+      "burst",
+      "newdir",
+      "temporary",
+      "same_size",
+      "chunked"
+    ],
+    "metadata_boundary": [
+      "preserved_stat"
+    ]
+  },
+  "inference": "Mutation checks of attribution, not observed bug rates. Wrong filter and dropped callback/failing build are deliberately introduced.",
+  "hypothesis": "Native notification and existing relevance filters may suffice for ordinary edits. Metadata polling may miss restored-stat writes. Content rescan is an established coverage/cost control, not a novel watcher.",
+  "provenance": "This local alternative follows unsuccessful MkDocs/Vite dependency retrieval. No historical upstream case is counted as locally replayed.",
+  "jobs": [
+    {
+      "id": "sens-r00-docs-wrong_filter-none",
+      "numeric_id": 50000,
+      "tool": "docs",
+      "mode": "wrong_filter",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 0,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r00-docs-relevant-drop",
+      "numeric_id": 50001,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "drop",
+      "scenario": "inplace",
+      "replicate": 0,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r00-docs-relevant-fail",
+      "numeric_id": 50002,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "fail",
+      "scenario": "inplace",
+      "replicate": 0,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r00-docs-relevant-none",
+      "numeric_id": 50003,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 0,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r00-tsc-wrong_filter-none",
+      "numeric_id": 50004,
+      "tool": "tsc",
+      "mode": "wrong_filter",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 0,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r00-tsc-default-none",
+      "numeric_id": 50005,
+      "tool": "tsc",
+      "mode": "default",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 0,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r01-docs-wrong_filter-none",
+      "numeric_id": 50006,
+      "tool": "docs",
+      "mode": "wrong_filter",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 1,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r01-docs-relevant-drop",
+      "numeric_id": 50007,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "drop",
+      "scenario": "inplace",
+      "replicate": 1,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r01-docs-relevant-fail",
+      "numeric_id": 50008,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "fail",
+      "scenario": "inplace",
+      "replicate": 1,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r01-docs-relevant-none",
+      "numeric_id": 50009,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 1,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r01-tsc-wrong_filter-none",
+      "numeric_id": 50010,
+      "tool": "tsc",
+      "mode": "wrong_filter",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 1,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r01-tsc-default-none",
+      "numeric_id": 50011,
+      "tool": "tsc",
+      "mode": "default",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 1,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r02-docs-wrong_filter-none",
+      "numeric_id": 50012,
+      "tool": "docs",
+      "mode": "wrong_filter",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 2,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r02-docs-relevant-drop",
+      "numeric_id": 50013,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "drop",
+      "scenario": "inplace",
+      "replicate": 2,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r02-docs-relevant-fail",
+      "numeric_id": 50014,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "fail",
+      "scenario": "inplace",
+      "replicate": 2,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r02-docs-relevant-none",
+      "numeric_id": 50015,
+      "tool": "docs",
+      "mode": "relevant",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 2,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r02-tsc-wrong_filter-none",
+      "numeric_id": 50016,
+      "tool": "tsc",
+      "mode": "wrong_filter",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 2,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    },
+    {
+      "id": "sens-r02-tsc-default-none",
+      "numeric_id": 50017,
+      "tool": "tsc",
+      "mode": "default",
+      "inject": "none",
+      "scenario": "inplace",
+      "replicate": 2,
+      "stratum": "sensitivity",
+      "diagnostic": true
+    }
+  ]
+}

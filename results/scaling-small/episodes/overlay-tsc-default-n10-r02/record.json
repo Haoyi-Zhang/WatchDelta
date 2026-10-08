@@ -1,0 +1,111 @@
+{
+  "id": "overlay-tsc-default-n10-r02",
+  "numeric_id": 900001,
+  "filesystem": "overlay",
+  "tool": "tsc",
+  "mode": "default",
+  "scenario": "same_size",
+  "inject": "none",
+  "diagnostic": false,
+  "file_count": 10,
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 897124129496,
+    "end_ns": 897124227483,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 897120303119,
+  "initial_projection": {
+    "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+    "message.js": "73cfa8453e8340fb006c056dd37ef322d1c5bcd08e17c1d3c0cac09940d5d746",
+    "modules/module_0000.js": "d8b16214f994d16aebbb9138b362db9c596f1efdebbb07334e6c74eebb1b81ae",
+    "modules/module_0001.js": "5a5082f520ce8976b63781a73dc19732313526b6b847478fae4b59de7b8d4312",
+    "modules/module_0002.js": "f0e8713680f2f749d4691a0fb5ef7858f7ef8cb7111b56a83f845dd6ba97f0e9",
+    "modules/module_0003.js": "2a2b704fc98a2e1e5f4e334e1067d87d169ce9baaf8cd322dab7ee7680f946cc",
+    "modules/module_0004.js": "37b07907e361cf659b609bcc540c749159782328616df40fef9bd5d287089f18",
+    "modules/module_0005.js": "9313be923710dcec0adfb690dddd98f017f2bc828b68ff4069363cb5bfe9e515",
+    "modules/module_0006.js": "c3fa5f123aff829a119d3a2fa341c3516fa00e2e1c56986b04ba8d0263a15e2a",
+    "modules/module_0007.js": "dc2fb1b193de4f670d3de72b728c6176ff55df62e9b999b9390715500fab7640"
+  },
+  "observed_projection": {
+    "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+    "message.js": "24a996e9a1591b50167ab28b89968aa33f566e7262acf1f0b8fa783822375bde",
+    "modules/module_0000.js": "d8b16214f994d16aebbb9138b362db9c596f1efdebbb07334e6c74eebb1b81ae",
+    "modules/module_0001.js": "5a5082f520ce8976b63781a73dc19732313526b6b847478fae4b59de7b8d4312",
+    "modules/module_0002.js": "f0e8713680f2f749d4691a0fb5ef7858f7ef8cb7111b56a83f845dd6ba97f0e9",
+    "modules/module_0003.js": "2a2b704fc98a2e1e5f4e334e1067d87d169ce9baaf8cd322dab7ee7680f946cc",
+    "modules/module_0004.js": "37b07907e361cf659b609bcc540c749159782328616df40fef9bd5d287089f18",
+    "modules/module_0005.js": "9313be923710dcec0adfb690dddd98f017f2bc828b68ff4069363cb5bfe9e515",
+    "modules/module_0006.js": "c3fa5f123aff829a119d3a2fa341c3516fa00e2e1c56986b04ba8d0263a15e2a",
+    "modules/module_0007.js": "dc2fb1b193de4f670d3de72b728c6176ff55df62e9b999b9390715500fab7640"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "source_sha256": "95fafb19977648d560542591052586041caa485e23efc6b9d3156088054248a7",
+    "projection": {
+      "index.js": "cdc2b26adeb65b30aebb659b49e05c4d549fc038f5e71aeb27d4dae6188fb6ea",
+      "message.js": "24a996e9a1591b50167ab28b89968aa33f566e7262acf1f0b8fa783822375bde",
+      "modules/module_0000.js": "d8b16214f994d16aebbb9138b362db9c596f1efdebbb07334e6c74eebb1b81ae",
+      "modules/module_0001.js": "5a5082f520ce8976b63781a73dc19732313526b6b847478fae4b59de7b8d4312",
+      "modules/module_0002.js": "f0e8713680f2f749d4691a0fb5ef7858f7ef8cb7111b56a83f845dd6ba97f0e9",
+      "modules/module_0003.js": "2a2b704fc98a2e1e5f4e334e1067d87d169ce9baaf8cd322dab7ee7680f946cc",
+      "modules/module_0004.js": "37b07907e361cf659b609bcc540c749159782328616df40fef9bd5d287089f18",
+      "modules/module_0005.js": "9313be923710dcec0adfb690dddd98f017f2bc828b68ff4069363cb5bfe9e515",
+      "modules/module_0006.js": "c3fa5f123aff829a119d3a2fa341c3516fa00e2e1c56986b04ba8d0263a15e2a",
+      "modules/module_0007.js": "dc2fb1b193de4f670d3de72b728c6176ff55df62e9b999b9390715500fab7640"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "tsc"
+    ]
+  },
+  "served_projection": {},
+  "served_matches_disk": null,
+  "runtime": {
+    "returncode": 0,
+    "stdout": "{\"message\":\"WD0000900001\"}",
+    "stderr": ""
+  },
+  "clean_runtime": {
+    "returncode": 0,
+    "stdout": "{\"message\":\"WD0000900001\"}",
+    "stderr": ""
+  },
+  "runtime_matches": true,
+  "stable_latency_ms": 264.59505,
+  "metrics": {
+    "accepted_events": 0,
+    "batches": 0,
+    "builds": 1,
+    "cpu_s": 0.03044900000000017,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 16
+  },
+  "observation_ms": 2000.702957,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    897121424274,
+    899125180575
+  ],
+  "completion_observed": true,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

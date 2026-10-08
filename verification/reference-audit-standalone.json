@@ -1,0 +1,19 @@
+{
+  "all_citations_resolved": true,
+  "all_entries_cited": true,
+  "audit_csv_sha256": "0bd47d9e05e03a3b66588c228b771a457e87665ce2699c63b25a23dcf5a2d9e8",
+  "audit_key_set_matches": true,
+  "audit_md_sha256": "fe3857dd1c1aaecf0904fc30f8a650f96831c2bf7ee11a30c73f9fdd3477a3bc",
+  "audit_rows": 67,
+  "bibliography_entries": 67,
+  "bibliography_sha256": "ed0e427a6d21987a3b4e1f010c5bdd6e7283cc8749903c9c7635fed1db435481",
+  "duplicate_dois": {},
+  "duplicate_titles": {},
+  "errors": [],
+  "metadata_fields_match_ledger": true,
+  "paper": null,
+  "paper_artifact_mirrors_match": null,
+  "paper_bibliography_sha256": "ed0e427a6d21987a3b4e1f010c5bdd6e7283cc8749903c9c7635fed1db435481",
+  "source_mode": "retained-paper-snapshot",
+  "unique_cited_keys": 67
+}

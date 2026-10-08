@@ -1,0 +1,136 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "node": "v22.16.0",
+  "typescript": "Version 5.8.3",
+  "packages": {
+    "watchfiles": "1.2.0",
+    "markdown-it-py": "4.2.0",
+    "mdurl": "0.1.2"
+  },
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "cpus": 5,
+  "filesystem": "overlay",
+  "clock": "CLOCK_MONOTONIC (nanoseconds)",
+  "cwd_placeholder": "<artifact>",
+  "utc": "2026-10-08T06:34:15Z",
+  "panel_synthesis": {
+    "exact": {
+      "panel": [
+        [],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ]
+      ],
+      "max_errors": 0,
+      "required_distance": 1,
+      "minimum_distance": 1,
+      "hypothesis_count": 32,
+      "pair_count": 496,
+      "selected_count": 5,
+      "repair_breadth": 14,
+      "solver": "scipy.optimize.milp/HiGHS",
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal); Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mip_gap": 0.0,
+      "optimal": true
+    },
+    "robust": {
+      "panel": [
+        [],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "observation_scope",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "consumer"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "publication"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "scheduling",
+          "consumer"
+        ],
+        [
+          "selection",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ],
+        [
+          "observation_scope",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ]
+      ],
+      "max_errors": 1,
+      "required_distance": 3,
+      "minimum_distance": 3,
+      "hypothesis_count": 32,
+      "pair_count": 496,
+      "selected_count": 12,
+      "repair_breadth": 41,
+      "solver": "scipy.optimize.milp/HiGHS",
+      "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal); Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mip_gap": 0.0,
+      "optimal": true
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "known-c12-r01--s03-state-predicate+scheduling",
+  "numeric_id": 1000223,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "preserved_stat",
+  "inject": "none",
+  "diagnostic": false,
+  "diagnosis_unit": "known-c12-r01",
+  "diagnosis_repairs": [
+    "state_predicate",
+    "scheduling"
+  ],
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1905387222848,
+    "end_ns": 1905387546669,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": true
+  },
+  "ready_ns": 1905386269340,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "fbf4706faf25bf9f321c32ebdcb3424a3a25beefbb1e8da5ee09c08ecbcb4489"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "55fc759bfb0adf56679a3831c71098bee557b72e12fb6d6c9f7ce7c0399f070c",
+    "projection": {
+      "index.html": "fbf4706faf25bf9f321c32ebdcb3424a3a25beefbb1e8da5ee09c08ecbcb4489"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "fbf4706faf25bf9f321c32ebdcb3424a3a25beefbb1e8da5ee09c08ecbcb4489"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": 100.996432,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.007731000000000154,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 16
+  },
+  "observation_ms": 1500.999245,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    1905386804271,
+    1906893806076
+  ],
+  "completion_observed": true,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

@@ -1,0 +1,124 @@
+{
+  "id": "uvicorn-integration",
+  "created_utc": "2026-09-30T03:08:37.845357+00:00",
+  "uvicorn": "0.48.0",
+  "settle_seconds": 1.5,
+  "question": "Does the actual Uvicorn reload CLI honor the documentation dependency only after explicit Markdown inclusion, while preserving atomic saves and a temporary-file control?",
+  "classification": "Default excludes .md by configuration; any stale default result is a deliberate dependency/configuration mismatch, not a newly discovered Uvicorn bug.",
+  "stop_rule": "12 fixed sequential jobs, all outcomes retained. This is a post-main-freeze integration exercise, not an industrial deployment or a third member of the main matrix.",
+  "script_sha256": "a36190eb380cb89256181b6fad5b2511e13c79b7d5bcb117ec47be5d99b1f4d5",
+  "jobs": [
+    {
+      "id": "uvicorn-r00-default-same_size",
+      "mode": "default",
+      "scenario": "same_size",
+      "replicate": 0,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r00-include_md-same_size",
+      "mode": "include_md",
+      "scenario": "same_size",
+      "replicate": 0,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r00-include_md-atomic",
+      "mode": "include_md",
+      "scenario": "atomic",
+      "replicate": 0,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r00-include_md-temporary",
+      "mode": "include_md",
+      "scenario": "temporary",
+      "replicate": 0,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r01-default-same_size",
+      "mode": "default",
+      "scenario": "same_size",
+      "replicate": 1,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r01-include_md-same_size",
+      "mode": "include_md",
+      "scenario": "same_size",
+      "replicate": 1,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r01-include_md-atomic",
+      "mode": "include_md",
+      "scenario": "atomic",
+      "replicate": 1,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r01-include_md-temporary",
+      "mode": "include_md",
+      "scenario": "temporary",
+      "replicate": 1,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r02-default-same_size",
+      "mode": "default",
+      "scenario": "same_size",
+      "replicate": 2,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r02-include_md-same_size",
+      "mode": "include_md",
+      "scenario": "same_size",
+      "replicate": 2,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r02-include_md-atomic",
+      "mode": "include_md",
+      "scenario": "atomic",
+      "replicate": 2,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    },
+    {
+      "id": "uvicorn-r02-include_md-temporary",
+      "mode": "include_md",
+      "scenario": "temporary",
+      "replicate": 2,
+      "stratum": "integration",
+      "tool": "docs",
+      "pipeline": "uvicorn"
+    }
+  ],
+  "runtime_selection": "Before execution, explicitly selected asyncio, h11, and no WebSocket protocol to avoid optional installed runtime backends.",
+  "last_preexecution_revision_utc": "2026-09-30T03:27:55.087165+00:00",
+  "readiness": "Initial successful HTTP response AND actual reloader process inotify fdinfo registration matching source-root inode. Linux-only, checked before measured edit.",
+  "snapshot_check": "Before execution, added explicit copied-output versus endpoint-projection consistency field; no change to the scenarios or outcomes."
+}

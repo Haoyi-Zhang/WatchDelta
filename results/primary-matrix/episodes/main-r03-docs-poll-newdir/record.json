@@ -1,0 +1,72 @@
+{
+  "id": "main-r03-docs-poll-newdir",
+  "numeric_id": 10275,
+  "tool": "docs",
+  "mode": "poll",
+  "scenario": "newdir",
+  "replicate": 3,
+  "stratum": "ordinary",
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1050302943657,
+    "end_ns": 1050303134464,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 1050301844838,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "feature/card.html": "47a0153157b2283332dcd0f244daea0642e2da9c8e94d3de9adea2be07cb0b5e",
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 94, \"source_files\": 2}\n",
+    "stderr": "",
+    "source_sha256": "52424c83c9b7675130b5342391dfa5179755631d7fc394828bdaadae196cc7c9",
+    "projection": {
+      "feature/card.html": "47a0153157b2283332dcd0f244daea0642e2da9c8e94d3de9adea2be07cb0b5e",
+      "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "feature/card.html": "47a0153157b2283332dcd0f244daea0642e2da9c8e94d3de9adea2be07cb0b5e",
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": 101.192892,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.0050800000000000844,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 32
+  },
+  "observation_ms": 1500.437775,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completion_observed": true,
+  "worker_stderr": ""
+}

@@ -1,0 +1,639 @@
+{
+  "fixed_panel": [
+    [
+      "observation_scope",
+      "state_predicate"
+    ],
+    [
+      "selection",
+      "observation_scope",
+      "scheduling"
+    ],
+    [
+      "selection",
+      "state_predicate",
+      "scheduling",
+      "consumer"
+    ],
+    [
+      "selection",
+      "observation_scope",
+      "consumer"
+    ],
+    [
+      "state_predicate",
+      "scheduling"
+    ],
+    [
+      "observation_scope",
+      "scheduling",
+      "consumer"
+    ]
+  ],
+  "fixed_panel_size": 6,
+  "hypothesis_count": 32,
+  "id": "compound-diagnosis",
+  "known_boundaries": [
+    "selection",
+    "observation_scope",
+    "state_predicate",
+    "scheduling",
+    "consumer",
+    "publication"
+  ],
+  "max_steps": 8,
+  "planner": "minimax-candidate-set",
+  "repetitions": 2,
+  "settle_seconds": 1.5,
+  "units": [
+    {
+      "id": "known-c01-r01",
+      "numeric_base": 1000000,
+      "supported": true,
+      "truth": [
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c02-r01",
+      "numeric_base": 1000020,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c03-r01",
+      "numeric_base": 1000040,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c04-r01",
+      "numeric_base": 1000060,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "known-c05-r01",
+      "numeric_base": 1000080,
+      "supported": true,
+      "truth": [
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c06-r01",
+      "numeric_base": 1000100,
+      "supported": true,
+      "truth": [
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c07-r01",
+      "numeric_base": 1000120,
+      "supported": true,
+      "truth": [
+        "selection",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c08-r01",
+      "numeric_base": 1000140,
+      "supported": true,
+      "truth": [
+        "selection",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c09-r01",
+      "numeric_base": 1000160,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "known-c10-r01",
+      "numeric_base": 1000180,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c11-r01",
+      "numeric_base": 1000200,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c12-r01",
+      "numeric_base": 1000220,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "known-c13-r01",
+      "numeric_base": 1000240,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c14-r01",
+      "numeric_base": 1000260,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c15-r01",
+      "numeric_base": 1000280,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c16-r01",
+      "numeric_base": 1000300,
+      "supported": true,
+      "truth": [
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c17-r01",
+      "numeric_base": 1000320,
+      "supported": true,
+      "truth": [
+        "selection",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c18-r01",
+      "numeric_base": 1000340,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c19-r01",
+      "numeric_base": 1000360,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c20-r01",
+      "numeric_base": 1000380,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c21-r01",
+      "numeric_base": 1000400,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c22-r01",
+      "numeric_base": 1000420,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c23-r01",
+      "numeric_base": 1000440,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c24-r01",
+      "numeric_base": 1000460,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c25-r01",
+      "numeric_base": 1000480,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "unknown-c01-r01",
+      "numeric_base": 1000500,
+      "supported": false,
+      "truth": [
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c02-r01",
+      "numeric_base": 1000520,
+      "supported": false,
+      "truth": [
+        "selection",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c03-r01",
+      "numeric_base": 1000540,
+      "supported": false,
+      "truth": [
+        "observation_scope",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c04-r01",
+      "numeric_base": 1000560,
+      "supported": false,
+      "truth": [
+        "state_predicate",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c05-r01",
+      "numeric_base": 1000580,
+      "supported": false,
+      "truth": [
+        "scheduling",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c06-r01",
+      "numeric_base": 1000600,
+      "supported": false,
+      "truth": [
+        "consumer",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "known-c01-r02",
+      "numeric_base": 1000620,
+      "supported": true,
+      "truth": [
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c02-r02",
+      "numeric_base": 1000640,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c03-r02",
+      "numeric_base": 1000660,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c04-r02",
+      "numeric_base": 1000680,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "known-c05-r02",
+      "numeric_base": 1000700,
+      "supported": true,
+      "truth": [
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c06-r02",
+      "numeric_base": 1000720,
+      "supported": true,
+      "truth": [
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c07-r02",
+      "numeric_base": 1000740,
+      "supported": true,
+      "truth": [
+        "selection",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c08-r02",
+      "numeric_base": 1000760,
+      "supported": true,
+      "truth": [
+        "selection",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c09-r02",
+      "numeric_base": 1000780,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "known-c10-r02",
+      "numeric_base": 1000800,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c11-r02",
+      "numeric_base": 1000820,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c12-r02",
+      "numeric_base": 1000840,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "known-c13-r02",
+      "numeric_base": 1000860,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c14-r02",
+      "numeric_base": 1000880,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c15-r02",
+      "numeric_base": 1000900,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c16-r02",
+      "numeric_base": 1000920,
+      "supported": true,
+      "truth": [
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c17-r02",
+      "numeric_base": 1000940,
+      "supported": true,
+      "truth": [
+        "selection",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c18-r02",
+      "numeric_base": 1000960,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c19-r02",
+      "numeric_base": 1000980,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c20-r02",
+      "numeric_base": 1001000,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c21-r02",
+      "numeric_base": 1001020,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "known-c22-r02",
+      "numeric_base": 1001040,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c23-r02",
+      "numeric_base": 1001060,
+      "supported": true,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c24-r02",
+      "numeric_base": 1001080,
+      "supported": true,
+      "truth": [
+        "selection",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "known-c25-r02",
+      "numeric_base": 1001100,
+      "supported": true,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "unknown-c01-r02",
+      "numeric_base": 1001120,
+      "supported": false,
+      "truth": [
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c02-r02",
+      "numeric_base": 1001140,
+      "supported": false,
+      "truth": [
+        "selection",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c03-r02",
+      "numeric_base": 1001160,
+      "supported": false,
+      "truth": [
+        "observation_scope",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c04-r02",
+      "numeric_base": 1001180,
+      "supported": false,
+      "truth": [
+        "state_predicate",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c05-r02",
+      "numeric_base": 1001200,
+      "supported": false,
+      "truth": [
+        "scheduling",
+        "post_build_corruption"
+      ]
+    },
+    {
+      "id": "unknown-c06-r02",
+      "numeric_base": 1001220,
+      "supported": false,
+      "truth": [
+        "consumer",
+        "post_build_corruption"
+      ]
+    }
+  ],
+  "unknown_fault": "post_build_corruption"
+}

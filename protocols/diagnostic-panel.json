@@ -1,0 +1,396 @@
+{
+  "exact_panel": {
+    "hypothesis_count": 32,
+    "max_errors": 0,
+    "minimum_distance": 1,
+    "mip_gap": 0.0,
+    "optimal": true,
+    "pair_count": 496,
+    "panel": [
+      [],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ]
+    ],
+    "repair_breadth": 14,
+    "required_distance": 1,
+    "selected_count": 5,
+    "solver": "scipy.optimize.milp/HiGHS",
+    "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal); Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "hypothesis_count": 32,
+  "id": "distance-panel-study",
+  "robust_panel": {
+    "hypothesis_count": 32,
+    "max_errors": 1,
+    "minimum_distance": 3,
+    "mip_gap": 0.0,
+    "optimal": true,
+    "pair_count": 496,
+    "panel": [
+      [],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "observation_scope",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "consumer"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "publication"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "scheduling",
+        "consumer"
+      ],
+      [
+        "selection",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ],
+      [
+        "observation_scope",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ]
+    ],
+    "repair_breadth": 41,
+    "required_distance": 3,
+    "selected_count": 12,
+    "solver": "scipy.optimize.milp/HiGHS",
+    "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal); Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "settle_seconds": 1.0,
+  "signature_alphabet": [
+    "matched",
+    "upstream_silence",
+    "scheduling_failure",
+    "consumer_failure",
+    "publication_failure",
+    "unknown_stale"
+  ],
+  "triple_repetition_runs": 15,
+  "units": [
+    {
+      "id": "panel-h00",
+      "numeric_base": 2000000,
+      "truth": []
+    },
+    {
+      "id": "panel-h01",
+      "numeric_base": 2000100,
+      "truth": [
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h02",
+      "numeric_base": 2000200,
+      "truth": [
+        "observation_scope"
+      ]
+    },
+    {
+      "id": "panel-h03",
+      "numeric_base": 2000300,
+      "truth": [
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h04",
+      "numeric_base": 2000400,
+      "truth": [
+        "scheduling"
+      ]
+    },
+    {
+      "id": "panel-h05",
+      "numeric_base": 2000500,
+      "truth": [
+        "selection"
+      ]
+    },
+    {
+      "id": "panel-h06",
+      "numeric_base": 2000600,
+      "truth": [
+        "state_predicate"
+      ]
+    },
+    {
+      "id": "panel-h07",
+      "numeric_base": 2000700,
+      "truth": [
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h08",
+      "numeric_base": 2000800,
+      "truth": [
+        "observation_scope",
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h09",
+      "numeric_base": 2000900,
+      "truth": [
+        "observation_scope",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h10",
+      "numeric_base": 2001000,
+      "truth": [
+        "observation_scope",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "panel-h11",
+      "numeric_base": 2001100,
+      "truth": [
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h12",
+      "numeric_base": 2001200,
+      "truth": [
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h13",
+      "numeric_base": 2001300,
+      "truth": [
+        "selection",
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h14",
+      "numeric_base": 2001400,
+      "truth": [
+        "selection",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h15",
+      "numeric_base": 2001500,
+      "truth": [
+        "selection",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "panel-h16",
+      "numeric_base": 2001600,
+      "truth": [
+        "state_predicate",
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h17",
+      "numeric_base": 2001700,
+      "truth": [
+        "state_predicate",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h18",
+      "numeric_base": 2001800,
+      "truth": [
+        "state_predicate",
+        "scheduling"
+      ]
+    },
+    {
+      "id": "panel-h19",
+      "numeric_base": 2001900,
+      "truth": [
+        "observation_scope",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h20",
+      "numeric_base": 2002000,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h21",
+      "numeric_base": 2002100,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h22",
+      "numeric_base": 2002200,
+      "truth": [
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h23",
+      "numeric_base": 2002300,
+      "truth": [
+        "selection",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h24",
+      "numeric_base": 2002400,
+      "truth": [
+        "selection",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h25",
+      "numeric_base": 2002500,
+      "truth": [
+        "selection",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h26",
+      "numeric_base": 2002600,
+      "truth": [
+        "state_predicate",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h27",
+      "numeric_base": 2002700,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ]
+    },
+    {
+      "id": "panel-h28",
+      "numeric_base": 2002800,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h29",
+      "numeric_base": 2002900,
+      "truth": [
+        "observation_scope",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h30",
+      "numeric_base": 2003000,
+      "truth": [
+        "selection",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    },
+    {
+      "id": "panel-h31",
+      "numeric_base": 2003100,
+      "truth": [
+        "state_predicate",
+        "scheduling",
+        "consumer",
+        "publication"
+      ]
+    }
+  ]
+}

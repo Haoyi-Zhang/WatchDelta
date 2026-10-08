@@ -1,0 +1,52 @@
+{
+  "total_pages": 12,
+  "main_content_pages": 10,
+  "reference_only_pages": 2,
+  "reference_start_page": 11,
+  "data_availability_after_conclusion": true,
+  "ai_disclosure_after_data_availability": true,
+  "all_12_pages_visually_inspected": true,
+  "render_dpi": 200,
+  "figures": 3,
+  "tables": 3,
+  "bibliography_entries": 67,
+  "compiled_bibitems": 67,
+  "unique_cited_keys": 67,
+  "all_entries_cited": true,
+  "unresolved_citation_keys": [],
+  "uncited_bibliography_keys": [],
+  "unresolved_latex_references": false,
+  "overfull_boxes": 0,
+  "fatal_latex_error": false,
+  "class_options": "10pt,conference",
+  "formatting_overrides_detected": [],
+  "template_class_sha256": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7",
+  "template_bst_sha256": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f",
+  "template_class_and_bst_byte_identical": true,
+  "page_points": [
+    612,
+    792
+  ],
+  "fonts_embedded_and_subset": true,
+  "body_page_word_counts": [
+    725,
+    877,
+    849,
+    832,
+    662,
+    845,
+    919,
+    673,
+    787,
+    792
+  ],
+  "reference_page_word_counts": [
+    1297,
+    854
+  ],
+  "paper_pdf_sha256": "0070a9e856fe07623203e7f7b088b7cc355d42a0b72140784d4ec59994ff517e",
+  "paper_source_sha256": "a691e501a3a015983659b4c87ec697ad45d98e17b88d77af004dbb7606a42e2b",
+  "bibliography_sha256": "ed0e427a6d21987a3b4e1f010c5bdd6e7283cc8749903c9c7635fed1db435481",
+  "errors": [],
+  "scope": "Structural, compilation, and recorded visual-inspection checks; not independent peer review or a guarantee of eligibility or acceptance."
+}

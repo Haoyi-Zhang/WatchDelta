@@ -1,0 +1,12 @@
+{"kind": "http", "port": 41713, "t_ns": 1753772875827}
+{"kind": "build_start", "t_ns": 1753772920744}
+{"kind": "build_end", "returncode": 0, "t_ns": 1753786198510, "work": {"source_bytes": 70, "source_files": 1}}
+{"kind": "ready", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 0.9011639999999999, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 8}, "t_ns": 1753853157978}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 0.9012969999999999, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 8}, "t_ns": 1753853758512}
+{"events": [[2, "src/index.md"]], "kind": "events", "t_ns": 1753953631268}
+{"kind": "build_start", "t_ns": 1753953685639}
+{"kind": "build_end", "returncode": 0, "t_ns": 1753954598443, "work": {"source_bytes": 35, "source_files": 1}}
+{"events": [[2, "src/index.md"]], "kind": "events", "t_ns": 1754054942077}
+{"kind": "build_start", "t_ns": 1754055002939}
+{"kind": "build_end", "returncode": 0, "t_ns": 1754056099098, "work": {"source_bytes": 70, "source_files": 1}}
+{"kind": "stats", "metrics": {"accepted_events": 2, "batches": 2, "builds": 3, "cpu_s": 0.9063669999999999, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 24}, "t_ns": 1755478702073}

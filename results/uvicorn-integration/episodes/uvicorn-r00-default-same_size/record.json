@@ -1,0 +1,67 @@
+{
+  "id": "uvicorn-r00-default-same_size",
+  "mode": "default",
+  "scenario": "same_size",
+  "replicate": 0,
+  "stratum": "integration",
+  "tool": "docs",
+  "pipeline": "uvicorn",
+  "status": "stale",
+  "edit": {
+    "start_ns": 2173687009978,
+    "end_ns": 2173687081095,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 2173686929397,
+  "snapshot_stable": true,
+  "observer_ready_evidence": "inotify wd:1 ino:1a2954 sdev:1b mask:fee ignored_mask:0 fhandle-bytes:20 fhandle-type:f8 f_handle:00000000fb1d0401c79ae0be1b914a55b0768ef79c1e2b5854291a007075e9d6",
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1}\n",
+    "stderr": "",
+    "source_sha256": "52f07f405e25175eb97e1145c429901befa6073a8799b912c1bdf1b0d724ef11",
+    "projection": {
+      "index.html": "86a7669cc65ff2dd5ca0dff4238b76413ba77963188c585761bf410091077635"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_matches_disk": true,
+  "rerenders": 0,
+  "observation_ms": 1501.678593,
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-m",
+    "uvicorn",
+    "uvicorn_app:app",
+    "--app-dir",
+    "<artifact>/integrations",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "36543",
+    "--reload",
+    "--reload-dir",
+    "<project>/src",
+    "--no-access-log",
+    "--loop",
+    "asyncio",
+    "--http",
+    "h11",
+    "--ws",
+    "none"
+  ]
+}

@@ -1,0 +1,49 @@
+name: Tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: tests-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      PYTHONUTF8: '1'
+      PYTHONPATH: src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install -r requirements-lock.txt
+          npm install --ignore-scripts --no-audit --no-fund
+      - name: Select the pinned TypeScript compiler
+        shell: bash
+        run: echo "WATCHDELTA_TSC=$GITHUB_WORKSPACE/node_modules/typescript/lib/tsc.js" >> "$GITHUB_ENV"
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Recompute retained panel evidence
+        run: python scripts/analyze_panel.py
+      - name: Local-process regression cases
+        if: runner.os == 'Linux'
+        run: python scripts/smoke_replay.py --output "${{ runner.temp }}/watchdelta-replay"
+      - uses: actions/upload-artifact@v4
+        if: runner.os == 'Linux'
+        with:
+          name: process-regression-records
+          path: ${{ runner.temp }}/watchdelta-replay
+          retention-days: 14

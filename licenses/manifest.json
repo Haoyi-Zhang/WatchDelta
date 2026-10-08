@@ -1,0 +1,52 @@
+[
+  {
+    "package": "watchfiles",
+    "version": "1.2.0",
+    "notice": "licenses/watchfiles/LICENSE"
+  },
+  {
+    "package": "markdown-it-py",
+    "version": "4.2.0",
+    "notice": "licenses/markdown-it-py/LICENSE"
+  },
+  {
+    "package": "markdown-it-py",
+    "version": "4.2.0",
+    "notice": "licenses/markdown-it-py/LICENSE.markdown-it"
+  },
+  {
+    "package": "mdurl",
+    "version": "0.1.2",
+    "notice": "licenses/mdurl/LICENSE"
+  },
+  {
+    "package": "uvicorn",
+    "version": "0.48.0",
+    "notice": "licenses/uvicorn/LICENSE.md"
+  },
+  {
+    "package": "click",
+    "version": "8.1.8",
+    "notice": "licenses/click/LICENSE.txt"
+  },
+  {
+    "package": "h11",
+    "version": "0.16.0",
+    "notice": "licenses/h11/LICENSE.txt"
+  },
+  {
+    "package": "anyio",
+    "version": "4.13.0",
+    "notice": "licenses/anyio/LICENSE"
+  },
+  {
+    "package": "idna",
+    "version": "3.17",
+    "notice": "licenses/idna/LICENSE.md"
+  },
+  {
+    "package": "typing-extensions",
+    "version": "4.16.0",
+    "notice": "licenses/typing-extensions/LICENSE"
+  }
+]

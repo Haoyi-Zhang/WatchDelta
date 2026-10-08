@@ -1,0 +1,84 @@
+{
+  "id": "panel-h21--s04-observation-scope+state-predicate+scheduling",
+  "numeric_id": 2002104,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "same_size",
+  "inject": "publish_stale",
+  "diagnostic": false,
+  "diagnosis_unit": "panel-h21",
+  "diagnosis_repairs": [
+    "observation_scope",
+    "state_predicate",
+    "scheduling"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1269045191641,
+    "end_ns": 1269045339343,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "ready_ns": 1269043837221,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "a08cdfa1fa1e9fc0890088fc146708c1a966c2b14f4803385f4fa9246188adf0",
+    "projection": {
+      "index.html": "3ae4c8d70c70b189be74fe8ea02f128e79903a01d603b6431cac8d333c4cdfde"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.006675999999999904,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 48
+  },
+  "observation_ms": 1000.555428,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    1269044514424,
+    1270049452872
+  ],
+  "completion_observed": true,
+  "unpublished_projection": {
+    "index.html": "3ae4c8d70c70b189be74fe8ea02f128e79903a01d603b6431cac8d333c4cdfde"
+  },
+  "worker_stderr": "",
+  "unpublished_matches_clean": true
+}

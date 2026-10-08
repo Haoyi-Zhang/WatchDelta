@@ -1,0 +1,197 @@
+{
+  "id": "baseline-challenge",
+  "created_utc": "2026-09-30T03:08:37.845129+00:00",
+  "scope": "Local Linux overlay; real tsc watch and watchfiles + markdown-it-py; no MkDocs/Vite runtime claim",
+  "settle_seconds": 1.5,
+  "sampler_seconds": 0.02,
+  "scan_interval_seconds": 0.1,
+  "repetitions": 6,
+  "random_seed": 290926,
+  "oracle": "Exact relative output path set and SHA-256 bytes; identity normalization; fresh one-shot build of final copied sources",
+  "latency": "first sample in final matching suffix, lower bounded by edit completion; not defined for no-op controls or stale outcomes",
+  "noise": "build attempts in output-neutral temporary-file episodes; extra builds during relevant bursts are not called unnecessary",
+  "stop_rule": "fixed job list; infrastructure failures retained; no outcome-adaptive repetition",
+  "pilot_disclosure": "The nine pilot observations were inspected before this main protocol was frozen. Main results are new executions. The size-changing inplace replay was made distinct from same_size before main freeze.",
+  "strata": {
+    "ordinary": [
+      "inplace",
+      "atomic",
+      "burst",
+      "newdir",
+      "temporary",
+      "same_size",
+      "chunked"
+    ],
+    "metadata_boundary": [
+      "preserved_stat"
+    ]
+  },
+  "inference": "Frequencies over six executions per cell on one host; no independent-project or population inference; final staleness is relative to the 1.5 s obligation, not proof of permanent loss.",
+  "hypothesis": "Native notification and existing relevance filters may suffice for ordinary edits. Metadata polling may miss restored-stat writes. Content rescan is an established coverage/cost control, not a novel watcher.",
+  "provenance": "This local alternative follows unsuccessful MkDocs/Vite dependency retrieval. No historical upstream case is counted as locally replayed.",
+  "jobs": [
+    {
+      "id": "baseline-r00-newdir",
+      "numeric_id": 90000,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "newdir",
+      "replicate": 0,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r00-atomic",
+      "numeric_id": 90001,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "atomic",
+      "replicate": 0,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r00-burst",
+      "numeric_id": 90002,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "burst",
+      "replicate": 0,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r01-newdir",
+      "numeric_id": 90003,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "newdir",
+      "replicate": 1,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r01-atomic",
+      "numeric_id": 90004,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "atomic",
+      "replicate": 1,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r01-burst",
+      "numeric_id": 90005,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "burst",
+      "replicate": 1,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r02-newdir",
+      "numeric_id": 90006,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "newdir",
+      "replicate": 2,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r02-atomic",
+      "numeric_id": 90007,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "atomic",
+      "replicate": 2,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r02-burst",
+      "numeric_id": 90008,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "burst",
+      "replicate": 2,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r03-newdir",
+      "numeric_id": 90009,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "newdir",
+      "replicate": 3,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r03-atomic",
+      "numeric_id": 90010,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "atomic",
+      "replicate": 3,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r03-burst",
+      "numeric_id": 90011,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "burst",
+      "replicate": 3,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r04-newdir",
+      "numeric_id": 90012,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "newdir",
+      "replicate": 4,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r04-atomic",
+      "numeric_id": 90013,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "atomic",
+      "replicate": 4,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r04-burst",
+      "numeric_id": 90014,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "burst",
+      "replicate": 4,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r05-newdir",
+      "numeric_id": 90015,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "newdir",
+      "replicate": 5,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r05-atomic",
+      "numeric_id": 90016,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "atomic",
+      "replicate": 5,
+      "stratum": "baseline_challenge"
+    },
+    {
+      "id": "baseline-r05-burst",
+      "numeric_id": 90017,
+      "tool": "tsc",
+      "mode": "documented_sync",
+      "scenario": "burst",
+      "replicate": 5,
+      "stratum": "baseline_challenge"
+    }
+  ],
+  "reason": "Separate post-discovery challenge: main recommended means the native-file/native-directory/dynamic-fallback subset of the handbook example. This follow-up additionally enables synchronousWatchDirectory and its non-source directory exclusions. Three directory/replacement-sensitive scenarios are checked; no untested whole-matrix claim."
+}

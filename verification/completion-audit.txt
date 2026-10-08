@@ -1,0 +1,8 @@
+{
+  "episodes_checked": 510,
+  "legacy_flags_present": 480,
+  "flag_disagreements": 0,
+  "other_schema_without_legacy_flag": 30,
+  "raw_records_modified": false,
+  "scope": "Uvicorn and Hypercorn use separate reload-record schemas; pilots and mechanism replays are not part of this main/diagnostic completion-field audit. Agreement does not make the legacy formula generally valid."
+}

@@ -1,0 +1,83 @@
+{
+  "id": "known-c20-r01--s03-state-predicate+consumer",
+  "numeric_id": 1000383,
+  "tool": "docs",
+  "mode": "relevant",
+  "scenario": "preserved_stat",
+  "inject": "publish_stale",
+  "diagnostic": false,
+  "diagnosis_unit": "known-c20-r01",
+  "diagnosis_repairs": [
+    "state_predicate",
+    "consumer"
+  ],
+  "status": "stale",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1994570555841,
+    "end_ns": 1994570947356,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": true
+  },
+  "ready_ns": 1994569267905,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "d999ce065ed608fbc86b45a57ac75e9e82fc8592e8813f84e7346dcb380280ff",
+    "projection": {
+      "index.html": "a7954b8a4fd4ec8c2a854d50a5284ce86d1ee66d796116e9847c855d3a8cfc66"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": null,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.0075110000000002675,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 40
+  },
+  "observation_ms": 1500.403995,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    1994570026086,
+    1996075888893
+  ],
+  "completion_observed": true,
+  "unpublished_projection": {
+    "index.html": "a7954b8a4fd4ec8c2a854d50a5284ce86d1ee66d796116e9847c855d3a8cfc66"
+  },
+  "worker_stderr": "",
+  "unpublished_matches_clean": true
+}

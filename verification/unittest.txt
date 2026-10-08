@@ -1,0 +1,52 @@
+test_active_planner_exactly_identifies_every_modeled_set (tests.test_active_diagnosis.ActiveDiagnosisTests.test_active_planner_exactly_identifies_every_modeled_set) ... ok
+test_fixed_panel_separates_all_hypotheses (tests.test_active_diagnosis.ActiveDiagnosisTests.test_fixed_panel_separates_all_hypotheses) ... ok
+test_model_has_expected_hypotheses (tests.test_active_diagnosis.ActiveDiagnosisTests.test_model_has_expected_hypotheses) ... ok
+test_planner_is_deterministic (tests.test_active_diagnosis.ActiveDiagnosisTests.test_planner_is_deterministic) ... ok
+test_record_signature_observables (tests.test_active_diagnosis.ActiveDiagnosisTests.test_record_signature_observables) ... ok
+test_unknown_signature_eliminates_model_candidates (tests.test_active_diagnosis.ActiveDiagnosisTests.test_unknown_signature_eliminates_model_candidates) ... ok
+test_watchdelta_scripts_import_without_pythonpath (tests.test_cold_start.ColdStartTests.test_watchdelta_scripts_import_without_pythonpath) ... ok
+test_failure_is_not_success (tests.test_completion.CompletionTests.test_failure_is_not_success) ... ok
+test_invalid_window (tests.test_completion.CompletionTests.test_invalid_window) ... ok
+test_malformed_completion (tests.test_completion.CompletionTests.test_malformed_completion) ... ok
+test_start_is_not_completion (tests.test_completion.CompletionTests.test_start_is_not_completion) ... ok
+test_success_and_window (tests.test_completion.CompletionTests.test_success_and_window) ... ok
+test_frozen_compound_protocol_matches_generator (tests.test_compound_protocols.V4ProtocolTests.test_frozen_compound_protocol_matches_generator) ... ok
+test_frozen_scaling_protocol_matches_generator (tests.test_compound_protocols.V4ProtocolTests.test_frozen_scaling_protocol_matches_generator) ... ok
+test_diagnosis_refuses_to_guess (tests.test_diagnostic_protocols.V3ProtocolTests.test_diagnosis_refuses_to_guess) ... ok
+test_fixture_file_counts_are_exact (tests.test_diagnostic_protocols.V3ProtocolTests.test_fixture_file_counts_are_exact) ... ok
+test_publication_signature (tests.test_diagnostic_protocols.V3ProtocolTests.test_publication_signature) ... ok
+test_selection_signature (tests.test_diagnostic_protocols.V3ProtocolTests.test_selection_signature) ... ok
+test_extra_file (tests.test_oracle.OracleTests.test_extra_file) ... ok
+test_failed_oracle_cannot_match (tests.test_oracle.OracleTests.test_failed_oracle_cannot_match) ... ok
+test_final_mismatch_censors_latency (tests.test_oracle.OracleTests.test_final_mismatch_censors_latency) ... ok
+test_intermediate_match_does_not_count (tests.test_oracle.OracleTests.test_intermediate_match_does_not_count) ... ok
+test_missing_directory_output_is_detected (tests.test_oracle.OracleTests.test_missing_directory_output_is_detected) ... ok
+test_missing_file (tests.test_oracle.OracleTests.test_missing_file) ... ok
+test_noop_has_no_latency (tests.test_oracle.OracleTests.test_noop_has_no_latency) ... ok
+test_path_identity (tests.test_oracle.OracleTests.test_path_identity) ... ok
+test_precompletion_latency_clamped (tests.test_oracle.OracleTests.test_precompletion_latency_clamped) ... ok
+test_renderer_deterministic (tests.test_oracle.OracleTests.test_renderer_deterministic) ... ok
+test_same_length_difference_is_not_normalized (tests.test_oracle.OracleTests.test_same_length_difference_is_not_normalized) ... ok
+test_same_size_save_distinct (tests.test_oracle.OracleTests.test_same_size_save_distinct) ... ok
+test_size_changing_save_distinct (tests.test_oracle.OracleTests.test_size_changing_save_distinct) ... ok
+test_stat_preservation_does_not_fool_content_digest (tests.test_oracle.OracleTests.test_stat_preservation_does_not_fool_content_digest) ... ok
+test_symlink_rejected (tests.test_oracle.OracleTests.test_symlink_rejected) ... ok
+test_temporary_control_is_neutral (tests.test_oracle.OracleTests.test_temporary_control_is_neutral) ... ok
+test_custom_costs_break_cardinality_ties (tests.test_panel_diagnosis.PanelDiagnosisTests.test_custom_costs_break_cardinality_ties) ... ok
+test_decoder_rejects_two_corruptions_outside_budget_when_not_close (tests.test_panel_diagnosis.PanelDiagnosisTests.test_decoder_rejects_two_corruptions_outside_budget_when_not_close) ... ok
+test_distance_is_independently_recomputed (tests.test_panel_diagnosis.PanelDiagnosisTests.test_distance_is_independently_recomputed) ... ok
+test_exact_panel_decodes_every_hypothesis_without_error (tests.test_panel_diagnosis.PanelDiagnosisTests.test_exact_panel_decodes_every_hypothesis_without_error) ... ok
+test_minimum_cardinality_certificates (tests.test_panel_diagnosis.PanelDiagnosisTests.test_minimum_cardinality_certificates) ... ok
+test_robust_panel_corrects_every_single_substitution (tests.test_panel_diagnosis.PanelDiagnosisTests.test_robust_panel_corrects_every_single_substitution) ... ok
+test_two_error_certificate_is_infeasible_for_declared_catalog (tests.test_panel_diagnosis.PanelDiagnosisTests.test_two_error_certificate_is_infeasible_for_declared_catalog) ... ok
+test_hypercorn_protocol_declares_isolated_oracle (tests.test_python_cache_oracle.PythonCacheOracleTests.test_hypercorn_protocol_declares_isolated_oracle) ... ok
+test_restored_mtime_same_size_can_fool_import_but_not_direct_compile (tests.test_python_cache_oracle.PythonCacheOracleTests.test_restored_mtime_same_size_can_fool_import_but_not_direct_compile) ... ok
+test_actual_failed_clean_compilation_is_not_a_pass (tests.test_runtime.RuntimeOracleTests.test_actual_failed_clean_compilation_is_not_a_pass) ... ok
+test_same_size_changed_token_survives_real_rendering (tests.test_runtime.RuntimeOracleTests.test_same_size_changed_token_survives_real_rendering) ... ok
+test_two_fresh_markdown_processes_agree (tests.test_runtime.RuntimeOracleTests.test_two_fresh_markdown_processes_agree) ... ok
+test_typescript_two_independent_clean_builds_agree (tests.test_runtime.RuntimeOracleTests.test_typescript_two_independent_clean_builds_agree) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 17.287s
+
+OK

@@ -1,0 +1,16 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "hypercorn": "0.18.0",
+  "platform": "linux",
+  "reload_source": {
+    "run.py": {
+      "path": "/opt/pyvenv/lib/python3.13/site-packages/hypercorn/run.py",
+      "sha256": "d5404f4dc5a3cff92d74ca9bd599b1f92cf05cad928d0ea228b227fa23d7b5ed"
+    },
+    "utils.py": {
+      "path": "/opt/pyvenv/lib/python3.13/site-packages/hypercorn/utils.py",
+      "sha256": "e359430514f0de8302f3f0d823070f46caaf7e81d94063c4e98d85ea7020025a"
+    }
+  },
+  "mechanism": "supervisor calls files_to_watch(), then check_for_updates() at one-second wait intervals"
+}

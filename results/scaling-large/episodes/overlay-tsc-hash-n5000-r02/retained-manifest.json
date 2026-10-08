@@ -1,0 +1,18 @@
+{
+  "source_suffix": ".ts",
+  "output_suffix": ".js",
+  "source_files": 5000,
+  "source_bytes": 158942,
+  "source_sha256": "1472e5e00644c71606e7548cc4cd4c112b61b1fa6a498d7afe071bbaabd66ff7",
+  "recorded_source_sha256": "1472e5e00644c71606e7548cc4cd4c112b61b1fa6a498d7afe071bbaabd66ff7",
+  "observed_outputs": 5000,
+  "clean_outputs": 5000,
+  "observed_projection_sha256": "54c01a418660e5877982fefb816d8cf4a759146fb773720f8d0945610c12e4be",
+  "clean_projection_sha256": "54c01a418660e5877982fefb816d8cf4a759146fb773720f8d0945610c12e4be",
+  "compacted_paths": [
+    "work",
+    "observed",
+    "clean",
+    "manual_rebuild"
+  ]
+}

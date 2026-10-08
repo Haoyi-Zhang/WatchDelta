@@ -1,0 +1,30 @@
+{
+  "repository": "vitejs/vite",
+  "issue": {
+    "number": 16248,
+    "title": "Ignoring outDir in Chokidar watcher introduced regression in >=5.1.0, not entirely fixed by #15979",
+    "reported_version": "5.2.4",
+    "reported_configuration": "build.emptyOutDir=false; a source Sass file resides inside build.outDir",
+    "reported_comparison": "5.2.4 does not rebuild; 5.0.12 rebuilds",
+    "state": "closed",
+    "closed_at": "2024-04-18T16:16:57Z"
+  },
+  "old_source": {
+    "tag": "v5.2.4",
+    "path": "packages/vite/src/node/watch.ts",
+    "github_blob_sha": "9c9972bdd3a4710650b0a7ed421899e0ddb76b1e"
+  },
+  "fixed_source": {
+    "tag": "v5.2.10",
+    "path": "packages/vite/src/node/watch.ts",
+    "github_blob_sha": "d8eb128f1613a52965526526497ea8ae3656c38c"
+  },
+  "fix": {
+    "pull_request": 16453,
+    "merge_commit": "6a127d67ba953004ab10c21b50429050c7eadf11",
+    "first_release_verified_here": "5.2.10",
+    "release_date": "2024-04-20",
+    "changelog_text": "fix: don't add outDirs to watch.ignored if emptyOutDir is false (#16453)"
+  },
+  "scope": "The local replay executes the versioned configuration decision on simple absolute paths. It does not run Rollup, Chokidar, Sass, or a full Vite build."
+}

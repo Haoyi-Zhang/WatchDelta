@@ -1,0 +1,69 @@
+{
+  "id": "main-r02-docs-default-preserved_stat",
+  "numeric_id": 10183,
+  "tool": "docs",
+  "mode": "default",
+  "scenario": "preserved_stat",
+  "replicate": 2,
+  "stratum": "metadata_boundary",
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 1780246741546,
+    "end_ns": 1780246896589,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": true
+  },
+  "ready_ns": 1780245629168,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "04a2cbc831297080178db7213a278b347b5c5f03611005993e72f8e853efbe60"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1}\n",
+    "stderr": "",
+    "source_sha256": "8d32582717a6a452c31b7c2741a0e21d2b36441f71a2d10951e948a849d2798a",
+    "projection": {
+      "index.html": "04a2cbc831297080178db7213a278b347b5c5f03611005993e72f8e853efbe60"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "04a2cbc831297080178db7213a278b347b5c5f03611005993e72f8e853efbe60"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": 101.351533,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.006908000000000025,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 8
+  },
+  "observation_ms": 1500.489525,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completion_observed": true,
+  "worker_stderr": ""
+}

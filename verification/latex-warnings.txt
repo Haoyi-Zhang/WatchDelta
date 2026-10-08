@@ -1,0 +1,16 @@
+894:Underfull \hbox (badness 1515) in paragraph at lines 38--40
+902:Underfull \vbox (badness 1024) has occurred while \output is active []
+911:Underfull \hbox (badness 10000) in paragraph at lines 16--17
+917:Underfull \hbox (badness 1776) in paragraph at lines 25--26
+922:Underfull \hbox (badness 3713) in paragraph at lines 25--26
+927:Underfull \hbox (badness 2680) in paragraph at lines 27--28
+942:Underfull \hbox (badness 10000) in paragraph at lines 14--15
+947:Underfull \hbox (badness 10000) in paragraph at lines 14--15
+952:Underfull \hbox (badness 8151) in paragraph at lines 14--15
+958:Underfull \hbox (badness 6396) in paragraph at lines 14--15
+964:Underfull \hbox (badness 1939) in paragraph at lines 14--15
+984:Underfull \hbox (badness 1552) in paragraph at lines 26--27
+989:Underfull \hbox (badness 2119) in paragraph at lines 29--30
+994:Underfull \hbox (badness 10000) in paragraph at lines 31--1
+999:Underfull \hbox (badness 10000) in paragraph at lines 31--1
+1004:Underfull \hbox (badness 1694) in paragraph at lines 3--4

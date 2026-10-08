@@ -1,0 +1,57 @@
+{
+  "id": "timing-r04-relevant-same_second",
+  "tool": "docs",
+  "mode": "relevant",
+  "condition": "same_second",
+  "replicate": 4,
+  "stratum": "post_discovery_timing",
+  "status": "matched",
+  "edit": {
+    "start_ns": 2027238208232,
+    "end_ns": 2027238388123,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": false
+  },
+  "snapshot_stable": true,
+  "before_mtime_ns": 1790738808030421804,
+  "after_mtime_ns": 1790738808609126795,
+  "same_second": true,
+  "mtime_changed": true,
+  "size_unchanged": true,
+  "observed_projection": {
+    "index.html": "f5d6e4693ac491f3c53b13d15446b6fe17d56f50dfe50330a0ab29e89d109312"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1}\n",
+    "stderr": "",
+    "source_sha256": "75b62d0b9f813c2bc8e4eccb00fdbbfbe5388571bcfa8e68cebd51c98b9b1883",
+    "projection": {
+      "index.html": "f5d6e4693ac491f3c53b13d15446b6fe17d56f50dfe50330a0ab29e89d109312"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_matches_disk": true,
+  "metrics": {
+    "accepted_events": 1,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.004994999999999972,
+    "failed_builds": 0,
+    "scan_bytes": 0,
+    "scan_calls": 0,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 8
+  },
+  "worker_stderr": ""
+}

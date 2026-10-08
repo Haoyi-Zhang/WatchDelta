@@ -1,0 +1,118 @@
+{
+  "name": "long-budget",
+  "created_utc": "2026-09-30T03:12:42.022788+00:00",
+  "purpose": "Post-discovery distinction between a 1.5-second deadline miss and persistent staleness for TypeScript new directories. Not pooled with the frozen main matrix. Added after source inspection identified 500ms directory polling, 1000ms child-watch update, and compiler scheduling.",
+  "settle_seconds": 5.0,
+  "sample_seconds": 0.02,
+  "jobs": [
+    {
+      "id": "long-r05-tsc-default-newdir",
+      "numeric_id": 6011,
+      "tool": "tsc",
+      "mode": "default",
+      "scenario": "newdir",
+      "replicate": 5,
+      "inject": "none"
+    },
+    {
+      "id": "long-r04-tsc-default-newdir",
+      "numeric_id": 6009,
+      "tool": "tsc",
+      "mode": "default",
+      "scenario": "newdir",
+      "replicate": 4,
+      "inject": "none"
+    },
+    {
+      "id": "long-r02-tsc-default-newdir",
+      "numeric_id": 6005,
+      "tool": "tsc",
+      "mode": "default",
+      "scenario": "newdir",
+      "replicate": 2,
+      "inject": "none"
+    },
+    {
+      "id": "long-r01-tsc-poll-newdir",
+      "numeric_id": 6002,
+      "tool": "tsc",
+      "mode": "poll",
+      "scenario": "newdir",
+      "replicate": 1,
+      "inject": "none"
+    },
+    {
+      "id": "long-r02-tsc-poll-newdir",
+      "numeric_id": 6004,
+      "tool": "tsc",
+      "mode": "poll",
+      "scenario": "newdir",
+      "replicate": 2,
+      "inject": "none"
+    },
+    {
+      "id": "long-r04-tsc-poll-newdir",
+      "numeric_id": 6008,
+      "tool": "tsc",
+      "mode": "poll",
+      "scenario": "newdir",
+      "replicate": 4,
+      "inject": "none"
+    },
+    {
+      "id": "long-r01-tsc-default-newdir",
+      "numeric_id": 6003,
+      "tool": "tsc",
+      "mode": "default",
+      "scenario": "newdir",
+      "replicate": 1,
+      "inject": "none"
+    },
+    {
+      "id": "long-r00-tsc-default-newdir",
+      "numeric_id": 6001,
+      "tool": "tsc",
+      "mode": "default",
+      "scenario": "newdir",
+      "replicate": 0,
+      "inject": "none"
+    },
+    {
+      "id": "long-r00-tsc-poll-newdir",
+      "numeric_id": 6000,
+      "tool": "tsc",
+      "mode": "poll",
+      "scenario": "newdir",
+      "replicate": 0,
+      "inject": "none"
+    },
+    {
+      "id": "long-r03-tsc-poll-newdir",
+      "numeric_id": 6006,
+      "tool": "tsc",
+      "mode": "poll",
+      "scenario": "newdir",
+      "replicate": 3,
+      "inject": "none"
+    },
+    {
+      "id": "long-r03-tsc-default-newdir",
+      "numeric_id": 6007,
+      "tool": "tsc",
+      "mode": "default",
+      "scenario": "newdir",
+      "replicate": 3,
+      "inject": "none"
+    },
+    {
+      "id": "long-r05-tsc-poll-newdir",
+      "numeric_id": 6010,
+      "tool": "tsc",
+      "mode": "poll",
+      "scenario": "newdir",
+      "replicate": 5,
+      "inject": "none"
+    }
+  ],
+  "script_sha256": "3f1d4d37b417eec3b37096a1ded9b4cd5f277cd316462b776f1aa461fcb91897"
+}

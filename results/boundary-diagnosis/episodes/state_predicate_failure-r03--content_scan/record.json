@@ -1,0 +1,78 @@
+{
+  "id": "state_predicate_failure-r03--content_scan",
+  "numeric_id": 800242,
+  "tool": "docs",
+  "mode": "hash",
+  "scenario": "preserved_stat",
+  "inject": "none",
+  "diagnostic": true,
+  "diagnostic_truth": "state_predicate_failure",
+  "diagnostic_role": "content_scan",
+  "status": "matched",
+  "snapshot_stable": true,
+  "obligation_consistent": true,
+  "edit": {
+    "start_ns": 712261160401,
+    "end_ns": 712261317808,
+    "writes": 1,
+    "obligation": true,
+    "same_size": true,
+    "mtime_restored": true
+  },
+  "ready_ns": 712260385107,
+  "initial_projection": {
+    "index.html": "25bfee574b180724f5039ead7185cbc59546fccd440067e6b2a5a09d67c76bd6"
+  },
+  "observed_projection": {
+    "index.html": "587b1a1e99da037ae0ddcfc5a47a3f11622e71398cf60d21c9d55f9c25bda463"
+  },
+  "clean": {
+    "returncode": 0,
+    "stdout": "{\"source_bytes\": 70, \"source_files\": 1, \"removed_outputs\": 0}\n",
+    "stderr": "",
+    "source_sha256": "4ef4828bc8960c689ba136513b61b5cef527300e7d1a11f695dd1e35cf5ccaf0",
+    "projection": {
+      "index.html": "587b1a1e99da037ae0ddcfc5a47a3f11622e71398cf60d21c9d55f9c25bda463"
+    },
+    "command": [
+      "/opt/pyvenv/bin/python",
+      "-m",
+      "watchdelta.build",
+      "--root",
+      "<clean>",
+      "--tool",
+      "docs"
+    ]
+  },
+  "served_projection": {
+    "index.html": "587b1a1e99da037ae0ddcfc5a47a3f11622e71398cf60d21c9d55f9c25bda463"
+  },
+  "served_matches_disk": true,
+  "runtime": null,
+  "clean_runtime": null,
+  "runtime_matches": null,
+  "stable_latency_ms": 101.409212,
+  "metrics": {
+    "accepted_events": 0,
+    "batches": 1,
+    "builds": 1,
+    "cpu_s": 0.013650999999999969,
+    "failed_builds": 0,
+    "scan_bytes": 980,
+    "scan_calls": 14,
+    "storage_in_blocks": 0,
+    "storage_out_blocks": 8
+  },
+  "observation_ms": 1500.629083,
+  "noise_rebuilds": 0,
+  "additional_builds": 0,
+  "completed_builds": 1,
+  "completion_window_ns": [
+    712260741672,
+    713769074787
+  ],
+  "completion_observed": true,
+  "unpublished_projection": null,
+  "worker_stderr": "",
+  "unpublished_matches_clean": null
+}

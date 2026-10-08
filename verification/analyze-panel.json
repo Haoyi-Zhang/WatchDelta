@@ -1,0 +1,267 @@
+{
+  "dataset": "diagnostic-panel",
+  "protocol_sha256": "9f20d6eea6f8817f1f7547a47faf6ea540a9a086d7a96e0c6cf03eb80393a951",
+  "recomputed": {
+    "units": 32,
+    "actual_process_executions": 384,
+    "model_conformant_units": 32,
+    "model_conformant_executions": 384,
+    "exact_zero_error_recovered": 32,
+    "robust_zero_error_recovered": 32,
+    "exact_panel": {
+      "panel": [
+        [],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ]
+      ],
+      "max_errors": 0,
+      "required_distance": 1,
+      "minimum_distance": 1,
+      "hypothesis_count": 32,
+      "pair_count": 496,
+      "selected_count": 5,
+      "repair_breadth": 14,
+      "solver": null,
+      "solver_status": null,
+      "mip_gap": null,
+      "optimal": null,
+      "objective_cost": null,
+      "candidate_count": null
+    },
+    "robust_panel": {
+      "panel": [
+        [],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "observation_scope",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "scheduling"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "consumer"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "publication"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "scheduling",
+          "consumer"
+        ],
+        [
+          "selection",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ],
+        [
+          "observation_scope",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ],
+        [
+          "selection",
+          "observation_scope",
+          "state_predicate",
+          "scheduling",
+          "consumer"
+        ]
+      ],
+      "max_errors": 1,
+      "required_distance": 3,
+      "minimum_distance": 3,
+      "hypothesis_count": 32,
+      "pair_count": 496,
+      "selected_count": 12,
+      "repair_breadth": 41,
+      "solver": null,
+      "solver_status": null,
+      "mip_gap": null,
+      "optimal": null,
+      "objective_cost": null,
+      "candidate_count": null
+    },
+    "robust_single_corruption": {
+      "cases": 1920,
+      "recovered": 1920,
+      "false_exact": 0,
+      "unresolved": 0,
+      "unmodeled": 0
+    },
+    "exact_single_corruption": {
+      "cases": 800,
+      "recovered": 0,
+      "false_exact": 96,
+      "unresolved": 0,
+      "unmodeled": 704
+    },
+    "median_stable_latency_ms": 101.9,
+    "median_worker_cpu_ms": 5.0
+  },
+  "solver_exact": {
+    "hypothesis_count": 32,
+    "max_errors": 0,
+    "minimum_distance": 1,
+    "mip_gap": 0.0,
+    "optimal": true,
+    "pair_count": 496,
+    "panel": [
+      [],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ]
+    ],
+    "repair_breadth": 14,
+    "required_distance": 1,
+    "selected_count": 5,
+    "solver": "scipy.optimize.milp/HiGHS",
+    "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal); Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "solver_robust": {
+    "hypothesis_count": 32,
+    "max_errors": 1,
+    "minimum_distance": 3,
+    "mip_gap": 0.0,
+    "optimal": true,
+    "pair_count": 496,
+    "panel": [
+      [],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "observation_scope",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "scheduling"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "consumer"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "publication"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "scheduling",
+        "consumer"
+      ],
+      [
+        "selection",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ],
+      [
+        "observation_scope",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ],
+      [
+        "selection",
+        "observation_scope",
+        "state_predicate",
+        "scheduling",
+        "consumer"
+      ]
+    ],
+    "repair_breadth": 41,
+    "required_distance": 3,
+    "selected_count": 12,
+    "solver": "scipy.optimize.milp/HiGHS",
+    "solver_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal); Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "errors": []
+}

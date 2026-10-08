@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying WatchDelta paper when using this artifact."
+title: "WatchDelta: End-to-End Qualification and Robust Diagnosis of Watch-Mode Development Workflows"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Haoyi
+    orcid: "https://orcid.org/0009-0009-3693-786X"
+    affiliation: "Xi'an Jiaotong-Liverpool University"
+    email: "hyeliozhang@gmail.com"
+  - family-names: Ran
+    given-names: Huaijin
+    orcid: "https://orcid.org/0009-0009-2482-2344"
+    affiliation: "Nanyang Technological University"
+    email: "huaijin003@e.ntu.edu.sg"
+  - family-names: Tang
+    given-names: Xunzhu
+    orcid: "https://orcid.org/0000-0002-6377-0884"
+    affiliation: "AutoTrust AI"
+    email: "realdanieltang@gmail.com"
+preferred-citation:
+  type: unpublished
+  title: "WatchDelta: End-to-End Qualification and Robust Diagnosis of Watch-Mode Development Workflows"
+  year: 2026
+  authors:
+    - family-names: Zhang
+      given-names: Haoyi
+      orcid: "https://orcid.org/0009-0009-3693-786X"
+    - family-names: Ran
+      given-names: Huaijin
+      orcid: "https://orcid.org/0009-0009-2482-2344"
+    - family-names: Tang
+      given-names: Xunzhu
+      orcid: "https://orcid.org/0000-0002-6377-0884"

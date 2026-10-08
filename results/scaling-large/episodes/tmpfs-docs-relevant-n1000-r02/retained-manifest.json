@@ -1,0 +1,18 @@
+{
+  "source_suffix": ".md",
+  "output_suffix": ".html",
+  "source_files": 1000,
+  "source_bytes": 28821,
+  "source_sha256": "fe33a8d9fd63280ed1edf77344c4f10d8111b31c7fd3e6b16eafc6ef1cbea94c",
+  "recorded_source_sha256": "fe33a8d9fd63280ed1edf77344c4f10d8111b31c7fd3e6b16eafc6ef1cbea94c",
+  "observed_outputs": 1000,
+  "clean_outputs": 1000,
+  "observed_projection_sha256": "af2f9d4c092ff177c98d061fb506a8205b8438dec662b5c18736c3f32e62cb7d",
+  "clean_projection_sha256": "af2f9d4c092ff177c98d061fb506a8205b8438dec662b5c18736c3f32e62cb7d",
+  "compacted_paths": [
+    "work",
+    "observed",
+    "clean",
+    "manual_rebuild"
+  ]
+}

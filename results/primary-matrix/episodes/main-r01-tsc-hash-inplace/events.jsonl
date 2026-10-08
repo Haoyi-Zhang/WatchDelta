@@ -1,0 +1,7 @@
+{"kind": "build_start", "t_ns": 1875489646932}
+{"kind": "build_end", "log": "", "returncode": 0, "t_ns": 1875881048692}
+{"kind": "ready", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 1.6418599999999999, "failed_builds": 0, "scan_bytes": 116, "scan_calls": 1, "storage_in_blocks": 0, "storage_out_blocks": 24}, "t_ns": 1875881701314}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 1.641935, "failed_builds": 0, "scan_bytes": 116, "scan_calls": 1, "storage_in_blocks": 0, "storage_out_blocks": 24}, "t_ns": 1875882204080}
+{"kind": "build_start", "t_ns": 1875982194924}
+{"kind": "build_end", "log": "", "returncode": 0, "t_ns": 1876321160002}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 1, "builds": 2, "cpu_s": 2.3899999999999997, "failed_builds": 0, "scan_bytes": 1590, "scan_calls": 12, "storage_in_blocks": 0, "storage_out_blocks": 40}, "t_ns": 1877383464869}

@@ -1,0 +1,3580 @@
+{
+  "episodes_checked": 510,
+  "legacy_flags_present": 480,
+  "flag_disagreements": 0,
+  "other_schema_without_legacy_flag": 30,
+  "raw_records_modified": false,
+  "scope": "Uvicorn and Hypercorn use separate reload-record schemas; pilots and mechanism replays are not part of this main/diagnostic completion-field audit. Agreement does not make the legacy formula generally valid.",
+  "episodes": [
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-same_size",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-same_size",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-temporary",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-temporary",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-temporary",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-temporary",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-newdir",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-inplace",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-atomic",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-atomic",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-inplace",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-same_size",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-chunked",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-relevant-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-recommended-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-default-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-temporary",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-atomic",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-chunked",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-default-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-chunked",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-tuned-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-tuned-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-tuned-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-poll-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-relevant-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-tuned-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-relevant-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-burst",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-relevant-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-atomic",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-default-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-recommended-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-recommended-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-burst",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-relevant-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-chunked",
+      "successful_end_events": 2,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-docs-default-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-relevant-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-recommended-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-temporary",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-docs-tuned-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-recommended-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-tsc-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-docs-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-tsc-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r00-tsc-poll-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-recommended-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r04-tsc-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-default-temporary",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-tsc-hash-inplace",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r01-docs-hash-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-poll-preserved_stat",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-hash-same_size",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r03-docs-poll-chunked",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-hash-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r05-docs-tuned-preserved_stat",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "primary-matrix",
+      "id": "main-r02-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r00-docs-wrong_filter-none",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r00-docs-relevant-drop",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r00-docs-relevant-fail",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r00-docs-relevant-none",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r00-tsc-wrong_filter-none",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r00-tsc-default-none",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r01-docs-wrong_filter-none",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r01-docs-relevant-drop",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r01-docs-relevant-fail",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r01-docs-relevant-none",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r01-tsc-wrong_filter-none",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r01-tsc-default-none",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r02-docs-wrong_filter-none",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r02-docs-relevant-drop",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r02-docs-relevant-fail",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r02-docs-relevant-none",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r02-tsc-wrong_filter-none",
+      "successful_end_events": 0,
+      "legacy_flag": false,
+      "agrees": true
+    },
+    {
+      "dataset": "sensitivity",
+      "id": "sens-r02-tsc-default-none",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r04-poll-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r02-hash-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r05-relevant-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r01-relevant-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r02-poll-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r05-relevant-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r00-relevant-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r01-poll-same_second",
+      "successful_end_events": 0,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r05-hash-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r03-poll-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r02-poll-same_second",
+      "successful_end_events": 0,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r03-hash-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r01-relevant-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r00-poll-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r04-relevant-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r01-poll-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r00-hash-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r01-hash-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r03-relevant-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r04-hash-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r02-relevant-same_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r00-relevant-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r04-relevant-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r03-relevant-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r00-poll-same_second",
+      "successful_end_events": 0,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r05-poll-same_second",
+      "successful_end_events": 0,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r02-relevant-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r03-poll-same_second",
+      "successful_end_events": 0,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r04-poll-same_second",
+      "successful_end_events": 0,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "timing-diagnostic",
+      "id": "timing-r05-poll-cross_second",
+      "successful_end_events": 1,
+      "legacy_flag": null,
+      "agrees": null
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r00-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r00-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r00-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r01-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r01-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r01-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r02-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r02-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r02-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r03-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r03-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r03-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r04-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r04-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r04-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r05-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r05-atomic",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "baseline-challenge",
+      "id": "baseline-r05-burst",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r05-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r04-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r02-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r01-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r02-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r04-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r01-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r00-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r00-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r03-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r03-tsc-default-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    },
+    {
+      "dataset": "long-budget",
+      "id": "long-r05-tsc-poll-newdir",
+      "successful_end_events": 1,
+      "legacy_flag": true,
+      "agrees": true
+    }
+  ]
+}

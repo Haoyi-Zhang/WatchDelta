@@ -1,0 +1,9 @@
+{
+  "first_sha256": "0070a9e856fe07623203e7f7b088b7cc355d42a0b72140784d4ec59994ff517e",
+  "second_sha256": "0070a9e856fe07623203e7f7b088b7cc355d42a0b72140784d4ec59994ff517e",
+  "first_bytes": 295402,
+  "second_bytes": 295402,
+  "byte_identical": true,
+  "toolchain": "latexmk + pdfLaTeX + BibTeX",
+  "source_date_epoch": 1791167400
+}

@@ -1,0 +1,28 @@
+{
+  "purpose": "Trace executable source used to analyze retained records and run the diagnostic-panel study.",
+  "raw_records_modified": false,
+  "notes": [
+    "The terminal-state oracle records source and output fingerprints and checks a clean one-shot execution.",
+    "The adaptive diagnostic study uses a finite declared fault/intervention model and rejects unsupported signatures.",
+    "The diagnostic-panel compiler synthesizes minimum-cardinality separating and distance-three panels, independently certifies minimum distance, and decodes conservatively.",
+    "Packaging changes repair cold-start imports, semantic filenames, documentation, and reproducibility checks; archived experiment records are preserved."
+  ],
+  "files": {
+    "src/watchdelta/__init__.py": "536d220295fca4732ba04fa19b5ecd0bb675a51dd6eff976f26b21f8e6dd6780",
+    "src/watchdelta/build.py": "d7148c1661663c9b3b20409f5da61da916a3161e3dc45e6da8edf41a3cbefc57",
+    "src/watchdelta/core.py": "e170fcb55f4d810dabb65c45480bd5bdbced6fe67afeb74b1ad829c0b970558f",
+    "src/watchdelta/replay.py": "a4d17a039f4d84e35bb583ded7e2a180f1c5ce88dbc6263ad0b857f768c5008d",
+    "src/watchdelta/run.py": "7023a65b2c8c42ba9a9f579e225e372312bdee821d333b0d24d5b695a2b236a1",
+    "src/watchdelta/worker.py": "6b23e6d39478cd6c46d85ebfe7490108472a2e5ba6817099213d149d879cfe3c",
+    "src/watchdelta/diagnosis.py": "d6d1e80881ce4b2e7eeb6084c0173250f38081dec93c403e84f64ccd198bed96",
+    "src/watchdelta/active_diagnosis.py": "b86fceb1311801756b4b4585f4239f91466c40772c10e2e947527ab5bb2e0fb3",
+    "src/watchdelta/panel_diagnosis.py": "baf05f0bdc048ede15e4ff1eb1f3de5501dfb95a4cf23ae39302c4ac1da49441",
+    "src/watchdelta/diagnostic_cases.py": "af06e49b7b323b370eff9db2028b79c09c15d77b01d95386f13291fb9d79e115",
+    "scripts/analyze.py": "a5d40dcedf10a81df665c7015d51c7a657ed73e5e28515abbe72e5cb94d12b11",
+    "scripts/analyze_integrations.py": "82475b1902b762fce88a9d5397bf234062b3ae1393b7667c91875c95c951bbac",
+    "scripts/analyze_diagnostics.py": "e56e387b67c96d5a595d919e1712aaf605c6631790e02310bd9298410d9c7517",
+    "scripts/analyze_compound_scaling.py": "033c17cd9a632ccbb0acf5f43b0a98b8c138262d5deb5a3e7d06ce358bcb2293",
+    "scripts/analyze_panel.py": "801d8b8044e067563036f109f16b1a1f8879f13cb81eae24a276793290aefcf0",
+    "scripts/panel_study.py": "0c49b6c10aee43f84b8f6fc35f0165e9577f671b8eb3faaa8f709b5a634af31b"
+  }
+}

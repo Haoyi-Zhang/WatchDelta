@@ -1,0 +1,9 @@
+{"kind": "http", "port": 41003, "t_ns": 1340311179100}
+{"kind": "build_start", "t_ns": 1340311221965}
+{"kind": "build_end", "returncode": 0, "t_ns": 1340324367924, "work": {"source_bytes": 70, "source_files": 1}}
+{"kind": "ready", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 0.890601, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 8}, "t_ns": 1340392670393}
+{"kind": "stats", "metrics": {"accepted_events": 0, "batches": 0, "builds": 1, "cpu_s": 0.890741, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 8}, "t_ns": 1340393285584}
+{"events": [[2, "src/index.md"]], "kind": "events", "t_ns": 1340493172593}
+{"kind": "build_start", "t_ns": 1340493265363}
+{"kind": "build_end", "returncode": 0, "t_ns": 1340494198708, "work": {"source_bytes": 70, "source_files": 1}}
+{"kind": "stats", "metrics": {"accepted_events": 1, "batches": 1, "builds": 2, "cpu_s": 0.895267, "failed_builds": 0, "scan_bytes": 0, "scan_calls": 0, "storage_in_blocks": 0, "storage_out_blocks": 16}, "t_ns": 1341897880508}

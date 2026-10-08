@@ -1,0 +1,256 @@
+{
+  "id": "timing-diagnostic",
+  "created_utc": "2026-09-30T03:04:57.254995+00:00",
+  "settle_seconds": 3.0,
+  "repetitions": 6,
+  "random_seed": 300926,
+  "discovery": "Added after seeing a stale docs/poll/same_size episode in the first ten primary-matrix records and after inspecting notify-8.0.0 poll.rs. Not a preregistered main-study hypothesis.",
+  "hypothesis": "With content comparison disabled and integral-second mtime comparison, ordinary same-second same-length changes can remain stale; crossing an mtime second should resolve this condition.",
+  "operation": "Normal write of new equal-length bytes; no utime/restored metadata in these jobs. Align file creation to .03 s after a wall second. Cross-second edits wait until source creation mtime second +1.04. Retain timing slips; do not replace jobs.",
+  "stop_rule": "30 fixed jobs, no outcome-adaptive replacement. Count actually achieved same/cross second classifications.",
+  "script_sha256": "a21fe35ccb16712c563c61459befb64c5fc06927c9c986e40a45e01d07235407",
+  "jobs": [
+    {
+      "id": "timing-r04-poll-cross_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "cross_second",
+      "replicate": 4,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r02-hash-same_second",
+      "tool": "docs",
+      "mode": "hash",
+      "condition": "same_second",
+      "replicate": 2,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r05-relevant-cross_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "cross_second",
+      "replicate": 5,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r01-relevant-cross_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "cross_second",
+      "replicate": 1,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r02-poll-cross_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "cross_second",
+      "replicate": 2,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r05-relevant-same_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "same_second",
+      "replicate": 5,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r00-relevant-same_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "same_second",
+      "replicate": 0,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r01-poll-same_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "same_second",
+      "replicate": 1,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r05-hash-same_second",
+      "tool": "docs",
+      "mode": "hash",
+      "condition": "same_second",
+      "replicate": 5,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r03-poll-cross_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "cross_second",
+      "replicate": 3,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r02-poll-same_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "same_second",
+      "replicate": 2,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r03-hash-same_second",
+      "tool": "docs",
+      "mode": "hash",
+      "condition": "same_second",
+      "replicate": 3,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r01-relevant-same_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "same_second",
+      "replicate": 1,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r00-poll-cross_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "cross_second",
+      "replicate": 0,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r04-relevant-same_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "same_second",
+      "replicate": 4,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r01-poll-cross_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "cross_second",
+      "replicate": 1,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r00-hash-same_second",
+      "tool": "docs",
+      "mode": "hash",
+      "condition": "same_second",
+      "replicate": 0,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r01-hash-same_second",
+      "tool": "docs",
+      "mode": "hash",
+      "condition": "same_second",
+      "replicate": 1,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r03-relevant-same_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "same_second",
+      "replicate": 3,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r04-hash-same_second",
+      "tool": "docs",
+      "mode": "hash",
+      "condition": "same_second",
+      "replicate": 4,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r02-relevant-same_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "same_second",
+      "replicate": 2,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r00-relevant-cross_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "cross_second",
+      "replicate": 0,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r04-relevant-cross_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "cross_second",
+      "replicate": 4,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r03-relevant-cross_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "cross_second",
+      "replicate": 3,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r00-poll-same_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "same_second",
+      "replicate": 0,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r05-poll-same_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "same_second",
+      "replicate": 5,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r02-relevant-cross_second",
+      "tool": "docs",
+      "mode": "relevant",
+      "condition": "cross_second",
+      "replicate": 2,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r03-poll-same_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "same_second",
+      "replicate": 3,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r04-poll-same_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "same_second",
+      "replicate": 4,
+      "stratum": "post_discovery_timing"
+    },
+    {
+      "id": "timing-r05-poll-cross_second",
+      "tool": "docs",
+      "mode": "poll",
+      "condition": "cross_second",
+      "replicate": 5,
+      "stratum": "post_discovery_timing"
+    }
+  ],
+  "last_preexecution_revision_utc": "2026-09-30T03:25:11.621451+00:00",
+  "snapshot_check": "Before execution, added explicit copied-output versus endpoint-projection consistency field; no change to the scenarios or outcomes."
+}

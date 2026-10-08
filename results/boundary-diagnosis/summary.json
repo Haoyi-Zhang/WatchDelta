@@ -1,0 +1,98 @@
+{
+  "units": 48,
+  "planned_units": 48,
+  "executions": 84,
+  "correct": 48,
+  "unresolved": 0,
+  "confusion": {
+    "healthy": {
+      "healthy": 6,
+      "unnecessary_work": 0,
+      "selection_failure": 0,
+      "observation_scope_failure": 0,
+      "state_predicate_failure": 0,
+      "scheduling_failure": 0,
+      "consumer_failure": 0,
+      "publication_failure": 0,
+      "unresolved": 0
+    },
+    "unnecessary_work": {
+      "healthy": 0,
+      "unnecessary_work": 6,
+      "selection_failure": 0,
+      "observation_scope_failure": 0,
+      "state_predicate_failure": 0,
+      "scheduling_failure": 0,
+      "consumer_failure": 0,
+      "publication_failure": 0,
+      "unresolved": 0
+    },
+    "selection_failure": {
+      "healthy": 0,
+      "unnecessary_work": 0,
+      "selection_failure": 6,
+      "observation_scope_failure": 0,
+      "state_predicate_failure": 0,
+      "scheduling_failure": 0,
+      "consumer_failure": 0,
+      "publication_failure": 0,
+      "unresolved": 0
+    },
+    "observation_scope_failure": {
+      "healthy": 0,
+      "unnecessary_work": 0,
+      "selection_failure": 0,
+      "observation_scope_failure": 6,
+      "state_predicate_failure": 0,
+      "scheduling_failure": 0,
+      "consumer_failure": 0,
+      "publication_failure": 0,
+      "unresolved": 0
+    },
+    "state_predicate_failure": {
+      "healthy": 0,
+      "unnecessary_work": 0,
+      "selection_failure": 0,
+      "observation_scope_failure": 0,
+      "state_predicate_failure": 6,
+      "scheduling_failure": 0,
+      "consumer_failure": 0,
+      "publication_failure": 0,
+      "unresolved": 0
+    },
+    "scheduling_failure": {
+      "healthy": 0,
+      "unnecessary_work": 0,
+      "selection_failure": 0,
+      "observation_scope_failure": 0,
+      "state_predicate_failure": 0,
+      "scheduling_failure": 6,
+      "consumer_failure": 0,
+      "publication_failure": 0,
+      "unresolved": 0
+    },
+    "consumer_failure": {
+      "healthy": 0,
+      "unnecessary_work": 0,
+      "selection_failure": 0,
+      "observation_scope_failure": 0,
+      "state_predicate_failure": 0,
+      "scheduling_failure": 0,
+      "consumer_failure": 6,
+      "publication_failure": 0,
+      "unresolved": 0
+    },
+    "publication_failure": {
+      "healthy": 0,
+      "unnecessary_work": 0,
+      "selection_failure": 0,
+      "observation_scope_failure": 0,
+      "state_predicate_failure": 0,
+      "scheduling_failure": 0,
+      "consumer_failure": 0,
+      "publication_failure": 6,
+      "unresolved": 0
+    }
+  },
+  "completed_utc": "2026-10-03T13:13:29Z"
+}

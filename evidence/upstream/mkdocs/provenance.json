@@ -1,0 +1,29 @@
+{
+  "repository": "mkdocs/mkdocs",
+  "issue": {
+    "number": 2061,
+    "title": "livereload reloads for every file that changes",
+    "opened": "2020-04-13",
+    "closed": "2021-05-25",
+    "maintainer_reproduction": "touching N Markdown files after initial serve build caused N sequential rebuilds",
+    "status_note": "The initial --wait attempt was reverted; PR 2385 replaced the server/watcher implementation."
+  },
+  "pre_source": {
+    "tag": "1.1.2",
+    "path": "mkdocs/commands/serve.py",
+    "github_blob_sha": "390f1345964cf5ba4dafd68834aaed62ee9269fc"
+  },
+  "fix_source": {
+    "merge_commit": "a444c43474f91dea089922dd8fb188d1db3a4535",
+    "path": "mkdocs/livereload/__init__.py",
+    "github_blob_sha": "960c431645756a11166790c1b8ff1fd3efb845b9",
+    "pull_request": 2385
+  },
+  "release": {
+    "version": "1.2",
+    "date": "2021-06-04",
+    "release_note": "Multiple rapid file changes no longer cause the site to repeatedly rebuild.",
+    "observer_followup": "Version 1.2.2 reverted file watching to a polling observer for virtual filesystems, while retaining the batching server architecture."
+  },
+  "scope": "The executable replay below runs the exact merged _build_loop from the source snapshot with accepted callbacks injected into its condition queue. It does not instantiate watchdog or build a MkDocs site."
+}

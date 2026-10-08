@@ -1,0 +1,8 @@
+{
+  "src/watchdelta/__init__.py": "536d220295fca4732ba04fa19b5ecd0bb675a51dd6eff976f26b21f8e6dd6780",
+  "src/watchdelta/build.py": "d7148c1661663c9b3b20409f5da61da916a3161e3dc45e6da8edf41a3cbefc57",
+  "src/watchdelta/core.py": "35cd0723fb6d57793cb4d1b4c73e86afce38e9206e108c220f2a88ca79f85093",
+  "src/watchdelta/replay.py": "a4d17a039f4d84e35bb583ded7e2a180f1c5ce88dbc6263ad0b857f768c5008d",
+  "src/watchdelta/run.py": "01a6d48039946e23f50261bdb487c58389ab32cab4b8a0ed1638da730d7dd757",
+  "src/watchdelta/worker.py": "3812522bc25d5021c3b5094b1ef31cd9b10d970e2128f6f34ed7722482dc3116"
+}
