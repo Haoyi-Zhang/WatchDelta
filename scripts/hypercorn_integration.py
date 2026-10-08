@@ -102,11 +102,16 @@ def apply_edit(project: Path, scenario: str, token: str) -> dict[str, Any]:
     before = target.stat()
     start = time.monotonic_ns()
     writes = 0
-    if scenario in {"same_size", "preserved_stat"}:
+    if scenario in {"same_size", "preserved_stat", "same_second"}:
         target.write_bytes(new)
         writes = 1
         if scenario == "preserved_stat":
             os.utime(target, ns=(before.st_atime_ns, before.st_mtime_ns))
+        elif scenario == "same_second":
+            # Keep CPython's whole-second timestamp and byte length unchanged,
+            # while advancing the fractional timestamp seen by the reloader.
+            sec = before.st_mtime_ns // 1_000_000_000
+            os.utime(target, ns=(before.st_atime_ns, sec * 1_000_000_000 + 500_000_000))
     elif scenario == "inplace":
         target.write_bytes(new + b"\n# measured in-place extension\n")
         writes = 1
@@ -144,6 +149,7 @@ def apply_edit(project: Path, scenario: str, token: str) -> dict[str, Any]:
         "mtime_before_ns": before.st_mtime_ns,
         "mtime_after_ns": after.st_mtime_ns,
         "mtime_restored": after.st_mtime_ns == before.st_mtime_ns,
+        "same_timestamp_second": after.st_mtime_ns // 1_000_000_000 == before.st_mtime_ns // 1_000_000_000,
         "source_sha256": sha256(target),
     }
 
@@ -200,6 +206,11 @@ def run_episode(output: Path, job: dict[str, Any], settle_seconds: float) -> dic
     project = (folder / "work").resolve()
     project.mkdir()
     (project / "app.py").write_text(render_app(TOKEN0), encoding="utf-8")
+    if job['scenario'] == 'same_second':
+        # A past, fractional timestamp makes the cache-boundary regression
+        # independent of the runner's startup time and wall-clock tick.
+        stamp = (time.time_ns() // 1_000_000_000 - 2) * 1_000_000_000 + 100_000_000
+        os.utime(project / 'app.py', ns=(stamp, stamp))
     record: dict[str, Any] = {**job, "status": "infrastructure_error"}
     process: subprocess.Popen[str] | None = None
     log_path = folder / "server.log"

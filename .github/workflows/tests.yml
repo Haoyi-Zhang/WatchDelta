@@ -42,7 +42,7 @@ jobs:
         if: runner.os == 'Linux'
         run: python scripts/smoke_replay.py --output "${{ runner.temp }}/watchdelta-replay"
       - uses: actions/upload-artifact@v4
-        if: runner.os == 'Linux'
+        if: always() && runner.os == 'Linux'
         with:
           name: process-regression-records
           path: ${{ runner.temp }}/watchdelta-replay

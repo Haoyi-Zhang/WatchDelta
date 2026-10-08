@@ -43,18 +43,22 @@ def main() -> None:
         assert record['metrics_include_http_probes'] is False
     integration = args.output / 'hypercorn-protocol.json'
     integration.write_text(json.dumps(dict(settle_seconds=3.0, jobs=[
-        dict(id='hypercorn-same-size', numeric_id=5, scenario='same_size'),
+        dict(id='hypercorn-inplace', numeric_id=5, scenario='inplace'),
         dict(id='hypercorn-restored-time', numeric_id=6, scenario='preserved_stat'),
+        dict(id='hypercorn-same-second', numeric_id=7, scenario='same_second'),
     ]), indent=2), encoding='utf-8')
     output = args.output / 'hypercorn'
     subprocess.run([sys.executable, 'scripts/hypercorn_integration.py', '--protocol', str(integration),
                     '--output', str(output)], cwd=ROOT, check=True, timeout=120)
     records = [json.loads(line) for line in (output / 'records.jsonl').read_text().splitlines()]
-    assert len(records) == 2
+    assert len(records) == 3
     for record in records:
         assert record['source_stable'] and record['oracle']['returncode'] == 0, record
-        assert record['status'] == ('stale' if record['scenario'] == 'preserved_stat' else 'matched'), record
-    print('Four watch episodes and two real Hypercorn reload episodes passed.')
+        assert record['status'] == ('matched' if record['scenario'] == 'inplace' else 'stale'), record
+        if record['scenario'] == 'same_second':
+            assert record['edit']['same_timestamp_second'] and not record['edit']['mtime_restored'], record
+            assert record['reload_imports'] >= 1, record
+    print('Four watch episodes and three real Hypercorn reload episodes passed.')
 
 
 if __name__ == '__main__':
