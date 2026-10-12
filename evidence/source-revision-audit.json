@@ -20,8 +20,8 @@
     "src/watchdelta/active_diagnosis.py": "58c50931c6f915a39df5d60ac498f0da9c4636f0a886875c8d7cb76888a22fe7",
     "src/watchdelta/panel_diagnosis.py": "11ada575422bd69312fe2ce90fdc3fb0a185b75e7f043957883064e835bfbaf8",
     "src/watchdelta/diagnostic_cases.py": "af06e49b7b323b370eff9db2028b79c09c15d77b01d95386f13291fb9d79e115",
-    "scripts/analyze.py": "75d58b601f33c06cdcafdb227893e370b1c57e8fcf7db6feff6d230e43a0ad15",
-    "scripts/analyze_integrations.py": "82475b1902b762fce88a9d5397bf234062b3ae1393b7667c91875c95c951bbac",
+    "scripts/analyze.py": "8a03f42dccded94fb5536f8adad0a4797f6f26d734a062f3c53d76f28ad99c29",
+    "scripts/analyze_integrations.py": "7f821ae1e578f8d62533e126929f715da5648d4625a0b0125f51a90975c2ccc7",
     "scripts/analyze_diagnostics.py": "3978b7b055fd017ca23a7f6b8968929586dd4f661117befdbd7cc8f2095b932b",
     "scripts/analyze_compound_scaling.py": "2b8d6161c72b22f2f49e0321e554378a3e4e12e91239147fdfbfe93ca8ae7eaa",
     "scripts/analyze_panel.py": "48ee2f8d5912c43bc4cbe35946bfa195b8c278fbfa50a0e569b04a3314ccd1ee",
@@ -29,6 +29,8 @@
     "src/watchdelta/qualification.py": "ae921ece6caa6373e98a0577cacbc7ff466d0e5649810286e4af823e950eadcf",
     "scripts/timing_diagnostic.py": "9c0a900f4c8e2694e8832a9b39a759e7bfce8f8613af937ed0a5d57fcb8d0516",
     "scripts/uvicorn_integration.py": "82671bb465ef49e3eb944d6eea26d654e4f50d1c4f5a4ebc1163cf55c6aa461f",
-    "scripts/local_unknown.py": "6a05fe06cf436af9c8a7131c7af92134f25e496b40aed0665448674a9877e306"
+    "scripts/local_unknown.py": "6a05fe06cf436af9c8a7131c7af92134f25e496b40aed0665448674a9877e306",
+    "tests/test_integration_qualification.py": "7f4e902883e071b67728b6931daff3c02e1535b8a45b09efac7b20b2a4b888b8",
+    "tests/test_source_revision_audit.py": "415b94360ffa5fecc0a1f462497e7b1c04e439d9c71420ec306c1b44974e2cb1"
   }
 }

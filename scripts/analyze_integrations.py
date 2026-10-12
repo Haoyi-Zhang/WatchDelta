@@ -1,14 +1,25 @@
 #!/usr/bin/env python3
 """Validate the added Hypercorn holdout and versioned historical mechanism replays."""
 from __future__ import annotations
-import argparse, collections, hashlib, json, statistics
+import argparse, collections, hashlib, json, statistics, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+
+# The standalone extension analyzer must enforce the primary loader's endpoint
+# premises too; a cached summary or serialized matched flag is not validation.
+for path in (ROOT, ROOT / 'src'):
+    if str(path) not in sys.path:
+        sys.path.insert(0, str(path))
+from scripts.analyze import load as load_qualified_episodes
 
 def sha(path:Path)->str:return hashlib.sha256(path.read_bytes()).hexdigest()
 def texrow(items):return ' & '.join(str(x) for x in items)+r' \\'
 def write(path:Path,text:str):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text+'\n')
 def median(values):return statistics.median(values) if values else None
+
+def validate_uvicorn(results:Path)->list[dict]:
+    """Check protocol, record mirrors, endpoint premises, and retained witnesses."""
+    return load_qualified_episodes('uvicorn-integration', results)
 
 def validate_hypercorn(results:Path):
     folder=results/'hypercorn-integration';protocol=json.loads((folder/'protocol.json').read_text())
@@ -55,7 +66,11 @@ def validate_mkdocs(results:Path):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--results',type=Path,default=ROOT/'results');p.add_argument('--paper',type=Path,required=True);a=p.parse_args()
     h,hp=validate_hypercorn(a.results);v,vs=validate_vite(a.results);m,ms=validate_mkdocs(a.results)
+    uv_records=validate_uvicorn(a.results)
     base=json.loads((a.results/'derived/summary.json').read_text())
+    uv=base['datasets']['uvicorn-integration']
+    if uv.get('n')!=len(uv_records) or uv.get('outcomes')!=dict(collections.Counter(r['status'] for r in uv_records)):
+        raise RuntimeError('Uvicorn cached summary differs from qualified records')
     base_n=sum(x['n'] for x in base['datasets'].values());base_matched=sum(x['outcomes'].get('matched',0) for x in base['datasets'].values());base_stale=sum(x['outcomes'].get('stale',0) for x in base['datasets'].values())
     hrows=[]
     for scenario in ['same_size','inplace','atomic','burst','preserved_stat','temporary']:
@@ -80,9 +95,7 @@ Vite 5.2.4/5.2.10 & Exact out-directory decision on simple absolute paths & 48 &
 MkDocs PR 2385 & Exact merged \texttt{\_build\_loop}, callbacks injected after observer acceptance & 24 & All expected invariants held; 360 rapid callbacks produced nine builds, while spaced callbacks and events during a build were retained.\\
 \bottomrule\end{tabular}
 \end{table*}''')
-    uv=base['datasets']['uvicorn-integration']
     # The compact paper integration table is regenerated here from both actual-process integrations.
-    uv_records=[json.loads(x) for x in (a.results/'uvicorn-integration'/'records.jsonl').read_text().splitlines() if x.strip()]
     integration_rows=[]
     for mode,scenario,system_label,edit_label in [
         ('default','same_size','Uvicorn default','Markdown same size'),

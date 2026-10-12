@@ -75,8 +75,27 @@ def stale(rs):return sum(r['status']=='stale' for r in rs)
 def write(path,text):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text+'\n',encoding='utf-8',newline='\n')
 def texrow(xs):return ' & '.join(str(x) for x in xs)+r' \\'
 
+def audit_sources(root:Path)->dict:
+    """Check current analysis bytes separately from frozen experiment bytes."""
+    original=json.loads((root/'protocols/primary-matrix-source-sha256.json').read_text())
+    current_manifest=json.loads((root/'evidence/source-revision-audit.json').read_text())['files']
+    audit={'frozen_archive_hashes':{},'current_source_manifest':current_manifest,'source_hashes':{}}
+    with tarfile.open(root/'evidence/primary-matrix-source.tar.gz','r:gz') as archive:
+        for path,expected in original.items():
+            member=archive.extractfile(path)
+            if member is None:raise RuntimeError(f'Missing frozen source: {path}')
+            audit['frozen_archive_hashes'][path]=hashlib.sha256(member.read()).hexdigest()==expected
+    for path,expected in current_manifest.items():
+        source=root/path
+        audit['source_hashes'][path]=source.is_file() and hashlib.sha256(source.read_bytes()).hexdigest()==expected
+    if not all(audit['source_hashes'].values()) or not all(audit['frozen_archive_hashes'].values()):
+        raise RuntimeError('Frozen archive or current implementation differs from its declared manifest')
+    return audit
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--results',type=Path,default=ROOT/'results');p.add_argument('--paper',type=Path,default=ROOT/'paper-data');a=p.parse_args()
+    # Reject an identity mismatch before loading records or generating claims.
+    source_audit=audit_sources(ROOT)
     datasets={name:load(name,a.results) for name in DATASETS};main=datasets['primary-matrix'];out=a.results/'derived';out.mkdir(exist_ok=True);gen=a.paper/'generated'
     summary={'datasets':{k:{'n':len(v),'outcomes':counts(v)} for k,v in datasets.items()},'configurations':[]}
     matrix=[];cost=[]
@@ -196,19 +215,6 @@ Selection & Edit & Success & Renders\\\midrule
                 row={k:r.get(k,'') for k in names};row['dataset']=dataset
                 row.update({k:r.get('metrics',{}).get(k,'') for k in ['cpu_s','builds','failed_builds','scan_calls','scan_bytes','storage_in_blocks','storage_out_blocks']});w.writerow(row)
     validation={'planned_episode_match':True,'duplicate_ids':False,'protocol_hashes_match':True,'per_episode_records_match':True,'classifications_match_raw_projections':True,'retained_output_bytes_match_hashes':True,'identical_final_source_and_compiler_config':True,'planned_attributes_match':True,'available_invariants_hold':True,'datasets':summary['datasets'],'source_hashes':{}}
-    original=json.loads((ROOT/'protocols/primary-matrix-source-sha256.json').read_text())
-    current_manifest=json.loads((ROOT/'evidence/source-revision-audit.json').read_text())['files']
-    validation['frozen_archive_hashes']={}
-    validation['current_source_manifest']=current_manifest
-    with tarfile.open(ROOT/'evidence/primary-matrix-source.tar.gz','r:gz') as archive:
-        for path,expected in original.items():
-            member=archive.extractfile(path)
-            if member is None:raise RuntimeError(f'Missing frozen source: {path}')
-            validation['frozen_archive_hashes'][path]=hashlib.sha256(member.read()).hexdigest()==expected
-    for path,expected in current_manifest.items():
-        source=ROOT/path
-        validation['source_hashes'][path]=source.is_file() and hashlib.sha256(source.read_bytes()).hexdigest()==expected
-    if not all(validation['source_hashes'].values()) or not all(validation['frozen_archive_hashes'].values()):
-        raise RuntimeError('Frozen archive or current implementation differs from its declared manifest')
+    validation.update(source_audit)
     write(out/'validation.json',json.dumps(validation,indent=2));print(json.dumps(summary,indent=2))
 if __name__=='__main__':main()
