@@ -186,6 +186,10 @@ def decode_nearest(
     ]
     best_distance = min(score for score, _ in scored)
     best = tuple(hypothesis for score, hypothesis in scored if score == best_distance)
+    # A failed readiness/reference/capture premise is not signature noise.
+    # Do not spend an error-correction coordinate to hide a failed experiment.
+    if any(value.startswith("noncomparable:") for value in observed):
+        return DecodeResult("inconclusive", None, best_distance, best)
     if best_distance > max_errors:
         return DecodeResult("unmodeled", None, best_distance, best)
     if len(best) != 1:

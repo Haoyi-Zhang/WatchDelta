@@ -15,6 +15,7 @@ from __future__ import annotations
 
 from itertools import combinations
 from typing import Any, Iterable, Sequence
+from .qualification import qualify
 
 UPSTREAM_BOUNDARIES: tuple[str, ...] = (
     "selection",
@@ -105,7 +106,14 @@ def record_signature(record: dict[str, Any]) -> str:
     modeled candidates to be rejected rather than forcing an attractive label.
     Infrastructure and oracle failures are likewise kept outside the model.
     """
-    status = record.get("status")
+    qualified = qualify(record)
+    status = qualified.status
+    if status == "inconclusive" or status != record.get("status"):
+        return "noncomparable:inconclusive"
+    if status == "nonconform":
+        # A service/disk disagreement establishes an endpoint failure, but
+        # does not by itself establish the model's unpublished-build signature.
+        return "unknown_stale"
     if status == "matched":
         return "matched"
     if status != "stale":

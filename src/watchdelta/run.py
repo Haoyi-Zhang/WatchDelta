@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any
 from .core import create_fixture,projection,clean_build,endpoint_status,stable_latency,tsc_path,tsc_command,build_once,module_subprocess_env
 from .replay import edit
+from .qualification import qualify
 ROOT=Path(__file__).resolve().parents[2]
 
 class Worker:
@@ -112,7 +113,11 @@ def episode(base:Path,case:dict,settle:float)->dict:
              unpublished_projection=next((e.get('unpublished_projection') for e in reversed(worker.events) if e.get('kind')=='build_end' and e.get('published') is False),None),
              worker_stderr=stderr)
         record['unpublished_matches_clean']=(record['unpublished_projection']==clean['projection'] if record.get('unpublished_projection') is not None else None)
-        if status=='stale' and case.get('diagnostic',False):
+        qualification=qualify(record)
+        record.update(status=qualification.status,qualification=qualification.verdict,
+                      qualification_reasons=list(qualification.reasons))
+        if qualification.status!='matched':record['stable_latency_ms']=None
+        if qualification.status=='stale' and case.get('diagnostic',False):
             build_once(work,case['tool'])
             record['manual_rebuild_matches']=projection(work/'out',ext)==clean['projection']
             shutil.copytree(work/'out',folder/'manual_rebuild')

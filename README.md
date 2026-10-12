@@ -9,6 +9,8 @@ The implementation provides two complementary diagnostic modes:
 
 For the evaluated 32-hypothesis model, the compiler produces a cardinality-five exact panel and a 12-execution panel with minimum distance three. The retained diagnostic-panel study contains 384 fresh-process executions. Its analyzer recomputes all 384 model signatures from episode records and retained output bytes, and enumerates all 1,920 single-observation substitutions.
 
+The main mutation execution adapter receives injected truth and constructs each fresh replay with the named faults omitted. The planner itself never receives truth. This is oracle-driven repair simulation, not a general unknown-workflow repair adapter. Qualification is mandatory before diagnosis: a failed reference, invalid readiness order, or unstable snapshot is inconclusive; an output or consumer disagreement is nonconforming. The panel decoder cannot hide inconclusive episodes inside its signature-error budget. An analyzer error blocks generation of manuscript success tables.
+
 ## Evidence map
 
 | Directory | Evidence |
@@ -23,7 +25,16 @@ For the evaluated 32-hypothesis model, the compiler produces a cardinality-five 
 | `results/vite-filter-replay`, `mkdocs-batch-replay` | 72 versioned mechanism replays |
 | `results/pilots/hypercorn-oracle-contamination` | excluded negative oracle pilot |
 
-The complete evidence contains 1,300 actual-process executions and 72 mechanism replays. These heterogeneous layers are not pooled into a field failure rate.
+The retained Linux study contains 1,300 actual-process executions and 72 mechanism replays. These heterogeneous layers are not pooled into a field failure rate.
+
+`results/local-unknown-bytes` is a separate 24-process Windows comparison using the standard-library one-file observer in `scripts/local_unknown.py`. The repair routine changes actual selector/scope configuration on the running process without a truth lookup. Unchanged/manual/configured strategies reach 0/8, 8/8, and 8/8 current endpoints; their next-edit endpoints are 0/8, 0/8, and 8/8. Median intervention wall times are 0.125, 0.482, and 204.488 ms, with the last including a fixed 200-ms decision probe. CPU deltas are below the observed process-clock resolution. `results/local-unknown` retains an excluded preliminary run with a newline-normalizing comparator; it is not watcher-failure evidence and is not in these denominators.
+
+Run this small comparison without the Linux-only replay dependencies:
+
+```bash
+python scripts/local_unknown.py --output results/local-new-run --repetitions 4
+python -m pytest -q tests/test_qualification.py tests/test_local_unknown.py
+```
 
 ## Environment and quick verification
 

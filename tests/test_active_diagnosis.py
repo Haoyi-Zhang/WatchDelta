@@ -1,4 +1,5 @@
 import unittest
+from tests.test_qualification import valid_record
 
 from watchdelta.active_diagnosis import (
     BOUNDARIES,
@@ -47,10 +48,10 @@ class ActiveDiagnosisTests(unittest.TestCase):
         self.assertEqual(candidates, ())
 
     def test_record_signature_observables(self):
-        self.assertEqual(record_signature({"status": "matched"}), "matched")
+        self.assertEqual(record_signature(valid_record()), "matched")
         self.assertEqual(
             record_signature(
-                {
+                {**valid_record(stale=True),
                     "status": "stale",
                     "metrics": {"accepted_events": 1, "failed_builds": 0},
                     "completed_builds": 0,
@@ -60,7 +61,7 @@ class ActiveDiagnosisTests(unittest.TestCase):
         )
         self.assertEqual(
             record_signature(
-                {
+                {**valid_record(stale=True),
                     "status": "stale",
                     "metrics": {"accepted_events": 1, "failed_builds": 1},
                     "completed_builds": 0,
@@ -70,7 +71,7 @@ class ActiveDiagnosisTests(unittest.TestCase):
         )
         self.assertEqual(
             record_signature(
-                {
+                {**valid_record(stale=True),
                     "status": "stale",
                     "metrics": {"accepted_events": 1, "failed_builds": 0},
                     "completed_builds": 1,
@@ -81,7 +82,7 @@ class ActiveDiagnosisTests(unittest.TestCase):
         )
         self.assertEqual(
             record_signature(
-                {
+                {**valid_record(stale=True),
                     "status": "stale",
                     "metrics": {"accepted_events": 1, "failed_builds": 0},
                     "completed_builds": 1,

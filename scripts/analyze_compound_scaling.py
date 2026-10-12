@@ -32,6 +32,7 @@ from watchdelta.active_diagnosis import (
     serialize_set,
     update_candidates,
 )
+from watchdelta.qualification import qualify, validate_retained
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -69,6 +70,7 @@ def tex_escape(value: str) -> str:
 
 
 def validate_episode_record(record: dict[str, Any], folder: Path) -> None:
+    validate_retained(record, folder)
     expected = "matched" if record["observed_projection"] == record["clean"]["projection"] else "stale"
     if record.get("status") != expected:
         raise RuntimeError(f"status/projection mismatch: {record.get('id')}")
@@ -188,6 +190,8 @@ def validate_scaling_large(results: Path, protocols: Path) -> tuple[list[dict[st
             raise RuntimeError(f"scaling-large record mirror differs: {record['id']}")
         if record["status"] != "matched":
             raise RuntimeError(f"scaling-large mismatch: {record['id']}")
+        if qualify(record).status != "matched":
+            raise RuntimeError(f"scaling-large endpoint premises failed: {record['id']}")
         if record["clean"]["returncode"] != 0 or record.get("snapshot_stable") is not True:
             raise RuntimeError(f"scaling-large invalid endpoint: {record['id']}")
         if record["tool"] == "docs" and record.get("served_matches_disk") is not True:

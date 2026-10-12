@@ -13,6 +13,7 @@ if str(_SRC) not in _sys.path:
 from watchdelta.core import create_fixture,projection,clean_build,endpoint_status
 from watchdelta.replay import edit
 from watchdelta.run import environment
+from watchdelta.qualification import qualify
 ROOT=Path(__file__).resolve().parents[1]
 
 def registered_root(pid, root):
@@ -56,17 +57,19 @@ def main():
                         registration=registered_root(process.pid,work/'src')
                         if time.monotonic()>ready_limit:raise TimeoutError('Uvicorn inotify root registration readiness')
                         if registration is None:time.sleep(.02)
-                    ready=time.monotonic_ns();log.flush();initial_renders=(folder/'server.log').read_text().count('WATCHDELTA_RENDER_COMPLETE')
+                    ready=time.monotonic_ns();initial=projection(work/'out','.html');log.flush();initial_renders=(folder/'server.log').read_text().count('WATCHDELTA_RENDER_COMPLETE')
                     info=edit(work,'docs',job['scenario'],f'WD{80000+i:010d}');time.sleep(protocol['settle_seconds'])
                     with urllib.request.urlopen(f'http://127.0.0.1:{port}/index.html',timeout=3) as r:served=r.read()
                     observed=projection(work/'out','.html');end=time.monotonic_ns()
                     os.killpg(process.pid,signal.SIGTERM);process.wait(timeout=5);log.flush()
                     shutil.copytree(work/'out',folder/'observed');clean=clean_build(work,'docs',folder/'clean')
                     renders=(folder/'server.log').read_text().count('WATCHDELTA_RENDER_COMPLETE')-initial_renders
-                    record.update(status=endpoint_status(observed,clean['projection'],clean['returncode']==0),edit=info,ready_ns=ready,
+                    record.update(status=endpoint_status(observed,clean['projection'],clean['returncode']==0),edit=info,ready_ns=ready,initial_projection=initial,
+                      obligation_consistent=(initial!=clean['projection'])==info['obligation'],served_projection={'index.html':hashlib.sha256(served).hexdigest()},
                       snapshot_stable=projection(folder/'observed','.html')==observed,observer_ready_evidence=registration,observed_projection=observed,clean=clean,served_matches_disk=hashlib.sha256(served).hexdigest()==observed['index.html'],
                       rerenders=renders,observation_ms=(end-info['end_ns'])/1e6,
                       command=[s.replace(str(work),'<project>').replace(str(ROOT),'<artifact>') for s in command])
+                    result=qualify(record);record.update(status=result.status,qualification=result.verdict,qualification_reasons=list(result.reasons))
                 except Exception as e:record.update(status='infrastructure_error',error=repr(e))
                 finally:
                     if process and process.poll() is None:

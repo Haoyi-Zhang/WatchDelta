@@ -6,7 +6,7 @@ The bundle pins and records the source or installed artifact used for TypeScript
 
 ## Vite output-directory decision
 
-The Vite replay executes the relevant tagged source decision from 5.2.4 and 5.2.10 on a bounded absolute-path matrix. It verifies the reported `emptyOutDir=false` boundary but does not claim full Vite/Rollup/Chokidar execution.
+The Vite replay executes a JavaScript transcription of the relevant tagged source decision from 5.2.4 and 5.2.10 on a bounded absolute-path matrix, with source guards. It verifies the reported `emptyOutDir=false` boundary but does not execute the tagged TypeScript function or claim full Vite/Rollup/Chokidar execution.
 
 ## MkDocs build-loop batching
 
@@ -19,6 +19,8 @@ The excluded pilot imported the measured terminal module to construct a nominall
 ## Adaptive diagnosis
 
 The adaptive layer declares six boundaries, enumerates a finite hypothesis space, predicts a lifecycle/output signature for each repair–hypothesis pair, and updates the candidate set after each actual-process execution. The planner minimizes the largest surviving bucket, then aggregate bucket concentration and repair breadth. An observation predicted by no remaining hypothesis yields `unmodeled` rather than a forced label.
+
+The execution adapter uses the seeded fault set and selected repairs to construct each replay with named faults omitted. Only the planner is truth-blinded. Those replays measure discrimination under oracle-driven repair semantics. In the separate `local_unknown.py` comparison, the repair routine instead sends literal selector/root configuration changes to an existing process. Qualification rejects failed reference/readiness/capture premises before either signature mapping or panel decoding; an inconclusive episode is not a correctable signature substitution.
 
 ## Distance-constrained panel synthesis
 

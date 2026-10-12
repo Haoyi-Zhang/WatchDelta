@@ -1,5 +1,6 @@
 from __future__ import annotations
 from typing import Any
+from .qualification import qualify
 
 def _metric(record: dict[str, Any], name: str) -> int | float:
     return record.get("metrics", {}).get(name, 0)
@@ -11,6 +12,10 @@ def classify(base: dict[str, Any], interventions: dict[str, dict[str, Any]]) -> 
     the supplied interventions do not distinguish a boundary.
     """
     evidence: list[str] = []
+    for record in (base, *interventions.values()):
+        result = qualify(record)
+        if result.status not in {"matched", "stale"} or result.status != record.get("status"):
+            return "unresolved", ["non-comparable or unmodeled endpoint premises"]
     obligation = bool(base.get("edit", {}).get("obligation"))
     if base.get("status") == "matched":
         if not obligation and _metric(base, "builds") > 0:

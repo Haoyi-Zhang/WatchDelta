@@ -13,6 +13,7 @@ if str(_SRC) not in _sys.path:
     _sys.path.insert(0, str(_SRC))
 from watchdelta.core import projection, source_fingerprint
 from watchdelta.diagnosis import classify
+from watchdelta.qualification import validate_retained
 ROOT=Path(__file__).resolve().parents[1]
 CLASSES=['healthy','unnecessary_work','selection_failure','observation_scope_failure',
          'state_predicate_failure','scheduling_failure','consumer_failure','publication_failure']
@@ -24,6 +25,7 @@ def med(values):return statistics.median(values) if values else None
 def fmt(x,d=1):return '--' if x is None else f'{x:.{d}f}'
 
 def validate_episode(folder:Path,r:dict)->None:
+    validate_retained(r,folder)
     saved=json.loads((folder/'record.json').read_text())
     if saved!=r:raise RuntimeError(f'record mismatch: {r["id"]}')
     if r['status'] not in {'matched','stale'}:raise RuntimeError(f'non-comparable episode: {r["id"]} {r["status"]}')

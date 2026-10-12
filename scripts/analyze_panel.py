@@ -18,6 +18,7 @@ if str(_SRC) not in _sys.path:
 from watchdelta.active_diagnosis import hypothesis_space, predict_signature, record_signature
 from watchdelta.panel_diagnosis import certify_panel, decode_nearest, exhaustive_single_corruptions
 from watchdelta.core import projection
+from watchdelta.qualification import validate_retained
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -80,6 +81,7 @@ def main() -> int:
     check(set(exact_panel).issubset(set(robust_panel)), "exact panel is not nested in robust panel", errors)
 
     all_steps: list[dict[str, Any]] = []
+    conformant_units = 0
     exact_recovered = 0
     robust_recovered = 0
     for record in records:
@@ -88,23 +90,30 @@ def main() -> int:
         truth = frozenset(record["truth"])
         check(len(record["steps"]) == len(robust_panel), f"wrong step count in {record['id']}", errors)
         observed_by_repairs: dict[frozenset[str], str] = {}
+        unit_conformant = True
         for step, repairs in zip(record["steps"], robust_panel, strict=True):
             step_repairs = frozenset(step["repairs"])
             check(step_repairs == repairs, f"panel order mismatch in {record['id']}", errors)
             predicted = predict_signature(truth, repairs)
             episode_file = root / 'episodes' / step['execution_id'] / 'record.json'
             episode = read_json(episode_file)
-            check(projection(episode_file.parent / 'observed', '.html') == episode['observed_projection'],
-                  f"retained observed bytes mismatch in {step['execution_id']}", errors)
-            check(projection(episode_file.parent / 'clean/out', '.html') == episode['clean']['projection'],
-                  f"retained clean bytes mismatch in {step['execution_id']}", errors)
-            observed = record_signature(episode)
+            valid = True
+            try:
+                validate_retained(episode, episode_file.parent)
+            except (RuntimeError, OSError, KeyError, ValueError) as exc:
+                errors.append(f"invalid episode {step['execution_id']}: {exc}")
+                valid = False
+            observed = record_signature(episode) if valid else "noncomparable:inconclusive"
             check(step['observed'] == observed, f"episode signature mismatch in {step['execution_id']}", errors)
             check(step["predicted"] == predicted, f"stored prediction mismatch in {record['id']}", errors)
             check(observed == predicted, f"actual/model mismatch in {record['id']}", errors)
             check(step["conformant"] is (observed == predicted), f"conformance flag mismatch in {record['id']}", errors)
             observed_by_repairs[repairs] = observed
-            all_steps.append(step)
+            # Count recomputed valid conformance, never a cached True flag.
+            conformant = valid and observed == predicted
+            unit_conformant = unit_conformant and conformant
+            all_steps.append({**step, "conformant": conformant})
+        conformant_units += unit_conformant
         robust_observed = tuple(observed_by_repairs[item] for item in robust_panel)
         exact_observed = tuple(observed_by_repairs[item] for item in exact_panel)
         robust_decoded = decode_nearest(robust_observed, robust_panel, 1)
@@ -142,7 +151,7 @@ def main() -> int:
     recomputed = {
         "units": len(records),
         "actual_process_executions": len(all_steps),
-        "model_conformant_units": sum(all(step["conformant"] for step in record["steps"]) for record in records),
+        "model_conformant_units": conformant_units,
         "model_conformant_executions": sum(bool(step["conformant"]) for step in all_steps),
         "exact_zero_error_recovered": exact_recovered,
         "robust_zero_error_recovered": robust_recovered,
@@ -170,7 +179,16 @@ def main() -> int:
         "errors": errors,
     }
 
+    # A rejected dataset cannot leave newly generated manuscript success claims.
+    if errors:
+        print(json.dumps(output, indent=2))
+        return 1
     if args.paper is not None:
+        compound_path = args.results / "analysis-complete.json"
+        if not compound_path.is_file():
+            errors.append(f"missing compound analysis for manuscript table: {compound_path}")
+            print(json.dumps(output, indent=2))
+            return 1
         generated = args.paper / "generated"
         generated.mkdir(parents=True, exist_ok=True)
         macros = [
@@ -192,7 +210,6 @@ def main() -> int:
             macro("TotalEvidenceN", 916 + len(all_steps) + 72),
         ]
         (generated / "numbers-panel.tex").write_text("\n".join(macros) + "\n", encoding="utf-8")
-        compound_path = args.results / "analysis-complete.json"
         if not compound_path.is_file():
             errors.append(f"missing compound analysis for manuscript table: {compound_path}")
         else:

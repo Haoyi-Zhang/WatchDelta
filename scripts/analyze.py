@@ -5,6 +5,9 @@ No incomplete run is accepted, and every planned case remains in the denominator
 from __future__ import annotations
 import argparse,collections,csv,hashlib,json,math,statistics,tarfile
 from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
+from watchdelta.qualification import validate_retained
 ROOT=Path(__file__).resolve().parents[1]
 CONFIGS=[('tsc','default','TS default'),('tsc','recommended','TS native options'),('tsc','poll','TS fixed polling'),('tsc','hash','TS content scan'),('docs','default','Docs default'),('docs','relevant','Docs relevant'),('docs','tuned','Docs tuned'),('docs','poll','Docs polling'),('docs','hash','Docs content scan')]
 SCENARIOS=['inplace','atomic','burst','newdir','temporary','same_size','chunked','preserved_stat']
@@ -39,8 +42,11 @@ def load(name:str,results:Path)->list[dict]:
         job=next(j for j in plan['jobs'] if j['id']==r['id'])
         if any(r.get(k)!=v for k,v in job.items()):raise RuntimeError(f'Case attributes changed: {r["id"]}')
         if json.loads((folder/'episodes'/r['id']/'record.json').read_text())!=r:raise RuntimeError(f'Per-case record differs: {r["id"]}')
-        if r['status'] not in ['matched','stale','oracle_error','infrastructure_error']:raise RuntimeError(f'Unknown status: {r["id"]}')
-        if r['status'] in ['matched','stale']:
+        if r['status'] not in ['matched','stale','nonconform','inconclusive','oracle_error','infrastructure_error']:raise RuntimeError(f'Unknown status: {r["id"]}')
+        # All episodes, including recorded reference/setup errors, must pass
+        # premises before any manuscript success count or table is generated.
+        validate_retained(r,folder/'episodes'/r['id'])
+        if r['status'] in ['matched','stale','nonconform']:
             case_folder=folder/'episodes'/r['id'];ext='.js' if r['tool']=='tsc' else '.html'
             if manifest(case_folder/'observed',ext)!=r['observed_projection']:raise RuntimeError(f'Observed bytes differ: {r["id"]}')
             if manifest(case_folder/'clean/out',ext)!=r['clean']['projection']:raise RuntimeError(f'Clean bytes differ: {r["id"]}')
@@ -50,9 +56,7 @@ def load(name:str,results:Path)->list[dict]:
             if r.get('ready_ns') is not None and not r['ready_ns']<=r['edit']['start_ns']<=r['edit']['end_ns']:raise RuntimeError(f'Readiness/edit clock order: {r["id"]}')
             if r['clean']['returncode']!=0:raise RuntimeError(f'Invalid oracle: {r["id"]}')
             equal=r['observed_projection']==r['clean']['projection']
-            if equal!=(r['status']=='matched'):raise RuntimeError(f'Endpoint misclassification: {r["id"]}')
-            for check in ['snapshot_stable','obligation_consistent','served_matches_disk']:
-                if r.get(check) is False:raise RuntimeError(f'{check} failed: {r["id"]}')
+            if equal!=(r['status'] in ['matched','nonconform']):raise RuntimeError(f'Endpoint misclassification: {r["id"]}')
             if r.get('stable_latency_ms') is not None and (r['status']!='matched' or not r['edit']['obligation']):raise RuntimeError(f'Invalid latency: {r["id"]}')
             for k,v in r.get('metrics',{}).items():
                 if v<0:raise RuntimeError(f'Negative metric {k}: {r["id"]}')

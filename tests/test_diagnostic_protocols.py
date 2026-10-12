@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 from watchdelta.core import create_fixture, source_files, build_once, projection
 from watchdelta.diagnosis import classify
+from tests.test_qualification import valid_record
 
 class V3ProtocolTests(unittest.TestCase):
     def test_fixture_file_counts_are_exact(self):
@@ -23,13 +24,13 @@ class V3ProtocolTests(unittest.TestCase):
 
     def test_selection_signature(self):
         label,_=classify(
-            {'status':'stale','edit':{'obligation':True},'metrics':{'accepted_events':0}},
-            {'broad_filter':{'status':'matched','metrics':{}}})
+            {**valid_record(stale=True),'metrics':{'accepted_events':0}},
+            {'broad_filter':{**valid_record(),'metrics':{}}})
         self.assertEqual(label,'selection_failure')
 
     def test_publication_signature(self):
         label,_=classify(
-            {'status':'stale','edit':{'obligation':True},'metrics':{'builds':1},
+            {**valid_record(stale=True),'metrics':{'builds':1},
              'unpublished_matches_clean':True}, {})
         self.assertEqual(label,'publication_failure')
 
