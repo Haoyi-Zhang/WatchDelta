@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import Any
 from .qualification import qualify
+from .active_diagnosis import record_signature
 
 def _metric(record: dict[str, Any], name: str) -> int | float:
     return record.get("metrics", {}).get(name, 0)
@@ -16,6 +17,8 @@ def classify(base: dict[str, Any], interventions: dict[str, dict[str, Any]]) -> 
         result = qualify(record)
         if result.status not in {"matched", "stale"} or result.status != record.get("status"):
             return "unresolved", ["non-comparable or unmodeled endpoint premises"]
+        if result.status == "stale" and record_signature(record).startswith("noncomparable:"):
+            return "unresolved", ["diagnostic lifecycle metadata missing or invalid"]
     obligation = bool(base.get("edit", {}).get("obligation"))
     if base.get("status") == "matched":
         if not obligation and _metric(base, "builds") > 0:
@@ -29,7 +32,7 @@ def classify(base: dict[str, Any], interventions: dict[str, dict[str, Any]]) -> 
         return "consumer_failure", ["accepted work ended with a failed consumer"]
     if base.get("unpublished_matches_clean") is True:
         return "publication_failure", ["successful unpublished output matches reference", "served output remains stale"]
-    if _metric(base, "accepted_events") > 0 and base.get("completed_builds", 0) == 0:
+    if _metric(base, "accepted_events") > 0 and base["completed_builds"] == 0:
         return "scheduling_failure", ["change accepted", "no successful build completion", "manual rebuild repairs output"]
     broad = interventions.get("broad_filter")
     if broad and broad.get("status") == "matched":

@@ -118,14 +118,23 @@ def record_signature(record: dict[str, Any]) -> str:
         return "matched"
     if status != "stale":
         return f"noncomparable:{status}"
-    metrics = record.get("metrics", {})
-    if metrics.get("failed_builds", 0) > 0:
+    # Endpoint disagreement alone cannot establish a silent or failed stage.
+    # Missing/invalid counters are absent evidence, not observed zero counts.
+    metrics = record.get("metrics")
+    if not isinstance(metrics, dict):
+        return "noncomparable:lifecycle"
+    counts = (metrics.get("failed_builds"), metrics.get("accepted_events"),
+              record.get("completed_builds"))
+    if any(type(value) is not int or value < 0 for value in counts):
+        return "noncomparable:lifecycle"
+    failed, accepted, completed = counts
+    if failed > 0:
         return "consumer_failure"
     if record.get("unpublished_matches_clean") is True:
         return "publication_failure"
-    if metrics.get("accepted_events", 0) > 0 and record.get("completed_builds", 0) == 0:
+    if accepted > 0 and completed == 0:
         return "scheduling_failure"
-    if metrics.get("accepted_events", 0) == 0 and record.get("completed_builds", 0) == 0:
+    if accepted == 0 and completed == 0:
         return "upstream_silence"
     return "unknown_stale"
 

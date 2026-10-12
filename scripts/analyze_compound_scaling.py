@@ -23,6 +23,8 @@ from pathlib import Path as _BootstrapPath
 _SRC = _BootstrapPath(__file__).resolve().parents[1] / "src"
 if str(_SRC) not in _sys.path:
     _sys.path.insert(0, str(_SRC))
+if str(_SRC.parent) not in _sys.path:
+    _sys.path.insert(0, str(_SRC.parent))
 from watchdelta.active_diagnosis import (
     BOUNDARIES,
     choose_intervention,
@@ -33,6 +35,7 @@ from watchdelta.active_diagnosis import (
     update_candidates,
 )
 from watchdelta.qualification import qualify, validate_retained
+from scripts.analyze_diagnostics import validate_scaling
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -224,14 +227,24 @@ def validate_scaling_large(results: Path, protocols: Path) -> tuple[list[dict[st
 
 
 def load_scaling_small(results: Path) -> list[dict[str, Any]]:
-    records = read_jsonl(results / "scaling-small" / "records.jsonl")
-    if len(records) != 48 or any(record["status"] != "matched" for record in records):
-        raise RuntimeError("scaling-small prerequisite is incomplete")
+    complete = json.loads((results / "scaling-small" / "complete.json").read_text())
+    # Standalone combined analysis must check the same retained witnesses as
+    # the ordered reproduction pipeline, not trust cached matched statuses.
+    records, _summary = validate_scaling(results)
+    if complete.get("episodes") != len(records):
+        raise RuntimeError("scaling-small completion marker mismatch")
     return records
 
 
 def aggregate_scaling(records_small: list[dict[str, Any]], records_large: list[dict[str, Any]]) -> list[dict[str, Any]]:
     records = records_small + records_large
+    for record in records:
+        try:
+            result = qualify(record)
+        except (AttributeError, KeyError, TypeError, ValueError) as exc:
+            raise RuntimeError("invalid scaling endpoint schema") from exc
+        if result.status != "matched" or record.get("status") != result.status:
+            raise RuntimeError(f"ineligible scaling endpoint {record.get('id')}: {result.status}; {'; '.join(result.reasons)}")
     rows: list[dict[str, Any]] = []
     for tool, mode in (("tsc", "default"), ("tsc", "hash"), ("docs", "relevant"), ("docs", "hash")):
         for size in (10, 250, 1000, 5000):
@@ -378,8 +391,8 @@ Path & Match (10) & Match (5k) & Latency ms & CPU ms & Scanned KiB\\\midrule
         "FixedPanelBreadthN": fixed_panel_breadth,
         "ScaleLargeN": scaling_large_summary["episodes"],
         "ScaleLargeMatchedN": scaling_large_summary["matched"],
-        "ScaleAllN": 48 + scaling_large_summary["episodes"],
-        "ScaleAllMatchedN": 48 + scaling_large_summary["matched"],
+        "ScaleAllN": sum(row["n"] for row in scaling_rows),
+        "ScaleAllMatchedN": sum(row["matched"] for row in scaling_rows),
         "MaxTreeN": 5000,
         "CompoundRuntimeEpisodeN": runtime_total,
         "CompoundAllEvidenceN": all_cases,
@@ -400,7 +413,7 @@ Ordinary runtime matrix & TypeScript watch; watchfiles/Markdown/HTTP & 432 & Def
 Runtime integrations and diagnostics & Timing, strong baseline, Uvicorn, Hypercorn, sensitivity & 114 & Independent CLIs, longer deadlines, predicate controls, and deliberately injected failures.\\
 Single-boundary calibration & Eight seeded classes & 84 & Checks that each observable signature and repair intervention behaves as declared.\\
 Compound active diagnosis & Two--four modeled boundaries; one unknown mechanism & __COMPOUND_RUNS__ & __KNOWN_UNITS__ modeled units recovered exactly; __UNKNOWN_UNITS__ unknown units rejected as unmodeled.\\
-Tree/filesystem holdouts & 10--5,000 files; overlay/tmpfs & 80 & Terminal agreement plus response, CPU, scan work, and startup cost under native/relevant and content modes.\\
+Tree/filesystem holdouts & 10--5,000 files; overlay/tmpfs & __SCALING_RUNS__ & Terminal agreement plus response, CPU, scan work, and startup cost under native/relevant and content modes.\\
 Versioned mechanism replays & Vite tagged decision; merged MkDocs loop & 72 & Exact declared source boundary, not full historical application runtime.\\
 \bottomrule\end{tabular}
 \end{table*}"""
@@ -408,6 +421,7 @@ Versioned mechanism replays & Vite tagged decision; merged MkDocs loop & 72 & Ex
         evidence_text.replace("__COMPOUND_RUNS__", str(compound_summary["actual_process_executions"]))
         .replace("__KNOWN_UNITS__", str(compound_summary["known_units"]))
         .replace("__UNKNOWN_UNITS__", str(compound_summary["unknown_units"]))
+        .replace("__SCALING_RUNS__", str(macros["ScaleAllN"]))
     )
     write(paper / "generated/evidence.tex", evidence_text)
 
