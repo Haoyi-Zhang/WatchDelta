@@ -209,7 +209,7 @@ def main() -> int:
             macro("RuntimeExecutionN", 916 + len(all_steps)),
             macro("TotalEvidenceN", 916 + len(all_steps) + 72),
         ]
-        (generated / "numbers-panel.tex").write_text("\n".join(macros) + "\n", encoding="utf-8")
+        (generated / "numbers-panel.tex").write_text("\n".join(macros) + "\n", encoding="utf-8", newline="\n")
         if not compound_path.is_file():
             errors.append(f"missing compound analysis for manuscript table: {compound_path}")
         else:
@@ -220,7 +220,7 @@ def main() -> int:
             table_lines = [
                 r"\begin{table*}[t]",
                 r"\centering",
-        r"\caption{Diagnosis results. Compound units are repeated twice. Panel runs include the unrepaired baseline; $d_{\min}$ is recomputed from the codebook.}",
+        r"\caption{Adaptive and compiled-panel diagnosis results.}",
                 r"\label{tab:diagnosis}",
                 r"\scriptsize",
                 r"\setlength{\tabcolsep}{4.5pt}",
@@ -242,7 +242,7 @@ def main() -> int:
                 r"\end{table*}",
             ]
             table = "\n".join(table_lines) + "\n"
-            (generated / "diagnosis.tex").write_text(table, encoding="utf-8")
+            (generated / "diagnosis.tex").write_text(table, encoding="utf-8", newline="\n")
 
     print(json.dumps(output, indent=2))
     return 1 if errors else 0

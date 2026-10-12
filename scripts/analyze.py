@@ -72,7 +72,7 @@ def fmt(x,d=1):return '--' if x is None else f'{x:.{d}f}'
 def counts(rs):return dict(collections.Counter(r['status'] for r in rs))
 def passed(rs):return sum(r['status']=='matched' for r in rs)
 def stale(rs):return sum(r['status']=='stale' for r in rs)
-def write(path,text):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text+'\n')
+def write(path,text):path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text+'\n',encoding='utf-8',newline='\n')
 def texrow(xs):return ' & '.join(str(x) for x in xs)+r' \\'
 
 def main():
@@ -93,7 +93,7 @@ def main():
         write(gen/f'cdf-{tool}-{mode}.dat',cdf)
     matrixtex=r'''\begin{table*}[t]
 \centering
-\caption{Stale endpoints within 1.5 seconds after editing (count / six trials per cell). The last column is a metadata-preservation stress stratum, not an ordinary-save failure rate. An endpoint mismatch is not necessarily permanent event loss.}
+\caption{Stale endpoints in the primary watch-mode matrix.}
 \label{tab:matrix}
 \begin{tabular}{lrrrrrrrr}
 \toprule
@@ -106,7 +106,7 @@ Configuration & In place & Rename & Burst & New dir. & Temp. & Same size & Chunk
     write(gen/'matrix.tex',matrixtex)
     write(gen/'cost.tex',r'''\begin{table*}[t]
 \centering
-\caption{Ordinary relevant-edit responses and work. Success is over 36 episodes per row; latency is median [25th, 75th percentile] among successful endpoints only. CPU is median per episode over all 36, in milliseconds. The last column counts rebuild attempts across six output-neutral temporary-file episodes, not failed controls.}
+\caption{Ordinary relevant-edit responses and work.}
 \label{tab:cost}
 \begin{tabular}{llrrr}
 \toprule
