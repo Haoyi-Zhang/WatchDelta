@@ -67,3 +67,12 @@ python scripts/audit_completions.py
 Original code is available under the MIT license in `LICENSE`. Third-party source notices remain in `licenses/`. The public repository is [WatchDelta](https://github.com/Haoyi-Zhang/WatchDelta).
 
 The retained study used Python 3.13.5 on Linux; its documentation CPU intervals include the HTTP probes and are not watcher-only overhead. Content-mode TypeScript runs use fresh one-shot compilation rather than the persistent watch compiler. The reproduction driver closes its CPU interval before HTTP retrieval. Unit tests can run on Windows, but actual-process replay requires Linux process groups and `/proc`.
+
+## Render retained scaling observations
+
+Install `requirements-figures.txt`, then run
+`python scripts/render_scaling.py --source plot_inputs --output-dir figures --font-root /path/to/texmf-dist/fonts`.
+The optional vector renderer preserves both log-scale panels, all four series
+and the observed nonmonotone values. It reads the retained episode medians;
+it does not start watchers or replace actual-process measurements. Its five
+input and routing checks are included in the ordinary test suite.
