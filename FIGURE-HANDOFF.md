@@ -1,16 +1,25 @@
-# Figure handoff
+# Figure reproduction
 
-No external redraw is required and no PPTX is supplied. Every essential visual is already an editable vector LaTeX/TikZ/PGFPlots source.
+The complete project includes the manuscript figure sources in the sibling
+`paper` directory. The standalone artifact repository contains the retained
+measurements and their analysis, rather than a second copy of the paper.
 
-1. `paper/figures/workflow.tex` shows the live watch path and isolated terminal-source reference. The branches must remain distinct.
-2. `paper/figures/scaling.tex` renders data-derived latency and worker-CPU curves for 10, 250, 1,000, and 5,000 source files. `scripts/analyze_compound_scaling.py` regenerates its `.dat` inputs.
-3. `paper/figures/diagnostic-panel.tex` shows the exact and distance-three panel/codebook construction without crossing modules or overlapping labels.
+The workflow and diagnostic-panel figures are editable TikZ schematics.
+The scaling figure is a Python-generated vector PDF: `figures/draw_scaling.py`
+reads `generated/scaling-latency.dat` and `generated/scaling-cpu.dat`, covering
+10, 250, 1,000, and 5,000 source files. The analysis in
+`scripts/analyze_compound_scaling.py` derives those tables from the retained
+episodes. Rendering does not execute subjects, measure time, or fit a model.
 
-Captions remain in LaTeX and no figure contains an internal overall title. Rebuild and inspect with:
+From the manuscript directory, with ReportLab and the TeX URW Times font
+available, regenerate the plotted PDF and compile the paper:
 
-```bash
-cd ../paper
-make refresh
+```sh
+python figures/draw_scaling.py --font-root /path/to/texmf-dist/fonts
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
-python verify_paper.py --visual-inspection-confirmed --render-dpi 200
 ```
+
+The PDF embeds the manuscript-compatible font. Captions remain in LaTeX.
+Check the rendered plot's axes, units, series and source-table values after
+regeneration. The live-watch and isolated-reference branches in the workflow
+schematic remain distinct.
