@@ -1,19 +1,19 @@
 {
   "all_citations_resolved": true,
   "all_entries_cited": true,
-  "audit_csv_sha256": "0bd47d9e05e03a3b66588c228b771a457e87665ce2699c63b25a23dcf5a2d9e8",
+  "audit_csv_sha256": "88398338e0af204dc6f288857cb1d1d42de819d4ffbf2183ec9125ffb85662cd",
   "audit_key_set_matches": true,
-  "audit_md_sha256": "fe3857dd1c1aaecf0904fc30f8a650f96831c2bf7ee11a30c73f9fdd3477a3bc",
+  "audit_md_sha256": "57ad69e1ef559cb538da9dd1d560464299393254bad60d40657c294dee6ef24b",
   "audit_rows": 67,
   "bibliography_entries": 67,
-  "bibliography_sha256": "ed0e427a6d21987a3b4e1f010c5bdd6e7283cc8749903c9c7635fed1db435481",
+  "bibliography_sha256": "f5cf737928ba11994f970a3f2c3cc6bd6c56b928eaeb622b23b3a9a7d9d4a4af",
   "duplicate_dois": {},
   "duplicate_titles": {},
   "errors": [],
   "metadata_fields_match_ledger": true,
   "paper": null,
   "paper_artifact_mirrors_match": null,
-  "paper_bibliography_sha256": "ed0e427a6d21987a3b4e1f010c5bdd6e7283cc8749903c9c7635fed1db435481",
+  "paper_bibliography_sha256": "f5cf737928ba11994f970a3f2c3cc6bd6c56b928eaeb622b23b3a9a7d9d4a4af",
   "source_mode": "retained-paper-snapshot",
   "unique_cited_keys": 67
 }

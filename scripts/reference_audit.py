@@ -39,6 +39,12 @@ def parse_bib(text: str) -> dict[str, dict[str, object]]:
             end += 1
         if depth:
             raise ValueError(f"unterminated BibTeX entry: {key}")
+        if entry_type == "ieeetranbstctl":
+            # IEEEtran style controls are metadata, not bibliography references.
+            offset = end
+            continue
+        if key in entries:
+            raise ValueError(f"duplicate bibliography key: {key}")
         body = text[pos : end - 1]
         fields: dict[str, str] = {}
         cursor = 0
