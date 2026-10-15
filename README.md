@@ -38,6 +38,20 @@ python -m pytest -q tests/test_qualification.py tests/test_local_unknown.py
 
 ## Environment and quick verification
 
+Run from this artifact directory. The full verification commands below target
+the recorded Linux environment (CPython 3.13.5, Node.js 22.16.0 and TypeScript
+5.8.3) and use POSIX `make`/`env`; they are not a Windows full-replay recipe.
+Install the pinned Python dependencies and local TypeScript first:
+
+```bash
+python -m pip install -r requirements-lock.txt
+npm install --ignore-scripts --no-audit --no-fund
+export WATCHDELTA_TSC="$PWD/node_modules/typescript/lib/tsc.js"
+```
+
+The runner passes this TypeScript source path to Node; a global `tsc` is not
+required. Then verify:
+
 ```bash
 python --version
 node --version
