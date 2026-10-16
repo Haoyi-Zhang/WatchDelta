@@ -84,6 +84,13 @@ The retained study used Python 3.13.5 on Linux; its documentation CPU intervals 
 
 ## Render retained scaling observations
 
+The workflow and diagnostic-panel diagrams are direct Matplotlib vectors with
+embedded fonts. The full bundle's `paper/build.py` regenerates both:
+
+```sh
+python plots/draw_schematics.py --output-dir ../paper/figures
+```
+
 Install `requirements-figures.txt`, then run
 `python scripts/render_scaling.py --source plot_inputs --output-dir figures --font-root /path/to/texmf-dist/fonts`.
 The optional vector renderer preserves both log-scale panels, all four series
