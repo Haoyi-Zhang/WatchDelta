@@ -11,7 +11,7 @@
   "duplicate_titles": {},
   "errors": [],
   "metadata_fields_match_ledger": true,
-  "paper": "D:\\CodexProjects\\wg-check\\substantive-library\\P121\\paper",
+  "paper": "<PROJECTS_ROOT>\\wg-check\\substantive-library\\P121\\paper",
   "paper_artifact_mirrors_match": true,
   "paper_bibliography_sha256": "f5cf737928ba11994f970a3f2c3cc6bd6c56b928eaeb622b23b3a9a7d9d4a4af",
   "source_mode": "live-paper",

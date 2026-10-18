@@ -97,3 +97,7 @@ The optional vector renderer preserves both log-scale panels, all four series
 and the observed nonmonotone values. It reads the retained episode medians;
 it does not start watchers or replace actual-process measurements. Its five
 input and routing checks are included in the ordinary test suite.
+
+## Portable path notation
+
+Published execution records use `<PYTHON_ROOT>`, `<NODE_ROOT>`, `<RUNTIME_ROOT>` and `<PROJECTS_ROOT>` for machine-local installation and workspace prefixes. These are path aliases, not literal directories; substitute the corresponding local roots when replaying a command. Recorded interpreter and dependency versions, inputs, measurements and outcomes are unchanged. File inventories bind the published portable serializations; any `recorded_` identity denotes the pre-normalization bytes.
