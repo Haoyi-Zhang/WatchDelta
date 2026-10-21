@@ -18,13 +18,12 @@
     {
       "name": "Xunzhu Tang",
       "orcid": "0000-0002-6377-0884",
-      "affiliation": "University of Luxembourg, Luxembourg, Luxembourg",
-      "email": "xunzhu.tang@uni.lu",
-      "corresponding": true,
-      "secondary_email": "realdanieltang@gmail.com"
+      "affiliation": "AutoTrust AI",
+      "email": "realdanieltang@gmail.com",
+      "corresponding": true
     }
   ],
-  "public_repository": null,
+  "public_repository": "https://github.com/Haoyi-Zhang/WatchDelta",
   "archival_doi": null,
-  "note": "The review bundle is local and has not been published or assigned a DOI."
+  "note": "The artifact is available from the canonical repository; no archival DOI has been assigned."
 }
