@@ -27,6 +27,13 @@ The main mutation execution adapter receives injected truth and constructs each 
 
 The retained Linux study contains 1,300 actual-process executions and 72 mechanism replays. These heterogeneous layers are not pooled into a field failure rate.
 
+The Hypercorn analyzer checks the initial HTTP token, monotonic readiness/edit/
+endpoint order, oracle payload, and retained terminal source before writing tables.
+Its extension summary distinguishes legacy direct-source evidence from records
+with the later frozen-source/stability witness. A supplied `source_stable` must
+be `true` and agree with the retained frozen source; absent historical fields
+are not backfilled or treated as proof of that later isolation check.
+
 `results/local-unknown-bytes` is a separate 24-process Windows comparison using the standard-library one-file observer in `scripts/local_unknown.py`. The repair routine changes actual selector/scope configuration on the running process without a truth lookup. Unchanged/manual/configured strategies reach 0/8, 8/8, and 8/8 current endpoints; their next-edit endpoints are 0/8, 0/8, and 8/8. Median intervention wall times are 0.125, 0.482, and 204.488 ms, with the last including a fixed 200-ms decision probe. CPU deltas are below the observed process-clock resolution. `results/local-unknown` retains an excluded preliminary run with a newline-normalizing comparator; it is not watcher-failure evidence and is not in these denominators.
 
 Run this small comparison without the Linux-only replay dependencies:
@@ -85,15 +92,18 @@ The retained study used Python 3.13.5 on Linux; its documentation CPU intervals 
 ## Render retained scaling observations
 
 The workflow and diagnostic-panel diagrams are direct Matplotlib vectors with
-embedded fonts. The full bundle's `paper/build.py` regenerates both:
+embedded fonts. The full bundle's `paper/build.py` regenerates both diagrams
+and the scaling figure from `paper/generated/scaling-{latency,cpu}.dat`
+before compiling with the supplied pdfLaTeX/BibTeX template:
 
 ```sh
-python plots/draw_schematics.py --output-dir ../paper/figures
+python ../paper/build.py --font-root /path/to/texmf-dist/fonts
 ```
 
 Install `requirements-figures.txt`, then run
 `python scripts/render_scaling.py --source plot_inputs --output-dir figures --font-root /path/to/texmf-dist/fonts`.
-The optional vector renderer preserves both log-scale panels, all four series
+Omitting `--font-root` uses `kpsewhich` to locate the installed TeX font tree.
+The standalone optional vector renderer preserves both log-scale panels, all four series
 and the observed nonmonotone values. It reads the retained episode medians;
 it does not start watchers or replace actual-process measurements. Its five
 input and routing checks are included in the ordinary test suite.

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate the added Hypercorn holdout and versioned historical mechanism replays."""
 from __future__ import annotations
-import argparse, collections, hashlib, json, statistics, sys
+import argparse, ast, collections, hashlib, json, statistics, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -21,6 +21,73 @@ def validate_uvicorn(results:Path)->list[dict]:
     """Check protocol, record mirrors, endpoint premises, and retained witnesses."""
     return load_qualified_episodes('uvicorn-integration', results)
 
+def validate_hypercorn_premises(record:dict, case:Path)->str:
+    """Check this token fixture without executing retained application code.
+
+    Legacy runs retain direct-source oracle evidence, not the later frozen-copy
+    isolation witness. Report that scope without modifying or upgrading records.
+    """
+    def reject(reason):
+        raise RuntimeError(f'Hypercorn inconclusive {record.get("id")}: {reason}')
+
+    if record.get('initial') != 'WD0000000000':
+        reject('initial HTTP readiness token not established')
+    edit = record.get('edit')
+    if not isinstance(edit, dict):
+        reject('edit evidence missing')
+    clocks = (record.get('ready_ns'), edit.get('start_ns'),
+              edit.get('end_ns'), record.get('endpoint_ns'))
+    if not all(type(t) is int and t > 0 for t in clocks) or not all(
+            a <= b for a, b in zip(clocks, clocks[1:])):
+        reject('ready <= edit.start <= edit.end <= endpoint not established')
+    expected = record.get('expected')
+    if not isinstance(expected, str) or not expected:
+        reject('nonempty reference token missing')
+    if not isinstance(record.get('observed'), str) or not record['observed']:
+        reject('terminal HTTP capture missing')
+    if type(edit.get('obligation')) is not bool or edit['obligation'] != (
+            record['initial'] != expected):
+        reject('edit obligation differs from initial/reference comparison')
+    oracle = record.get('oracle')
+    if not isinstance(oracle, dict) or type(oracle.get('returncode')) is not int or oracle['returncode'] != 0:
+        reject('reference did not exit successfully')
+    if oracle.get('content') != expected:
+        reject('expected differs from oracle payload')
+    try:
+        payloads = [json.loads(line[len('WATCHDELTA_ORACLE='):])
+                    for line in oracle['stdout'].splitlines()
+                    if line.startswith('WATCHDELTA_ORACLE=')]
+    except (KeyError, AttributeError, ValueError):
+        reject('oracle stdout payload unavailable or malformed')
+    if payloads != [expected]:
+        reject('oracle stdout differs from expected payload')
+    source = case / 'final-app.py'
+    if not source.is_file():
+        reject('terminal source witness missing')
+    if sha(source) != record.get('source_sha256') or edit.get('source_sha256') != record.get('source_sha256'):
+        reject('terminal source fingerprint differs')
+    try:
+        tree = ast.parse(source.read_bytes())
+        tokens = [node.value.value for node in tree.body
+                  if isinstance(node, ast.Assign)
+                  and any(isinstance(t, ast.Name) and t.id == 'CONTENT' for t in node.targets)
+                  and isinstance(node.value, ast.Constant)]
+    except (SyntaxError, ValueError):
+        reject('terminal source token unavailable')
+    if tokens != [expected]:
+        reject('reference token differs from terminal source witness')
+    live = case / 'work/app.py'
+    if live.is_file() and sha(live) != record['source_sha256']:
+        reject('retained live source differs')
+    if 'source_stable' in record:
+        if record['source_stable'] is not True:
+            reject('source stability not established')
+        reference = case / 'reference/app.py'
+        if not reference.is_file() or sha(reference) != record['source_sha256']:
+            reject('frozen reference source witness missing or different')
+        return 'frozen-source-and-stability-flag'
+    return 'legacy-direct-source; frozen-isolation-witness-not-recorded'
+
 def validate_hypercorn(results:Path):
     folder=results/'hypercorn-integration';protocol=json.loads((folder/'protocol.json').read_text())
     if sha(folder/'protocol.json')!=(folder/'protocol.sha256').read_text().strip():raise RuntimeError('Hypercorn protocol hash mismatch')
@@ -32,6 +99,7 @@ def validate_hypercorn(results:Path):
         if any(r.get(k)!=v for k,v in jobs[r['id']].items()):raise RuntimeError(f'Hypercorn attributes changed: {r["id"]}')
         case=folder/'episodes'/r['id']
         if json.loads((case/'record.json').read_text())!=r:raise RuntimeError(f'Hypercorn record mismatch: {r["id"]}')
+        validate_hypercorn_premises(r, case)
         if sha(case/'final-app.py')!=r['source_sha256']:raise RuntimeError(f'Hypercorn source mismatch: {r["id"]}')
         if r['oracle']['returncode']!=0 or r['expected'] is None:raise RuntimeError(f'Hypercorn oracle failed: {r["id"]}')
         expected_status='matched' if r['observed']==r['expected'] else 'stale'
@@ -140,7 +208,10 @@ Versioned replays & Vite 5.2.4/5.2.10 decision logic; merged MkDocs PR 2385 buil
       'HypercornN':len(h),'HypercornMatched':sum(r['status']=='matched' for r in h),'HypercornPreservedStale':sum(r['status']=='stale' for r in h if r['scenario']=='preserved_stat'),
       'ViteReplayN':len(v),'ViteChangedN':vs['changed'],'MkDocsReplayN':len(m),'MkDocsBurstEvents':ms['burst_events'],'MkDocsBurstBuilds':ms['burst_builds'],'AllEvidenceN':all_evidence}
     write(a.paper/'generated/numbers-integrations.tex','% Generated from separately validated extension records.\n'+'\n'.join('\\newcommand{\\'+k+'}{'+str(val)+'}' for k,val in macros.items()))
-    summary={'hypercorn':{'n':len(h),'outcomes':dict(collections.Counter(r['status'] for r in h)),'protocol':hp['id']},
+    summary={'hypercorn':{'n':len(h),'outcomes':dict(collections.Counter(r['status'] for r in h)),'protocol':hp['id'],
+      'reference_evidence':dict(collections.Counter(
+          'frozen-source-and-stability-flag' if 'source_stable' in r else
+          'legacy-direct-source; frozen-isolation-witness-not-recorded' for r in h))},
       'vite':vs,'mkdocs':ms,'base_runtime':{'n':base_n,'matched':base_matched,'stale':base_stale},
       'runtime_total':{'n':runtime_n,'matched':runtime_matched,'stale':runtime_stale},'all_executed_cases':all_evidence,
       'excluded_pilot':'results/pilots/hypercorn-oracle-contamination'}
