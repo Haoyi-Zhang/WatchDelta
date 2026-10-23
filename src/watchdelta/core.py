@@ -7,8 +7,20 @@ TOKEN0 = 'WD0000000000'
 def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
+def readable_tree(root: Path) -> Path:
+    """Do not silently omit retained files past Windows' legacy path limit."""
+    if os.name != 'nt':
+        return root
+    absolute = str(root.resolve())
+    if absolute.startswith('\\\\?\\'):
+        return Path(absolute)
+    if absolute.startswith('\\\\'):
+        return Path('\\\\?\\UNC\\' + absolute[2:])
+    return Path('\\\\?\\' + absolute)
+
 def projection(folder: Path, extension: str) -> dict[str, str]:
     """Identity-normalized, path-sensitive byte hashes; no source token stripping."""
+    folder = readable_tree(folder)
     if not folder.exists(): return {}
     answer = {}
     for p in sorted(folder.rglob('*' + extension)):
@@ -24,6 +36,7 @@ def source_files(root: Path, tool: str) -> list[Path]:
                   if p.is_file() and not any(x.startswith('.') for x in p.relative_to(root/'src').parts))
 
 def source_fingerprint(root: Path, tool: str) -> tuple[str, int]:
+    root = readable_tree(root)
     h = hashlib.sha256(); total = 0
     for p in source_files(root, tool):
         if p.is_symlink(): raise ValueError('Symlinks not supported')

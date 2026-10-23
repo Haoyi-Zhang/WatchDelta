@@ -35,6 +35,7 @@ class PaperBuildRouteTests(unittest.TestCase):
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(b'fixture; never used as a font')
         (self.paper / 'main.pdf').write_bytes(b'original fixture')
+        (self.paper / 'figures/scaling.pdf').write_bytes(b'original vector')
 
     def run_build(self, *, fail_renderer=False, automatic_font=False):
         calls = []
@@ -46,7 +47,9 @@ class PaperBuildRouteTests(unittest.TestCase):
             if str(command[1]).endswith('draw_scaling.py'):
                 if fail_renderer:
                     raise subprocess.CalledProcessError(1, command)
-                (self.paper / 'figures/scaling.pdf').write_bytes(self.data.read_bytes())
+                target = Path(command[1]).parent / 'scaling.pdf'
+                self.assertNotEqual(target.parent, self.paper / 'figures')
+                target.write_bytes(self.data.read_bytes())
             elif command[0] == 'pdflatex':
                 work = Path(kwargs['cwd'])
                 self.assertEqual((work / 'figures/scaling.pdf').read_bytes(), self.data.read_bytes())
@@ -78,6 +81,32 @@ class PaperBuildRouteTests(unittest.TestCase):
         with self.assertRaises(subprocess.CalledProcessError):
             self.run_build(fail_renderer=True)
         self.assertEqual((self.paper / 'main.pdf').read_bytes(), b'original fixture')
+        self.assertEqual((self.paper / 'figures/scaling.pdf').read_bytes(), b'original vector')
+
+    def test_missing_engine_blocks_all_producers(self):
+        with patch.object(build.shutil, 'which', return_value=None), \
+             patch.object(build.subprocess, 'run') as run, self.assertRaises(SystemExit):
+            build.main(['--font-root', str(self.fonts)])
+        run.assert_not_called()
+
+    def test_partial_renderer_and_compiler_failure_preserve_existing_outputs(self):
+        for failure in ('renderer', 'compiler'):
+            with self.subTest(failure=failure):
+                def process(command, **kwargs):
+                    if str(command[1]).endswith('draw_scaling.py'):
+                        (Path(command[1]).parent / 'scaling.pdf').write_bytes(b'partial owned fixture')
+                        if failure == 'renderer':
+                            raise subprocess.CalledProcessError(1, command)
+                    elif command[0] == 'pdflatex':
+                        raise subprocess.CalledProcessError(1, command)
+                    return subprocess.CompletedProcess(command, 0)
+                with patch.object(build, 'HERE', self.paper), \
+                     patch.object(build.shutil, 'which', side_effect=lambda name: name), \
+                     patch.object(build.subprocess, 'run', side_effect=process), \
+                     self.assertRaises(subprocess.CalledProcessError):
+                    build.main(['--font-root', str(self.fonts)])
+                self.assertEqual((self.paper / 'main.pdf').read_bytes(), b'original fixture')
+                self.assertEqual((self.paper / 'figures/scaling.pdf').read_bytes(), b'original vector')
 
     def test_missing_font_blocks_all_producers(self):
         with patch.object(build.subprocess, 'run') as run, self.assertRaises(SystemExit):

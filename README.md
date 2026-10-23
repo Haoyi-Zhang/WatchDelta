@@ -2,6 +2,10 @@
 
 WatchDelta qualifies a bounded edit-to-output episode by comparing a stable live projection with an isolated one-shot execution over identical terminal source bytes. When outputs disagree, it investigates six boundaries: selection, observation scope, state predicate, scheduling, consumer execution, and publication.
 
+Terminal qualification does not need a fault label or diagnostic codebook. Its
+released-tool evidence is the practical starting point; the following modes are
+conditional extensions after intervention effects have been calibrated.
+
 The implementation provides two complementary diagnostic modes:
 
 1. an adaptive minimax planner that chooses repair interventions from the surviving candidate sets; and
@@ -94,7 +98,10 @@ The retained study used Python 3.13.5 on Linux; its documentation CPU intervals 
 The workflow and diagnostic-panel diagrams are direct Matplotlib vectors with
 embedded fonts. The full bundle's `paper/build.py` regenerates both diagrams
 and the scaling figure from `paper/generated/scaling-{latency,cpu}.dat`
-before compiling with the supplied pdfLaTeX/BibTeX template:
+in an isolated work tree before compiling with the supplied pdfLaTeX/BibTeX
+template. Missing engines and renderer/compiler failures preserve delivered
+figures and the manuscript. The scaling graphic explicitly labels TS/content's
+fresh compilation and documentation CPU's included HTTP retrieval:
 
 ```sh
 python ../paper/build.py --font-root /path/to/texmf-dist/fonts

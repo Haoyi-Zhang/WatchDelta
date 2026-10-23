@@ -56,7 +56,7 @@ def marker(c, xp, yp, shape):
 
 
 def panel(c, data, left, right, limits, ticks, ylabel):
-    bottom, top = 31, 119
+    bottom, top = 42, 119
     x = lambda v: left + (math.log10(v) - math.log10(8)) / (math.log10(6500) - math.log10(8)) * (right - left)
     ymin, ymax = limits
     y = lambda v: bottom + (math.log10(v) - math.log10(ymin)) / (math.log10(ymax) - math.log10(ymin)) * (top - bottom)
@@ -75,7 +75,7 @@ def panel(c, data, left, right, limits, ticks, ylabel):
     c.line(left, bottom, left, top)
     c.line(left, bottom, right, bottom)
     c.setFont("ManuscriptRoman", 9)
-    c.drawCentredString((left + right) / 2, 7, "Source files")
+    c.drawCentredString((left + right) / 2, 18, "Source files")
     c.saveState()
     c.translate(left - 35, (bottom + top) / 2)
     c.rotate(90)
@@ -132,6 +132,8 @@ def main(argv=None):
         c.setFillColor(HexColor("#222222"))
         c.setFont("ManuscriptRoman", 8)
         c.drawString(xp + 20, yp - 2.5, label)
+    c.setFont("ManuscriptRoman", 7.5)
+    c.drawCentredString(258, 5, "TS/content includes fresh compilation; documentation CPU includes HTTP retrieval.")
     c.showPage()
     c.save()
 
