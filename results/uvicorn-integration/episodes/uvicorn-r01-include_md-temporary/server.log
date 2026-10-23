@@ -1,4 +1,4 @@
-INFO:     Will watch for changes in these directories: ['/mnt/data/watchdelta_work/watchdelta/artifact/results/uvicorn-integration/episodes/uvicorn-r01-include_md-temporary/work/src']
+INFO:     Will watch for changes in these directories: ['artifact/results/uvicorn-integration/episodes/uvicorn-r01-include_md-temporary/work/src']
 WATCHDELTA_RENDER_COMPLETE
 INFO:     Uvicorn running on http://127.0.0.1:42709 (Press CTRL+C to quit)
 INFO:     Started reloader process [23327] using WatchFiles
